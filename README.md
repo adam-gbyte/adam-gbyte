@@ -29,12 +29,12 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 
 - 💌 Email: **adamgumilang21@gmail.com**
 - 🌐 Website: [www.ginvitations.site](http://www.ginvitations.site)
-- 📷 Instagram: [@adam_gumilang_](https://instagram.com/adamglmg)
+- 📷 Instagram: [@adam_gumilang_](https://instagram.com/adam_gumilang_)
 
 ## 🔥 Statistik GitHub
 
-![Adam's GitHub Stats](https://github-readme-stats.vercel.app/api?username=adamgumilang&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=adamgumilang&layout=compact&theme=radical)
+![Adam's GitHub Stats](https://github-readme-stats.vercel.app/api?username=adam-gbyte&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=adam-gbyte&layout=compact&theme=radical)
 
 ---
 
