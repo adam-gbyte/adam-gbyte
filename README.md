@@ -1,29 +1,40 @@
-# <summary><strong>Hi there :wave: , I'm Goo!</strong></summary>
-Lifelong Learner, currently working as budagh kompeni.
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=goonesmile&label=Profile%20views&color=0e75b6&style=flat" alt="isrealodejobi" />
-</p>
+# Halo, saya Adam Gumilang 👋
 
-### <summary><strong>Tools:</strong></summary>
-<p>
-    <img src="https://img.shields.io/badge/Text%20Editor-Visual%20Studio%20Code-blue?&logo=visual%20studio%20code&logoColor=blue" />
-</p>
+Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer** yang bersemangat membangun aplikasi dari nol, baik itu frontend maupun backend. Saat ini saya sedang mendalami berbagai teknologi modern seperti **React, TailwindCSS, Node.js, MongoDB**, dan juga menjelajahi dunia **AI dan Machine Learning**.
 
-### <summary><strong>Yosh!</strong></summary>
-<p>
-    - :keyboard: I’m currently learning Data Analytics. </br>
-    - :speech_balloon: Ask me about anything.</br>
-    - :mailbox: How to reach me: <a href="mailto:youremail@gmail.com">Email me!</a>  </br>
-    - :cloud: Pronouns: She/Her. </br>
-    - :game_die: Drawing and writing are part of me. </br>
-<p>
- 
-### <summary><strong>Let's connect!</strong></summary>
-<a href="https://twitter.com/yours">
-  <img align="left" alt="Goo's Twitter" width="20px" src="https://simpleicons.now.sh/twitter/495f7e" />
-</a>
-<a href="https://www.instagram.com/yours/">
-  <img align="left" alt="Goo's Instagram" width="20px" src="https://simpleicons.now.sh/instagram/495f7e" />
-</a>
-<a href="https://yours.com/">
-  <img align="left" alt="Goo's Blog" width="20px" src="https://simpleicons.now.sh/blogger/495f7e" />
-</a>
+## 🚀 Tentang Saya
+
+- 🎓 Lahir pada 21 Maret 2005 dan tinggal di Indonesia.
+- 💻 Saat ini fokus belajar dan mengembangkan berbagai aplikasi web, sistem autentikasi, dan proyek IoT.
+- ⚙️ Bahasa & Teknologi yang saya gunakan:
+  - **Frontend**: React, TailwindCSS, SvelteKit, Vite
+  - **Backend**: Node.js, Express.js, MongoDB, Mongoose
+  - **Machine Learning**: Python, scikit-learn, skfuzzy, OpenCV
+  - **Lainnya**: JWT Auth, OAuth2, REST API, Arduino, ESP32-CAM
+
+## 💼 Proyek yang Saya Bangun
+
+- **Ginvitations**  
+  Platform undangan pernikahan digital dengan berbagai tema menarik: drakor, anime, adat, modern, dan lainnya.  
+  Teknologi: React, Node.js, MongoDB, TailwindCSS
+
+- **YouTube Comment Classifier**  
+  Chatbot dan sistem pendeteksi komentar spam/penipuan pada YouTube menggunakan Machine Learning.
+
+- **AI Waifu Engine (Eksperimen)**  
+  Proyek hobi membuat waifu 3D menggunakan Python dan OpenGL custom engine.
+
+## 📫 Hubungi Saya
+
+- 💌 Email: **adamgumilang21@gmail.com**
+- 🌐 Website: [www.ginvitations.site](http://www.ginvitations.site)
+- 📷 Instagram: [@adam_gumilang_](https://instagram.com/adamglmg)
+
+## 🔥 Statistik GitHub
+
+![Adam's GitHub Stats](https://github-readme-stats.vercel.app/api?username=adamgumilang&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=adamgumilang&layout=compact&theme=radical)
+
+---
+
+**"Semangat adalah bahan bakar terbaik untuk terus berkembang. Semangat Adam-kun!"**
