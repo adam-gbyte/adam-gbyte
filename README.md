@@ -1,5 +1,7 @@
 # Halo, saya Adam Gumilang 👋
 
+![Logo Mangkotmang](https://ik.imagekit.io/goldiron/Emilia.jpeg)
+
 Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer** yang bersemangat membangun aplikasi dari nol, baik itu frontend maupun backend. Saat ini saya sedang mendalami berbagai teknologi modern seperti **React, TailwindCSS, Node.js, MongoDB**, dan juga menjelajahi dunia **AI dan Machine Learning**.
 
 ## 🚀 Tentang Saya
