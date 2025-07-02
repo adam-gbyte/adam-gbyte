@@ -17,10 +17,13 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 - **Ginvitations**  
   Platform undangan pernikahan digital dengan berbagai tema menarik: drakor, anime, adat, modern, dan lainnya.  
   Teknologi: React, Node.js, MongoDB, TailwindCSS
-  [www.ginvitations.site](http://www.ginvitations.site)
+[www.ginvitations.site](http://www.ginvitations.site)
 
 - **YouTube Comment Classifier**  
   Chatbot dan sistem pendeteksi komentar spam/penipuan pada YouTube menggunakan Machine Learning.
+
+- Project Secret  
+  Aplikasi *** *** yang membantu *** secara real-time.
 
 - **AI Waifu Engine (Eksperimen)**  
   Proyek hobi membuat waifu 3D menggunakan Python dan OpenGL custom engine.
