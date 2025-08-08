@@ -44,12 +44,9 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 
 ## 🔥 Statistik GitHub
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=adam-gbyte&theme=blue_navy&hide_border=false&include_all_commits=true&count_private=false" width="430" />
-  <img src="https://nirzak-streak-stats.vercel.app/?user=adam-gbyte&theme=blue_navy&hide_border=false" width="430" />
+  <img src="https://github-readme-stats.vercel.app/api?username=adam-gbyte&show_icons=true&theme=radical width="430" />
+  <img src="https://nirzak-streak-stats.vercel.app/?user=adam-gbyteshow_icons=true&theme=radical width="430" />
 </p>
-
-![Adam's GitHub Stats](https://github-readme-stats.vercel.app/api?username=adam-gbyte&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=adam-gbyte&layout=compact&theme=radical)
 
 ---
 
