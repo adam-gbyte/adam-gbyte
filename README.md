@@ -35,7 +35,18 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 - 🌐 Website: [www.ginvitations.site](http://www.ginvitations.site)
 - 📷 Instagram: [@adam_gumilang_](https://instagram.com/adam_gumilang_)
 
+## 🌐Skills
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=js,html,css,git,exrpess,svelte,react,py,java,figma" />
+  </a>
+</p>
+
 ## 🔥 Statistik GitHub
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=adam-gbyte&theme=blue_navy&hide_border=false&include_all_commits=true&count_private=false" width="430" />
+  <img src="https://nirzak-streak-stats.vercel.app/?user=adam-gbyte&theme=blue_navy&hide_border=false" width="430" />
+</p>
 
 ![Adam's GitHub Stats](https://github-readme-stats.vercel.app/api?username=adam-gbyte&show_icons=true&theme=radical)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=adam-gbyte&layout=compact&theme=radical)
