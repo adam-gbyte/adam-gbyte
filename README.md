@@ -23,7 +23,7 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 - **YouTube Comment Classifier**  
   Chatbot dan sistem pendeteksi komentar spam/penipuan pada YouTube menggunakan Machine Learning.
 
-- Project Secret  
+- Project Secret (Coming soon)
   Aplikasi *** *** yang membantu *** secara real-time.
 
 - **AI Waifu Engine (Eksperimen)**  
@@ -35,17 +35,17 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 - 🌐 Website: [www.ginvitations.site](http://www.ginvitations.site)
 - 📷 Instagram: [@adam_gumilang_](https://instagram.com/adam_gumilang_)
 
-## 🌐Skills
+## 🌐 Skills
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=js,html,css,git,exrpess,svelte,react,py,java,figma" />
+    <img src="https://skillicons.dev/icons?i=js,html,css,git,express,svelte,react,py,java,figma" />
   </a>
 </p>
 
 ## 🔥 Statistik GitHub
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=adam-gbyte&show_icons=true&theme=radical width="430" />
-  <img src="https://nirzak-streak-stats.vercel.app/?user=adam-gbyte&show_icons=true&theme=radical width="430" />
+  <img src="https://github-readme-stats.vercel.app/api?username=adam-gbyte&show_icons=true&theme=radical" width="430" />
+  <img src="https://nirzak-streak-stats.vercel.app/?user=adam-gbyte&show_icons=true&theme=radical" width="430" />
 </p>
 
 ---
