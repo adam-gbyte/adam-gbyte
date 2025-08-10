@@ -24,7 +24,7 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
   Chatbot dan sistem pendeteksi komentar spam/penipuan pada YouTube menggunakan Machine Learning.
 
 - Project Secret (Coming soon)
-  Aplikasi *** *** yang membantu *** secara real-time.
+  Aplikasi **\* \*** yang membantu \*\*\* secara real-time.
 
 - **AI Waifu Engine (Eksperimen)**  
   Proyek hobi membuat waifu 3D menggunakan Python dan OpenGL custom engine.
@@ -33,9 +33,10 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 
 - 💌 Email: **adamgumilang21@gmail.com**
 - 🌐 Website: [www.ginvitations.site](http://www.ginvitations.site)
-- 📷 Instagram: [@adam_gumilang_](https://instagram.com/adam_gumilang_)
+- 📷 Instagram: [@adam*gumilang*](https://instagram.com/adam_gumilang_)
 
 ## 🌐 Skills
+
 <p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=js,html,css,git,express,svelte,react,py,java,figma" />
@@ -43,6 +44,7 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 </p>
 
 ## 🔥 Statistik GitHub
+
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=adam-gbyte&show_icons=true&theme=radical" width="430" />
   <img src="https://nirzak-streak-stats.vercel.app/?user=adam-gbyte&show_icons=true&theme=radical" width="430" />

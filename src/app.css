@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--bg: white;
+	--text: black;
+	--primary: #3b82f6;
+	--bg-hover: blue;
+	--text-hover: white;
+}
+
+/* Styles saat mode gelap */
+.dark {
+	--bg: #111827;
+	--text: #f9fafb;
+	--primary: #2563eb;
+}
