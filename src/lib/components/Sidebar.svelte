@@ -3,7 +3,7 @@
 
 	import { theme } from '$lib/theme';
 
-	let isOpen = true;
+	let isOpen = false;
 	let isTheme = true;
 
 	const menuItems = [
@@ -27,7 +27,7 @@
 </script>
 
 <aside
-	class={`flex h-screen flex-col shadow-xl transition-all duration-300 ${isOpen ? 'w-64' : 'w-20 items-center'}`}
+	class={`flex h-dvh flex-col shadow-xl transition-all duration-300 ${isOpen ? 'w-64' : 'w-20 items-center'}`}
 >
 	<!-- Header -->
 	<div class="flex items-center justify-between border-blue-500">
