@@ -1,20 +1,20 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
+/* @theme {
 	--bg: white;
 	--text: black;
 	--primary: #3b82f6;
 	--bg-hover: blue;
 	--text-hover: white;
-}
+} */
 
 /* Styles saat mode gelap */
-.dark {
+/* .dark {
 	--bg: #111827;
 	--text: #f9fafb;
 	--primary: #2563eb;
-}
+} */
 
 /* * {
 	outline: 1px solid rgba(255, 0, 0) !important;
@@ -24,7 +24,7 @@
 	display: none;
 }
 
-@layer utilities {
+/* @layer utilities {
 	@keyframes slide-down {
 		0% {
 			opacity: 0;
@@ -52,4 +52,4 @@
 	.animate-slide-up {
 		animation: slide-up 0.3s ease-out;
 	}
-}
+} */
