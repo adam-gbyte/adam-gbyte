@@ -4,7 +4,7 @@
 	import { ChevronRight } from 'lucide-svelte';
 	import { smoothScroll } from '$lib/actions/smoothScroll.js';
 
-	const navItems = ['Home', 'About', 'Skill', 'Project', 'Kontak'];
+	const navItems = ['HOME', 'ABOUT', 'SKILL', 'PROJECT', 'KONTAK'];
 	let currentIndex = 0;
 	let navContainer;
 
@@ -53,6 +53,7 @@
 	});
 
 	const names = ['adam-gbyte', 'Adam Gumilang'];
+	const skills = ['Full Stack', 'Frontend', 'Backend'];
 	let index = 0;
 	let timer;
 
@@ -85,20 +86,30 @@
 </script>
 
 <!-- HEADER NAV -->
-<header
-	bind:this={navContainer}
-	class="fixed top-0 left-1/2 z-50 mt-4 flex h-25 w-[90%] -translate-x-1/2 flex-col overflow-y-auto rounded-xl border border-white/30 shadow-xl backdrop-blur-sm md:w-[80%] dark:bg-black/10"
->
-	{#each navItems as item, i}
-		<button
-			data-idx={i}
-			on:click={() => scrollToSection(item.toLowerCase())}
-			class="my-1 cursor-pointer transition-all duration-300
+<header bind:this={navContainer} class="items-center">
+	<div
+		class="fixed top-0 left-1/2 z-50 mt-4 flex h-25 w-[90%] -translate-x-1/2 flex-col overflow-y-auto rounded-full border-gray-500 bg-white shadow-sm inset-shadow-sm"
+	>
+		{#each navItems as item, i}
+			<button
+				data-idx={i}
+				on:click={() => scrollToSection(item.toLowerCase())}
+				class="my-1 cursor-pointer transition-all duration-300
         {i === currentIndex ? 'text-xl font-bold text-blue-600' : 'text-gray-500'}"
-		>
-			{item}
-		</button>
-	{/each}
+			>
+				{item}
+			</button>
+		{/each}
+	</div>
+
+	<button
+		on:click={() => {
+			document.documentElement.classList.toggle('dark');
+		}}
+		class="absolute top-3 right-3 rounded-full border border-gray-300 bg-gray-200 px-3 py-1 text-sm transition hover:bg-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
+	>
+		Toggle Dark Mode
+	</button>
 </header>
 
 <!-- CONTENT SECTIONS -->
@@ -126,6 +137,26 @@
 		</span>
 	</h1>
 	<h2 class="text-xl font-bold md:text-3xl">Full Stack Developer</h2>
+	<h1 class="flex items-center gap-3 text-2xl leading-none font-bold md:text-5xl">
+		<!-- <span>Hi, I&apos;m</span> -->
+		<!-- Kotak teks -->
+		<span
+			class="relative inline-flex h-[32px] w-[170px] overflow-hidden rounded-xl px-3 md:h-[72px] md:w-[370px]"
+			aria-live="polite"
+		>
+			<span
+				class="absolute top-0 left-0 text-blue-600 transition-transform duration-700 ease-in-out will-change-transform"
+				style={`transform: ${offsetY}`}
+			>
+				{#each skills as n}
+					<span class="block h-[32px] leading-[32px] md:h-[72px] md:leading-[72px]">
+						{n}
+					</span>
+				{/each}
+			</span>
+		</span>
+		<span>Developer</span>
+	</h1>
 	<p class="mt-4 max-w-xl text-gray-600 dark:text-gray-300">
 		Welcome to my personal website! I'm Adam Gumilang, a passionate Full Stack Developer with
 		expertise in building dynamic and responsive web applications. Explore my skills, projects, and

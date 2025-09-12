@@ -7,9 +7,9 @@
 		if (window.FinisherHeader) {
 			new window.FinisherHeader({
 				selector: '.finisher-header',
-				count: 100,
+				count: 50,
 				size: {
-					min: 2,
+					min: 4,
 					max: 8,
 					pulse: 0
 				},
@@ -32,15 +32,14 @@
 					center: 1,
 					edge: 0.65
 				},
-				skew: -2,
+				skew: 0,
 				shapes: ['c']
 			});
 		}
 	});
 </script>
 
-<!-- <div class="flex bg-[var(--bg)] text-[var(--text)] transition-colors duration-300"> -->
+<!-- <div class="bg-[var(--bg)] text-[var(--text)] transition-colors duration-300"> -->
 <!-- <Sidebar /> -->
-<div class="header finisher-header"><slot /></div>
-
+<slot />
 <!-- </div> -->
