@@ -20,7 +20,7 @@
 
 	<!-- Isi konten -->
 	<div class="relative z-10 flex min-h-screen flex-col items-center justify-center text-white">
-		<h1 class="text-5xl font-bold">Hi, I'm Priyal — I build delightful web UIs</h1>
+		<h1 class="text-5xl font-bold">Hi, I'm Adam-gbyte — I build delightful web UIs</h1>
 		<p class="mt-4 text-lg text-gray-900">HTML · CSS · JavaScript · React</p>
 		<div class="mt-6 flex gap-4">
 			<button class="rounded-xl bg-purple-600 px-6 py-3 hover:bg-purple-700">View Projects</button>

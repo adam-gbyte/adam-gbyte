@@ -1,12 +1,12 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	--bg: white;
-	--text: black;
-	--primary: #3b82f6;
-	--bg-hover: blue;
-	--text-hover: white;
+  --bg: white;
+  --text: black;
+  --primary: #3b82f6;
+  --bg-hover: blue;
+  --text-hover: white;
 }
 
 /* Styles saat mode gelap */
@@ -21,7 +21,7 @@
 } */
 
 ::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 /* @layer utilities {

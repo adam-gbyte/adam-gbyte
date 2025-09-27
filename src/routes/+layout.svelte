@@ -1,9 +1,10 @@
 <script>
 	import '../app.css';
 	import Sidebar from '$lib/components/Sidebar.svelte';
+	import Header from '$lib/components/Header.svelte';
+
 	import { onMount } from 'svelte';
 	onMount(() => {
-		// Pastikan lib sudah dimuat
 		if (window.FinisherHeader) {
 			new window.FinisherHeader({
 				selector: '.finisher-header',
@@ -41,5 +42,7 @@
 
 <!-- <div class="bg-[var(--bg)] text-[var(--text)] transition-colors duration-300"> -->
 <!-- <Sidebar /> -->
+<Header />
+
 <slot />
 <!-- </div> -->

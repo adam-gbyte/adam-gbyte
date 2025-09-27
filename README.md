@@ -33,7 +33,7 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 
 - 💌 Email: **adamgumilang2103@gmail.com**
 - 🌐 Website: [adam-gbyte.my.id](http://www.adam-gbyte.my.id)
-- 📷 Instagram: [@adam_gumilang_](https://instagram.com/adam_gumilang_)
+- 📷 Instagram: [@adam*gumilang*](https://instagram.com/adam_gumilang_)
 
 ## 🌐 Skills
 
