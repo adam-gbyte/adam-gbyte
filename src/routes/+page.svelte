@@ -28,8 +28,9 @@
 	</a>
 </section>
 
-<section id="about" class="flex h-screen items-center justify-center">
-	<h1 class="text-5xl">About Section</h1>
+<section id="about" class="flex flex-col h-screen items-center justify-center">
+	<h1 class="text-5xl">About me</h1>
+	<p>My name is Adam Gumilang</p>
 </section>
 <section id="skill" class="flex h-screen items-center justify-center">
 	<h1 class="text-5xl">Skill Section</h1>

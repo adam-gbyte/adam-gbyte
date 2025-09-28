@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  export let words = ["Frontend", "Backend", "Fullstack"];
+  export let words = ["Frontend", "Backend", "Fullstack", "AI Engineer"];
   export let nextText = 'Developer'
   let currentWordIndex = 0;
   let displayText = "";
