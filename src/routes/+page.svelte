@@ -2,11 +2,15 @@
 	import { smoothScroll } from '$lib/actions/smoothScroll.js';
 	import TextTyping from "$lib/components/TextTyping.svelte";
 	import { ChevronRight } from 'lucide-svelte';
+
+	import Header from '$lib/components/Header.svelte';
 </script>
 
 <svelte:head>
 	<title>Adam G</title>
 </svelte:head>
+
+<Header />
 
 <section
 	id="home"

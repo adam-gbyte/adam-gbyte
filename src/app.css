@@ -16,9 +16,9 @@
 	--primary: #2563eb;
 } */
 
-/* * {
+* {
 	outline: 1px solid rgba(255, 0, 0) !important;
-} */
+}
 
 ::-webkit-scrollbar {
   display: none;
