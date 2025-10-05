@@ -21,7 +21,6 @@
 	<h1 class="flex items-center gap-3 text-2xl leading-none font-bold md:text-5xl">
 		<TextTyping />
 	</h1>
-	<!-- <h2 class="text-xl font-bold md:text-3xl">Full Stack Developer</h2> -->
 	<h1 class="flex items-center gap-3 text-xl leading-none font-bold md:text-3xl">
 		Hi, I'm <TextTyping words={[
 			'Adam Gumilang',
@@ -40,17 +39,20 @@
 
 <section id="about" class="flex flex-row h-screen items-center justify-center m-5 md:mx-30">
 	<img src={logo} alt="Logo" width="350" />
-	<div class="flex flex-col p-10">
-		<h1 class="text-5xl">About me</h1>
+	<div class="flex flex-col pl-10">
+		<h1 class="text-4xl mb-5">About me</h1>
 		<p>Hello, I'm Adam Gumilang, a full-stack developer with 1 year of experience. I have a strong passion for crafting both intuitive user interfaces and robust backend systems. With expertise in HTML, CSS, JavaScript, Node.js, and databases, I enjoy collaborating to deliver end-to-end creative solutions. Additionally, I'm eager to continue learning and staying up-to-date with the latest web technologies.</p>
 	</div>
 </section>
-<section id="skill" class="flex h-screen items-center justify-center">
+
+<section id="skill" class="flex flex-col h-screen items-center justify-center m-5 md:mx-30">
 	<h1 class="text-5xl">Skill Section</h1>
 </section>
+
 <section id="project" class="flex h-screen items-center justify-center">
 	<h1 class="text-5xl">Project Section</h1>
 </section>
+
 <section id="kontak" class="flex h-screen items-center justify-center">
 	<h1 class="text-5xl">Kontak Section</h1>
 </section>
