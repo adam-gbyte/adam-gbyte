@@ -4,6 +4,8 @@
 	import { ChevronRight } from 'lucide-svelte';
 
 	import Header from '$lib/components/Header.svelte';
+
+	const logo = "https://ik.imagekit.io/gbyte/logo/Logo%20v5.2023.2%20(beta-circle).png";
 </script>
 
 <svelte:head>
@@ -36,9 +38,12 @@
 	</a>
 </section>
 
-<section id="about" class="flex flex-col h-screen items-center justify-center m-5 md:mx-30">
-	<h1 class="text-5xl">About me</h1>
-	<p>Hello, I'm Adam Gumilang, a full-stack developer with 1 year of experience. I have a strong passion for crafting both intuitive user interfaces and robust backend systems. With expertise in HTML, CSS, JavaScript, Node.js, and databases, I enjoy collaborating to deliver end-to-end creative solutions. Additionally, I'm eager to continue learning and staying up-to-date with the latest web technologies.</p>
+<section id="about" class="flex flex-row h-screen items-center justify-center m-5 md:mx-30">
+	<img src={logo} alt="Logo" width="350" />
+	<div class="flex flex-col p-10">
+		<h1 class="text-5xl">About me</h1>
+		<p>Hello, I'm Adam Gumilang, a full-stack developer with 1 year of experience. I have a strong passion for crafting both intuitive user interfaces and robust backend systems. With expertise in HTML, CSS, JavaScript, Node.js, and databases, I enjoy collaborating to deliver end-to-end creative solutions. Additionally, I'm eager to continue learning and staying up-to-date with the latest web technologies.</p>
+	</div>
 </section>
 <section id="skill" class="flex h-screen items-center justify-center">
 	<h1 class="text-5xl">Skill Section</h1>
