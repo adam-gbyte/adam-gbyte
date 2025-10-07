@@ -38,9 +38,9 @@
 </section>
 
 <section id="about" class="flex md:flex-row flex-col h-screen items-center justify-center m-5 md:mx-30">
-	<img src={logo} alt="Logo" width="350" />
-	<div class="flex flex-col pl-10">
-		<h1 class="text-4xl mb-5">About me</h1>
+	<img src={logo} alt="Logo" class="w-[250px] md:w-[300px]" />
+	<div class="flex flex-col md:pl-10">
+		<h1 class="text-4xl mb-5 text-center mt-5">About me</h1>
 		<p>Hello, I'm Adam Gumilang, a full-stack developer with 1 year of experience. I have a strong passion for crafting both intuitive user interfaces and robust backend systems. With expertise in HTML, CSS, JavaScript, Node.js, and databases, I enjoy collaborating to deliver end-to-end creative solutions. Additionally, I'm eager to continue learning and staying up-to-date with the latest web technologies.</p>
 	</div>
 </section>
