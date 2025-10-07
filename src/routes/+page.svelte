@@ -37,7 +37,7 @@
 	</a>
 </section>
 
-<section id="about" class="flex flex-row h-screen items-center justify-center m-5 md:mx-30">
+<section id="about" class="flex md:flex-row flex-col h-screen items-center justify-center m-5 md:mx-30">
 	<img src={logo} alt="Logo" width="350" />
 	<div class="flex flex-col pl-10">
 		<h1 class="text-4xl mb-5">About me</h1>
@@ -46,7 +46,15 @@
 </section>
 
 <section id="skill" class="flex flex-col h-screen items-center justify-center m-5 md:mx-30">
-	<h1 class="text-5xl">Skill Section</h1>
+	<h1 class="text-5xl">Skill & Experience</h1>
+	<div class="flex flex-row">
+		<div>
+			Logo
+		</div>
+		<div>
+			Logo
+		</div>		
+	</div>
 </section>
 
 <section id="project" class="flex h-screen items-center justify-center">
