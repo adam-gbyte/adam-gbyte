@@ -7,6 +7,60 @@
 
   const logo =
     "https://ik.imagekit.io/gbyte/logo/Logo%20v5.2023.2%20(beta-circle).png";
+
+  import { onMount } from "svelte";
+  onMount(() => {
+    const skillSection = document.querySelector("#skill");
+    const scrollBox = document.querySelector("#skill-scroll");
+
+    let isInsideSkill = false;
+
+    const handleScroll = (e) => {
+      if (!isInsideSkill) return;
+
+      if (window.innerWidth < 768) {
+        // Mobile: scroll horizontal
+        scrollBox.scrollLeft += e.deltaY;
+        e.preventDefault();
+
+        // Jika sudah di akhir kanan
+        if (
+          scrollBox.scrollLeft + scrollBox.clientWidth >=
+          scrollBox.scrollWidth - 1
+        ) {
+          isInsideSkill = false;
+        }
+      } else {
+        // Desktop: scroll vertical dalam box
+        scrollBox.scrollTop += e.deltaY;
+        e.preventDefault();
+
+        if (
+          scrollBox.scrollTop + scrollBox.clientHeight >=
+          scrollBox.scrollHeight - 1
+        ) {
+          isInsideSkill = false;
+        }
+      }
+    };
+
+    // Deteksi saat section skill masuk ke viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            isInsideSkill = true;
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(skillSection);
+
+    // Tambahkan listener
+    window.addEventListener("wheel", handleScroll, { passive: false });
+  });
 </script>
 
 <svelte:head>
@@ -62,16 +116,20 @@
 
 <section
   id="skill"
-  class="flex md:flex-row flex-col gap-5 h-screen items-center justify-center m-5 md:mx-30"
+  class="relative flex flex-col h-screen items-center justify-center m-5 md:mx-30"
 >
   <h1 class="text-4xl md:text-5xl font-bold mb-10 text-center">
     Skill & Experience
   </h1>
 
+  <!-- Wrapper scrollable -->
   <div
-    class="flex flex-col gap-5 md:flex-md-col cursor-pointer justify-items-center"
+    id="skill-scroll"
+    class="flex md:flex-col flex-row gap-5 w-full max-w-4xl overflow-x-auto md:overflow-y-auto md:overflow-x-hidden snap-x md:snap-y scroll-smooth h-[50vh]"
   >
-    <div class="flex flex-col items-center group">
+    <div
+      class="flex flex-col items-center flex-shrink-0 w-[80vw] md:w-auto snap-start group justify-center"
+    >
       <img
         src="/icons/html-5.svg"
         alt="HTML"
@@ -79,17 +137,19 @@
       />
       <p class="text-sm md:text-base font-medium">HTML</p>
     </div>
-
-    <div class="flex flex-col items-center group">
+    <div
+      class="flex flex-col items-center flex-shrink-0 w-[80vw] md:w-auto snap-start group justify-center"
+    >
       <img
         src="/icons/javascript.svg"
-        alt="Javascript"
+        alt="JavaScript"
         class="w-16 h-16 mb-3 transition-transform duration-300 group-hover:scale-110"
       />
       <p class="text-sm md:text-base font-medium">JavaScript</p>
     </div>
-
-    <div class="flex flex-col items-center group">
+    <div
+      class="flex flex-col items-center flex-shrink-0 w-[80vw] md:w-auto snap-start group justify-center"
+    >
       <img
         src="/icons/nodejs.svg"
         alt="Node.js"
@@ -97,8 +157,9 @@
       />
       <p class="text-sm md:text-base font-medium">Node.js</p>
     </div>
-
-    <div class="flex flex-col items-center group">
+    <div
+      class="flex flex-col items-center flex-shrink-0 w-[80vw] md:w-auto snap-start group justify-center"
+    >
       <img
         src="/icons/svelte.svg"
         alt="SvelteKit"
@@ -106,8 +167,9 @@
       />
       <p class="text-sm md:text-base font-medium">SvelteKit</p>
     </div>
-
-    <div class="flex flex-col items-center group">
+    <div
+      class="flex flex-col items-center flex-shrink-0 w-[80vw] md:w-auto snap-start group justify-center"
+    >
       <img
         src="/icons/tailwind.svg"
         alt="Tailwind CSS"
@@ -122,8 +184,7 @@
       Saya memiliki pengalaman dalam membangun aplikasi full-stack menggunakan
       teknologi modern seperti <span class="font-semibold">SvelteKit</span>,
       <span class="font-semibold">Express.js</span>, dan
-      <span class="font-semibold">MongoDB</span>. Terbiasa bekerja dengan REST
-      API, autentikasi JWT, serta integrasi frontend dan backend.
+      <span class="font-semibold">MongoDB</span>.
     </p>
   </div>
 </section>
