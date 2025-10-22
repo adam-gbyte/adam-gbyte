@@ -11,15 +11,15 @@
   let projects = [
     {
       id: "project_1",
-      img: logo,
+      img: "https://ik.imagekit.io/ginvitations/assets/logo/Logo_GInvitations_v1_1.png?updatedAt=1747346902745",
       title: `Ginvitations`,
       description: `Deskripsi singkat untuk project Ginvitations`,
     },
     {
       id: "project_2",
-      img: "https://ik.imagekit.io/goldiron/Logo.png?updatedAt=1751459390218",
+      img: "https://ik.imagekit.io/goldiron/Logo2.png?updatedAt=1761141754589",
       title: `KKN Kabandungan`,
-      description: `Deskripsi singkat untuk project Ginvitations`,
+      description: `Deskripsi singkat untuk project KKN Kabandungan`,
     },
   ];
 
@@ -117,9 +117,9 @@
     {#each projects as project}
       <button
         on:click={() => openModal(project)}
-        class="w-72 bg-blue-200 items-center rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform"
+        class="w-72 bg-blue-200 rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform"
       >
-        <img src={project.img} alt="Logo" class="w-[200px] md:w-[250px]" />
+        <img src={project.img} alt="Logo" class="w-full md:w-full" />
         <h2 class="text-xl font-semibold mb-2 text-gray-800">
           {project.title}
         </h2>
