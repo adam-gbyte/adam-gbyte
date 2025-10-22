@@ -7,6 +7,12 @@
 
   const logo =
     "https://ik.imagekit.io/gbyte/logo/Logo%20v5.2023.2%20(beta-circle).png";
+
+  let projects = Array.from({ length: 5 }, (_, i) => ({
+    id: i + 1,
+    title: `Project ${i + 1}`,
+    description: `Deskripsi singkat untuk project ${i + 1}.`,
+  }));
 </script>
 
 <svelte:head>
@@ -81,12 +87,23 @@
 
 <section
   id="project"
-  class="flex md:flex-col flex-row h-screen items-center justify-center m-5 md:mx-30"
+  class="flex flex-col min-h-screen items-center justify-center px-6 py-12 bg-gray-50"
 >
-  <h1 class="text-5xl">My Project</h1>
-  <div class="flex flex-row">
-    <div class="w-50 h-100 bg-blue-200"><p>Project 1</p></div>
-    <div class="w-50 h-100 bg-blue-400"><p>Project 2</p></div>
+  <h1 class="text-4xl md:text-5xl font-bold mb-10 text-gray-800">
+    My Projects
+  </h1>
+
+  <div class="flex flex-wrap justify-center gap-8 w-full max-w-6xl">
+    {#each projects as project}
+      <div
+        class="w-72 bg-blue-200 rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform"
+      >
+        <h2 class="text-xl font-semibold mb-2 text-gray-800">
+          {project.title}
+        </h2>
+        <p class="text-gray-600">{project.description}</p>
+      </div>
+    {/each}
   </div>
 </section>
 
