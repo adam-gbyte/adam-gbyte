@@ -8,11 +8,31 @@
   const logo =
     "https://ik.imagekit.io/gbyte/logo/Logo%20v5.2023.2%20(beta-circle).png";
 
-  let projects = Array.from({ length: 5 }, (_, i) => ({
-    id: i + 1,
-    title: `Project ${i + 1}`,
-    description: `Deskripsi singkat untuk project ${i + 1}.`,
-  }));
+  let projects = [
+    {
+      id: "project_1",
+      img: logo,
+      title: `Ginvitations`,
+      description: `Deskripsi singkat untuk project Ginvitations`,
+    },
+    {
+      id: "project_2",
+      img: "https://ik.imagekit.io/goldiron/Logo.png?updatedAt=1751459390218",
+      title: `KKN Kabandungan`,
+      description: `Deskripsi singkat untuk project Ginvitations`,
+    },
+  ];
+
+  // Variabel untuk menyimpan project yang sedang dipilih
+  let selectedProject = null;
+
+  function openModal(project) {
+    selectedProject = project;
+  }
+
+  function closeModal() {
+    selectedProject = null;
+  }
 </script>
 
 <svelte:head>
@@ -95,17 +115,49 @@
 
   <div class="flex flex-wrap justify-center gap-8 w-full max-w-6xl">
     {#each projects as project}
-      <div
-        class="w-72 bg-blue-200 rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform"
+      <button
+        on:click={() => openModal(project)}
+        class="w-72 bg-blue-200 items-center rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform"
       >
+        <img src={project.img} alt="Logo" class="w-[200px] md:w-[250px]" />
         <h2 class="text-xl font-semibold mb-2 text-gray-800">
           {project.title}
         </h2>
         <p class="text-gray-600">{project.description}</p>
-      </div>
+      </button>
     {/each}
   </div>
 </section>
+
+<!-- POPUP MODAL -->
+{#if selectedProject}
+  <div
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50"
+  >
+    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-11/12 relative">
+      <button
+        class="absolute top-3 right-3 text-gray-400 hover:text-gray-600"
+        on:click={closeModal}
+      >
+        X
+      </button>
+
+      <h2 class="text-2xl font-bold mb-3 text-gray-800">
+        {selectedProject.title}
+      </h2>
+      <p class="text-gray-600 mb-4">{selectedProject.description}</p>
+
+      <div class="flex justify-end">
+        <button
+          class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+          on:click={closeModal}
+        >
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+{/if}
 
 <section id="kontak" class="flex h-screen items-center justify-center">
   <h1 class="text-5xl">Kontak Section</h1>
