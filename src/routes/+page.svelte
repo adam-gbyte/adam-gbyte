@@ -132,24 +132,28 @@
 <!-- POPUP MODAL -->
 {#if selectedProject}
   <div
-    class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50"
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 py-5 px-4 md:py-10 md:px-6 overflow-auto"
   >
-    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-11/12 relative">
+    <div
+      class="bg-white rounded-2xl shadow-xl w-full h-full max-h-[90vh] relative"
+    >
       <button
-        class="absolute top-3 right-3 text-gray-400 hover:text-gray-600"
+        class="absolute top-6 right-6 text-gray-400 hover:text-gray-600 text-xl"
         on:click={closeModal}
       >
         X
       </button>
 
-      <h2 class="text-2xl font-bold mb-3 text-gray-800">
-        {selectedProject.title}
-      </h2>
-      <p class="text-gray-600 mb-4">{selectedProject.description}</p>
+      <div
+        class="h-full flex flex-col justify-center items-center text-center p-6"
+      >
+        <h2 class="text-3xl font-bold mb-4 text-gray-800">
+          {selectedProject.title}
+        </h2>
+        <p class="text-gray-600 mb-6">{selectedProject.description}</p>
 
-      <div class="flex justify-end">
         <button
-          class="bg-blue-500 text-white cursor-pointer px-4 py-2 rounded-lg hover:bg-blue-600"
+          class="bg-blue-500 text-white cursor-pointer px-6 py-3 rounded-lg hover:bg-blue-600"
           on:click={closeModal}
         >
           Tutup
