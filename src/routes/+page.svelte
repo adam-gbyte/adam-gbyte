@@ -117,7 +117,7 @@
     {#each projects as project}
       <button
         on:click={() => openModal(project)}
-        class="w-72 bg-blue-200 rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform"
+        class="w-72 bg-blue-200 cursor-pointer rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform"
       >
         <img src={project.img} alt="Logo" class="w-full md:w-full" />
         <h2 class="text-xl font-semibold mb-2 text-gray-800">
