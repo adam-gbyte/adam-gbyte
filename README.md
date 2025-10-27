@@ -39,7 +39,7 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=js,html,css,git,express,svelte,react,py,java,figma" />
+    <img src="https://skillicons.dev/icons?i=js,html,css,git,express,svelte,react,py,java" />
   </a>
 </p>
 
