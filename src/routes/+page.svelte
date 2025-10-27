@@ -21,6 +21,12 @@
       title: `KKN Kabandungan`,
       description: `Deskripsi singkat untuk project KKN Kabandungan`,
     },
+    {
+      id: "project_3",
+      img: "https://ik.imagekit.io/goldiron/logo.jpeg?updatedAt=1761574307657",
+      title: `Klasifikasi tingkat kematangan Pisang Cavendish`,
+      description: `Deskripsi singkat untuk project Klasifikasi tingkat kematangan Pisang Cavendish`,
+    },
   ];
 
   // Variabel untuk menyimpan project yang sedang dipilih
