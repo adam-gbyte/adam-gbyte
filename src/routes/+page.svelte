@@ -169,6 +169,23 @@
   </div>
 {/if}
 
-<section id="kontak" class="flex h-screen items-center justify-center">
-  <h1 class="text-5xl">Kontak Section</h1>
+<!-- src/routes/+page.svelte atau komponen terpisah -->
+<section
+  id="kontak"
+  class="flex h-screen items-center justify-center bg-gray-50"
+>
+  <div class="text-center p-8 max-w-md w-full">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+      Hubungi Saya
+    </h1>
+    <p class="text-gray-600 mb-8">
+      Punya pertanyaan atau ingin berdiskusi? Kirim saya email!
+    </p>
+    <a
+      href="mailto:sveletekit@example.com"
+      class="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+    >
+      Kirim Email
+    </a>
+  </div>
 </section>
