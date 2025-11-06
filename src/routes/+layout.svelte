@@ -1,41 +1,11 @@
 <script>
-	import '../app.css';
-
-	import { onMount } from 'svelte';
-	onMount(() => {
-		if (window.FinisherHeader) {
-			new window.FinisherHeader({
-				selector: '.finisher-header',
-				count: 50,
-				size: {
-					min: 4,
-					max: 8,
-					pulse: 0
-				},
-				speed: {
-					x: {
-						min: 0,
-						max: 0.7
-					},
-					y: {
-						min: 0,
-						max: 0.6
-					}
-				},
-				colors: {
-					background: '#201e30',
-					particles: ['#fbfcca', '#d7f3fe', '#ffd0a7']
-				},
-				blending: 'overlay',
-				opacity: {
-					center: 1,
-					edge: 0.65
-				},
-				skew: 0,
-				shapes: ['c']
-			});
-		}
-	});
+  import "../app.css";
 </script>
+
+<svelte:head>
+  <title>Adam Gbyte - Developer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="icon" href="/favicon.ico" /> -->
+</svelte:head>
 
 <slot />
