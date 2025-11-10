@@ -17,9 +17,25 @@ const MyComponent = ({ name }) => {
 export default MyComponent;`;
 </script>
 
-<div
-  class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6"
->
-  <h1 class="text-2xl font-bold mb-4">React Functional Component:</h1>
-  <CodeCard title="React" code={exampleCode} />
-</div>
+<nav>
+  <div class="bg-gray-800 p-4 text-white text-center font-semibold">
+    Adam Gumilang
+  </div>
+</nav>
+
+<main class="min-h-screen bg-blue-950">
+  <section
+    class="min-h-screen flex md:flex-row flex-col items-center justify-center p-6"
+  >
+    <div class="flex flex-col md:max-w-1/2">
+      <h1 class="text-2xl md:text-3xl font-bold mb-6">Adam Gumilang</h1>
+      <p class="mb-4">
+        Halo! Saya Adam Gumilang, seorang pengembang web dengan minat besar
+        dalam menciptakan pengalaman digital yang menarik dan fungsional. Dengan
+        keahlian dalam berbagai teknologi web, saya berkomitmen untuk
+        menghadirkan solusi inovatif yang memenuhi kebutuhan pengguna.
+      </p>
+    </div>
+    <CodeCard title="Svelte" code={exampleCode} />
+  </section>
+</main>
