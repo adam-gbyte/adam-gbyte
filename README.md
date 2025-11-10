@@ -50,6 +50,11 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
   <img src="https://nirzak-streak-stats.vercel.app/?user=adam-gbyte&show_icons=true&theme=radical" width="430" />
 </p>
 
+<!-- Activity Graph -->
+<p align="center">
+  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=adam-gbyte&theme=react-dark"/>
+</p>
+
 ---
 
 **"Jangan mengatakan tidak mungkin kepadaku, sebelum kamu mati dalam mencobanya!"**
