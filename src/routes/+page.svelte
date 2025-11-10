@@ -1,33 +1,25 @@
 <script>
-  import Navbar from "$lib/components/Navbar.svelte";
-  import FeaturedWork from "$lib/components/FeaturedWork.svelte";
-  import Skills from "$lib/components/Skills.svelte";
+  import CodeCard from "$lib/components/CodeCard.svelte";
+
+  const exampleCode = `
+// MyComponent.jsx
+import React from 'react';
+
+const MyComponent = ({ name }) => {
+  return (
+    <div>
+      <h1>Hello, {name}!</h1>
+      <p>This is a functional React component.</p>
+    </div>
+  );
+};
+
+export default MyComponent;`;
 </script>
 
-<div class="min-h-screen bg-[#0a0f1c] text-white font-sans">
-  <Navbar />
-
-  <main class="max-w-5xl mx-auto px-8 py-16">
-    <h1 class="text-4xl font-extrabold mb-4">
-      Building Digital Solutions,<br />One Line of Code at a Time
-    </h1>
-
-    <div
-      class="bg-[#111827] p-4 rounded-md font-mono text-green-400 text-sm shadow-md w-fit mb-12"
-    >
-      <p>$ npm run dev</p>
-      <p>🚀 Starting server at http://localhost:5173</p>
-      <p>✅ Ready to code!</p>
-    </div>
-
-    <section>
-      <h2 class="text-2xl font-bold mb-4">Featured Work</h2>
-      <FeaturedWork />
-    </section>
-
-    <section class="mt-12">
-      <h2 class="text-2xl font-bold mb-4">Skills</h2>
-      <Skills />
-    </section>
-  </main>
+<div
+  class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6"
+>
+  <h1 class="text-2xl font-bold mb-4">React Functional Component:</h1>
+  <CodeCard title="React" code={exampleCode} />
 </div>

@@ -1,55 +1,24 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
-  --bg: white;
-  --text: black;
-  --primary: #3b82f6;
-  --bg-hover: blue;
-  --text-hover: white;
+html,
+body,
+#svelte {
+  height: 100%;
 }
 
-/* Styles saat mode gelap */
-/* .dark {
-	--bg: #111827;
-	--text: #f9fafb;
-	--primary: #2563eb;
-} */
+/* small utilities to help reproduce look */
+.hero-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+}
 
-/* * {
-  outline: 1px solid rgba(255, 0, 0) !important;
-} */
+/* soft glass panel */
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(6px);
+}
 
 ::-webkit-scrollbar {
   display: none;
 }
-
-/* @layer utilities {
-	@keyframes slide-down {
-		0% {
-			opacity: 0;
-			transform: translateY(-20px);
-		}
-		100% {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-	@keyframes slide-up {
-		0% {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		100% {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	.animate-slide-down {
-		animation: slide-down 0.3s ease-out;
-	}
-	.animate-slide-up {
-		animation: slide-up 0.3s ease-out;
-	}
-} */
