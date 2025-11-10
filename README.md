@@ -45,9 +45,8 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 
 ## 🔥 Statistik GitHub
 
-<!-- GitHub Stats -->
 <div align="center">
-  <!-- <img height="180em" src="https://streak-stats.demolab.com?user=agusheryanto182&theme=algolia&border_radius=10"/> -->
+  <img height="180em" src="https://streak-stats.demolab.com?user=adam-gbyte&theme=algolia&border_radius=10"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=adam-gbyte&show_icons=true&theme=radical"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adam-gbyte&layout=compact&langs_count=8&theme=radical"/>
 </div>
@@ -56,9 +55,8 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
   <img src="https://nirzak-streak-stats.vercel.app/?user=adam-gbyte&show_icons=true&theme=radical" width="430" />
 </p>
 
-<!-- Activity Graph -->
 <p align="center">
-  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=adam-gbyte&theme=radical"/>
+  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=adam-gbyte&theme=react-dark"/>
 </p>
 
 ---
