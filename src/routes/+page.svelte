@@ -27,26 +27,59 @@ export default MyComponent;`;
 
 <Navbar />
 
-<main class="min-h-screen dark:bg-blue-950 text-gray-900 dark:text-white">
+<main
+  class="flex flex-col scroll-mt-22 min-h-screen items-center justify-center dark:bg-blue-950 text-gray-900 dark:text-white"
+>
   <section
-    class="min-h-screen flex md:flex-row flex-col items-center justify-center p-6"
+    id="home"
+    class="flex md:flex-row max-w-6xl min-h-screen scroll-mt-16 flex-col items-center gap-4 p-6"
   >
     <div class="flex flex-col md:max-w-1/2">
-      <h1 class="text-2xl md:text-3xl font-bold dark:text-yellow-400 mb-6">
+      <h1 class="text-2xl md:text-4xl font-bold dark:text-yellow-400 mb-6">
         Adam Gumilang
       </h1>
       <p class="mb-4 dark:text-gray-300">
-        Halo! Saya Adam Gumilang, seorang pengembang web dengan minat besar
-        dalam menciptakan pengalaman digital yang menarik dan fungsional. Dengan
-        keahlian dalam berbagai teknologi web, saya berkomitmen untuk
-        menghadirkan solusi inovatif yang memenuhi kebutuhan pengguna.
+        Hi, I'm Adam Gumilang, a passionate web developer with expertise in
+        building modern and responsive web applications. Welcome to my
+        portfolio!
       </p>
     </div>
     <CodeCard title="Svelte" code={exampleCode} />
   </section>
-  <section class="min-h-screen transition-colors">
-    <h1 class="text-3xl font-bold">Halo Dunia</h1>
-    <p>SSECTION KILLS</p>
+
+  <section
+    id="about"
+    class="w-6xl min-h-screen items-center scroll-mt-22 justify-center p-6"
+  >
+    <h1 class="text-3xl text-center font-bold">ABOUT</h1>
+  </section>
+
+  <section
+    id="experience"
+    class="w-6xl min-h-screen items-center scroll-mt-22 justify-center p-6"
+  >
+    <h1 class="text-3xl text-center font-bold">EXPPERIENCE</h1>
+  </section>
+
+  <section
+    id="skills"
+    class="w-6xl min-h-screen items-center scroll-mt-22 justify-center p-6"
+  >
+    <h1 class="text-3xl text-center font-bold">SKILLS</h1>
+  </section>
+
+  <section
+    id="education"
+    class="w-6xl min-h-screen items-center scroll-mt-22 justify-center p-6"
+  >
+    <h1 class="text-3xl text-center font-bold">EDUCATION</h1>
+  </section>
+
+  <section
+    id="projects"
+    class="w-6xl min-h-screen items-center scroll-mt-22 justify-center p-6"
+  >
+    <h1 class="text-3xl text-center font-bold">PROJECTS</h1>
   </section>
 </main>
 

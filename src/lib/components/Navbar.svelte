@@ -23,13 +23,14 @@
 </script>
 
 <nav
-  class="flex justify-between items-center px-10 py-6 bg-gray-100 dark:bg-gray-900 dark:text-white"
+  class="flex justify-between z-50 top-0 left-0 items-center fixed w-full px-10 py-6 bg-gray-100 dark:bg-gray-900 dark:text-white"
 >
   <h1 class="text-2xl font-bold dark:text-gray-200 text-gray-900">
     Adam Gumilang
   </h1>
 
   <ul class="flex space-x-8 items-center text-sm font-semibold">
+    <li><a href="#home" class="hover:text-[#ff48c4]">HOME</a></li>
     <li><a href="#about" class="hover:text-[#ff48c4]">ABOUT</a></li>
     <li><a href="#experience" class="hover:text-[#ff48c4]">EXPERIENCE</a></li>
     <li><a href="#skills" class="hover:text-[#ff48c4]">SKILLS</a></li>

@@ -2,23 +2,8 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-html,
-body,
-#svelte {
-  height: 100%;
-}
-
-/* small utilities to help reproduce look */
-.hero-bg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center right;
-}
-
-/* soft glass panel */
-.glass {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(6px);
+* {
+  outline: 1px dashed rgba(255, 0, 0, 0.7);
 }
 
 ::-webkit-scrollbar {
