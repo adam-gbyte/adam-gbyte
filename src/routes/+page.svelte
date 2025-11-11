@@ -60,9 +60,7 @@ export default MyComponent;`;
     </div>
     <CodeCard title="Svelte" code={exampleCode} />
   </section>
-  <div
-    class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen transition-colors duration-300"
-  >
+  <div class=" text-gray-900 dark:text-white min-h-screen transition-colors">
     <button
       on:click={toggleTheme}
       class="p-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 transition-colors"
