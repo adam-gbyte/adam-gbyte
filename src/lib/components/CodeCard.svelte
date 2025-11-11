@@ -4,11 +4,13 @@
 </script>
 
 <div
-  class="w-full max-w-4xl mx-auto rounded-xl overflow-hidden border border-gray-800 bg-gray-900 shadow-lg transition-all duration-300 hover:shadow-xl"
+  class="w-full max-w-4xl mx-auto rounded-xl overflow-hidden border dark:border-gray-800 dark:bg-gray-900 shadow-lg transition-all duration-300 hover:shadow-xl"
 >
   <!-- Header bar -->
-  <div class="bg-gray-800 px-3 sm:px-4 py-2 flex items-center justify-between">
-    <span class="text-xs sm:text-sm font-semibold text-white truncate"
+  <div
+    class="dark:bg-gray-800 bg-gray-200 px-3 sm:px-4 py-2 flex items-center justify-between"
+  >
+    <span class="text-xs sm:text-sm font-semibold dark:text-white truncate"
       >{title}</span
     >
     <div class="flex gap-1 flex-shrink-0">
@@ -19,9 +21,9 @@
   </div>
 
   <!-- Code content -->
-  <div class="bg-gray-900 overflow-x-auto">
+  <div class="dark:bg-gray-900 overflow-x-auto">
     <pre
-      class="p-3 sm:p-4 text-xs sm:text-sm text-gray-100 whitespace-pre leading-relaxed min-w-full">
+      class="p-3 sm:p-4 text-xs sm:text-sm text-black dark:text-gray-100 whitespace-pre leading-relaxed min-w-full">
 <code>{code}</code>
     </pre>
   </div>
