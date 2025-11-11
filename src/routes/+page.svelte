@@ -18,25 +18,6 @@ const MyComponent = ({ name }) => {
 };
 
 export default MyComponent;`;
-
-  let theme = "light";
-  onMount(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved) {
-      theme = saved;
-    } else {
-      theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-    }
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  });
-
-  function toggleTheme() {
-    theme = theme === "dark" ? "light" : "dark";
-    localStorage.setItem("theme", theme);
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  }
 </script>
 
 <svelte:head>
@@ -45,12 +26,6 @@ export default MyComponent;`;
 </svelte:head>
 
 <Navbar />
-
-<!-- <nav>
-  <div class="bg-gray-800 p-4 text-white text-center font-semibold">
-    Adam Gumilang
-  </div>
-</nav> -->
 
 <main class="min-h-screen dark:bg-blue-950 text-gray-900 dark:text-white">
   <section
@@ -74,3 +49,7 @@ export default MyComponent;`;
     <p>SSECTION KILLS</p>
   </section>
 </main>
+
+<footer class="p-6 text-center bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
+  &copy; {new Date().getFullYear()} Adam Gumilang. All rights reserved.
+</footer>

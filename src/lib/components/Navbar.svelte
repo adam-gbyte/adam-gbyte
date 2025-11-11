@@ -29,7 +29,7 @@
     Adam Gumilang
   </h1>
 
-  <ul class="flex space-x-8 text-sm font-semibold">
+  <ul class="flex space-x-8 items-center text-sm font-semibold">
     <li><a href="#about" class="hover:text-[#ff48c4]">ABOUT</a></li>
     <li><a href="#experience" class="hover:text-[#ff48c4]">EXPERIENCE</a></li>
     <li><a href="#skills" class="hover:text-[#ff48c4]">SKILLS</a></li>
@@ -37,7 +37,7 @@
     <li><a href="#projects" class="hover:text-[#ff48c4]">PROJECTS</a></li>
     <button
       on:click={toggleTheme}
-      class="p-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 transition-colors"
+      class="p-2 cursor-pointer rounded-md border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100"
     >
       {#if theme === "dark"}
         <Sun />

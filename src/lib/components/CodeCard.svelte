@@ -4,7 +4,7 @@
 </script>
 
 <div
-  class="w-full max-w-4xl mx-auto rounded-xl overflow-hidden border dark:border-gray-800 dark:bg-gray-900 shadow-lg transition-all duration-300 hover:shadow-xl"
+  class="w-full max-w-4xl mx-auto rounded-xl overflow-hidden border dark:border-gray-800 dark:bg-gray-900 shadow-lg hover:shadow-xl"
 >
   <!-- Header bar -->
   <div
