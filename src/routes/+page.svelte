@@ -1,6 +1,8 @@
 <script>
   import { onMount } from "svelte";
+  import { Moon, Sun } from "lucide-svelte";
   import CodeCard from "$lib/components/CodeCard.svelte";
+  import Navbar from "$lib/components/Navbar.svelte";
 
   const exampleCode = `
 // MyComponent.jsx
@@ -37,13 +39,20 @@ export default MyComponent;`;
   }
 </script>
 
-<nav>
+<svelte:head>
+  <title>Adam Gumilang</title>
+  <meta name="description" content="Profil Adam Gumilang, Pengembang Web" />
+</svelte:head>
+
+<Navbar />
+
+<!-- <nav>
   <div class="bg-gray-800 p-4 text-white text-center font-semibold">
     Adam Gumilang
   </div>
-</nav>
+</nav> -->
 
-<main class="min-h-screen dark:bg-blue-950">
+<main class="min-h-screen dark:bg-blue-950 text-gray-900 dark:text-white">
   <section
     class="min-h-screen flex md:flex-row flex-col items-center justify-center p-6"
   >
@@ -60,14 +69,8 @@ export default MyComponent;`;
     </div>
     <CodeCard title="Svelte" code={exampleCode} />
   </section>
-  <div class=" text-gray-900 dark:text-white min-h-screen transition-colors">
-    <button
-      on:click={toggleTheme}
-      class="p-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 transition-colors"
-    >
-      {theme === "dark" ? "🌞 Mode Terang" : "🌙 Mode Gelap"}
-    </button>
+  <section class="min-h-screen transition-colors">
     <h1 class="text-3xl font-bold">Halo Dunia</h1>
-    <p>Contoh tema terang & gelap dengan SvelteKit + Tailwindv4</p>
-  </div>
+    <p>SSECTION KILLS</p>
+  </section>
 </main>
