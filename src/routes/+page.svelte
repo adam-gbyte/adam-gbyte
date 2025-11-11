@@ -28,11 +28,11 @@ export default MyComponent;`;
 <Navbar />
 
 <main
-  class="flex flex-col scroll-mt-22 min-h-screen items-center justify-center dark:bg-blue-950 text-gray-900 dark:text-white"
+  class="flex flex-col scroll-mt-22 items-center justify-center dark:bg-blue-950 text-gray-900 dark:text-white"
 >
   <section
     id="home"
-    class="flex md:flex-row max-w-6xl min-h-screen scroll-mt-16 flex-col items-center gap-4 p-6"
+    class="flex md:flex-row h-screen mt-16 scroll-mt-24 md:scroll-mt-16 flex-col items-center gap-4 p-6"
   >
     <div class="flex flex-col md:max-w-1/2">
       <h1 class="text-2xl md:text-4xl font-bold dark:text-yellow-400 mb-6">
@@ -49,35 +49,35 @@ export default MyComponent;`;
 
   <section
     id="about"
-    class="w-6xl min-h-screen items-center scroll-mt-22 justify-center p-6"
+    class="w-full items-center h-full scroll-mt-22 justify-center p-6"
   >
-    <h1 class="text-3xl text-center font-bold">ABOUT</h1>
+    <h1 class="text-3xl text-center h-full font-bold">ABOUT</h1>
   </section>
 
   <section
     id="experience"
-    class="w-6xl min-h-screen items-center scroll-mt-22 justify-center p-6"
+    class="w-full items-center scroll-mt-22 h-full justify-center p-6"
   >
     <h1 class="text-3xl text-center font-bold">EXPPERIENCE</h1>
   </section>
 
   <section
     id="skills"
-    class="w-6xl min-h-screen items-center scroll-mt-22 justify-center p-6"
+    class="w-full items-center scroll-mt-22 h-full justify-center p-6"
   >
     <h1 class="text-3xl text-center font-bold">SKILLS</h1>
   </section>
 
   <section
     id="education"
-    class="w-6xl min-h-screen items-center scroll-mt-22 justify-center p-6"
+    class="w-full items-center scroll-mt-22 h-full justify-center p-6"
   >
     <h1 class="text-3xl text-center font-bold">EDUCATION</h1>
   </section>
 
   <section
     id="projects"
-    class="w-6xl min-h-screen items-center scroll-mt-22 justify-center p-6"
+    class="w-full items-center scroll-mt-22 h-full justify-center p-6"
   >
     <h1 class="text-3xl text-center font-bold">PROJECTS</h1>
   </section>
