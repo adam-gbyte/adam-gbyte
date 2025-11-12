@@ -60,7 +60,7 @@
 
 <!-- Mobile Menu Button -->
 <button
-  class="md:hidden z-70 fixed top-4 right-4 p-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100"
+  class="md:hidden z-70 cursor-pointer fixed top-4 right-4 p-2 rounded-md dark:bg-gray-200 text-gray-800 dark:text-gray-200"
   on:click={toggleMenu}
   aria-label="Toggle Menu"
 >
@@ -72,12 +72,17 @@
 </button>
 
 <aside
-  class={`absolute top-0 right-0 h-full w-64 bg-gray-200 md:hidden shadow-lg z-60 border-l border-gray-300 transform transition-transform duration-500 ease-in-out p-6 ${
+  class={`top-0 right-0 h-full w-64 fixed bg-gray-700 dark:text-gray-400 md:hidden shadow-lg z-60 transform transition-transform duration-500 ease-in-out p-6 ${
     isMenuOpen ? "translate-x-0" : "translate-x-full"
   }`}
 >
-  <h2 class="text-lg font-bold mb-4">Sidebar</h2>
-  <p class="text-gray-700">
-    Ini adalah sidebar dengan animasi muncul dari kanan menggunakan TailwindCSS.
-  </p>
+  <h2 class="text-lg font-bold mb-4">Adam</h2>
+  <ul class="flex flex-col text-sm font-semibold p-4 gap-4">
+    <li><a href="#home" class="hover:text-[#ff48c4]">HOME</a></li>
+    <li><a href="#about" class="hover:text-[#ff48c4]">ABOUT</a></li>
+    <li><a href="#experience" class="hover:text-[#ff48c4]">EXPERIENCE</a></li>
+    <li><a href="#skills" class="hover:text-[#ff48c4]">SKILLS</a></li>
+    <li><a href="#education" class="hover:text-[#ff48c4]">EDUCATION</a></li>
+    <li><a href="#projects" class="hover:text-[#ff48c4]">PROJECTS</a></li>
+  </ul>
 </aside>
