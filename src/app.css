@@ -2,9 +2,9 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* * {
+* {
   outline: 1px dashed rgba(255, 0, 0, 0.7);
-} */
+}
 
 ::-webkit-scrollbar {
   display: none;

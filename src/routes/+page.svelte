@@ -32,7 +32,7 @@ export default MyComponent;`;
 >
   <section
     id="home"
-    class="flex md:flex-row mt-16 scroll-mt-25 md:scroll-mt-16 flex-col items-center gap-4 p-6"
+    class="flex md:flex-row w-max-3xl mt-16 h-screen scroll-mt-25 md:scroll-mt-16 flex-col items-center gap-4 p-6"
   >
     <div class="flex flex-col">
       <h1
@@ -51,7 +51,7 @@ export default MyComponent;`;
 
   <section
     id="about"
-    class="w-full items-center h-full scroll-mt-22 justify-center p-6"
+    class="w-max-4xl h-full items-center scroll-mt-22 justify-center p-6"
   >
     <h1 class="text-3xl text-center h-full font-bold">ABOUT</h1>
   </section>

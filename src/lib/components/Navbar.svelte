@@ -60,14 +60,25 @@
 
 <!-- Mobile Menu Button -->
 <button
-  class="md:hidden z-70 cursor-pointer fixed top-4 right-4 p-2 rounded-md dark:bg-gray-200 text-gray-800 dark:text-gray-200"
+  class="md:hidden z-70 cursor-pointer fixed top-4 right-4 p-2 rounded-md"
   on:click={toggleMenu}
   aria-label="Toggle Menu"
 >
   {#if isMenuOpen}
-    <X />
+    <X class="bg-gray-200" />
   {:else}
-    <Menu />
+    <Menu class="bg-gray-200" />
+  {/if}
+</button>
+
+<button
+  on:click={toggleTheme}
+  class="md:hidden p-2 fixed cursor-pointer rounded-md border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100"
+>
+  {#if theme === "dark"}
+    <Sun />
+  {:else}
+    <Moon />
   {/if}
 </button>
 
