@@ -28,14 +28,16 @@ export default MyComponent;`;
 <Navbar />
 
 <main
-  class="flex flex-col scroll-mt-22 items-center justify-center dark:bg-blue-950 text-gray-900 dark:text-white"
+  class="flex flex-col items-center justify-center dark:bg-blue-950 text-gray-900 dark:text-white"
 >
   <section
     id="home"
-    class="flex md:flex-row h-screen mt-16 scroll-mt-24 md:scroll-mt-16 flex-col items-center gap-4 p-6"
+    class="flex md:flex-row mt-16 scroll-mt-25 md:scroll-mt-16 flex-col items-center gap-4 p-6"
   >
-    <div class="flex flex-col md:max-w-1/2">
-      <h1 class="text-2xl md:text-4xl font-bold dark:text-yellow-400 mb-6">
+    <div class="flex flex-col">
+      <h1
+        class="text-2xl md:text-4xl font-bold dark:text-yellow-400 mb-3 md:mb-6"
+      >
         Adam Gumilang
       </h1>
       <p class="mb-4 dark:text-gray-300">
@@ -44,7 +46,7 @@ export default MyComponent;`;
         portfolio!
       </p>
     </div>
-    <CodeCard title="Svelte" code={exampleCode} />
+    <CodeCard title="React" code={exampleCode} />
   </section>
 
   <section
