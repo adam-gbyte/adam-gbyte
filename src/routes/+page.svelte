@@ -3,6 +3,7 @@
   import { Moon, Sun } from "lucide-svelte";
   import CodeCard from "$lib/components/CodeCard.svelte";
   import Navbar from "$lib/components/Navbar.svelte";
+  import Footer from "$lib/components/Footer.svelte";
 
   const exampleCode = `
 // MyComponent.jsx
@@ -11,8 +12,8 @@ import React from 'react';
 const MyComponent = ({ name }) => {
   return (
     <div>
-      <h1>Hello, {name}!</h1>
-      <p>This is a functional React component.</p>
+      <h1>Hello, i am {name}!</h1>
+      <p>And i'am a Fullstack</p>
     </div>
   );
 };
@@ -85,6 +86,4 @@ export default MyComponent;`;
   </section>
 </main>
 
-<footer class="p-6 text-center bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
-  &copy; {new Date().getFullYear()} Adam Gumilang. All rights reserved.
-</footer>
+<Footer />
