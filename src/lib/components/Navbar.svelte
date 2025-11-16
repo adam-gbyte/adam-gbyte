@@ -71,17 +71,6 @@
   {/if}
 </button>
 
-<button
-  on:click={toggleTheme}
-  class="md:hidden p-2 fixed cursor-pointer rounded-md border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100"
->
-  {#if theme === "dark"}
-    <Sun />
-  {:else}
-    <Moon />
-  {/if}
-</button>
-
 <aside
   class={`top-0 right-0 h-full w-64 fixed bg-gray-700 dark:text-gray-400 md:hidden shadow-lg z-60 transform transition-transform duration-500 ease-in-out p-6 ${
     isMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -96,4 +85,14 @@
     <li><a href="#education" class="hover:text-[#ff48c4]">EDUCATION</a></li>
     <li><a href="#projects" class="hover:text-[#ff48c4]">PROJECTS</a></li>
   </ul>
+  <button
+    on:click={toggleTheme}
+    class="p-2 cursor-pointer rounded-md border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100"
+  >
+    {#if theme === "dark"}
+      <Sun />
+    {:else}
+      <Moon />
+    {/if}
+  </button>
 </aside>
