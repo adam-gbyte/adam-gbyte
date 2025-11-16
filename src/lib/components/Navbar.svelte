@@ -60,14 +60,14 @@
 
 <!-- Mobile Menu Button -->
 <button
-  class="md:hidden z-70 cursor-pointer fixed top-4 right-4 p-2 rounded-md"
+  class="md:hidden z-70 cursor-pointer fixed top-4 right-4 p-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100"
   on:click={toggleMenu}
   aria-label="Toggle Menu"
 >
   {#if isMenuOpen}
-    <X class="bg-gray-200" />
+    <X />
   {:else}
-    <Menu class="bg-gray-200" />
+    <Menu />
   {/if}
 </button>
 
