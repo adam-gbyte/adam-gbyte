@@ -33,13 +33,18 @@ export default MyComponent;`;
 >
   <section
     id="home"
-    class="flex md:flex-row w-max-3xl mt-16 h-screen scroll-mt-25 md:scroll-mt-16 flex-col items-center gap-4 p-6"
+    class="flex md:flex-row w-max-3xl mt-16 h-screen scroll-mt-25 md:scroll-mt-16 flex-col items-center gap-4 md:p-16 p-6"
   >
     <div class="flex flex-col">
       <h1
         class="text-2xl md:text-4xl font-bold dark:text-yellow-400 mb-3 md:mb-6"
       >
-        Adam Gumilang
+        Hi, I'am Adam Gumilang
+      </h1>
+      <h1
+        class="text-xl md:text-4xl font-bold dark:text-yellow-400 mb-3 md:mb-6"
+      >
+        Back end & <br />Front end Developer
       </h1>
       <p class="mb-4 dark:text-gray-300">
         Hi, I'm Adam Gumilang, a passionate web developer with expertise in

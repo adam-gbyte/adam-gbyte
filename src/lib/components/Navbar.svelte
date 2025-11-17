@@ -72,7 +72,7 @@
 </button>
 
 <aside
-  class={`top-0 right-0 h-full w-64 fixed bg-gray-700 dark:text-gray-400 md:hidden shadow-lg z-60 transform transition-transform duration-500 ease-in-out p-6 ${
+  class={`top-0 right-0 h-full w-64 fixed dark:bg-gray-700 dark:text-white bg-gray-100 md:hidden shadow-lg z-60 transform transition-transform duration-500 ease-in-out p-6 ${
     isMenuOpen ? "translate-x-0" : "translate-x-full"
   }`}
 >
