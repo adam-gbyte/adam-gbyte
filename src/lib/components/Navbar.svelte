@@ -40,10 +40,9 @@
     <ul class="flex space-x-8 items-center text-sm font-semibold">
       <li><a href="#home" class="hover:text-[#ff48c4]">HOME</a></li>
       <li><a href="#about" class="hover:text-[#ff48c4]">ABOUT</a></li>
-      <li><a href="#experience" class="hover:text-[#ff48c4]">EXPERIENCE</a></li>
       <li><a href="#skills" class="hover:text-[#ff48c4]">SKILLS</a></li>
-      <li><a href="#education" class="hover:text-[#ff48c4]">EDUCATION</a></li>
       <li><a href="#projects" class="hover:text-[#ff48c4]">PROJECTS</a></li>
+      <li><a href="#contact" class="hover:text-[#ff48c4]">CONTACT</a></li>
     </ul>
     <button
       on:click={toggleTheme}
@@ -72,18 +71,47 @@
 </button>
 
 <aside
-  class={`top-0 right-0 h-full w-64 fixed dark:bg-gray-700 dark:text-white bg-gray-100 md:hidden shadow-lg z-60 transform transition-transform duration-500 ease-in-out p-6 ${
+  class={`top-0 right-0 h-full fixed w-64 dark:bg-gray-700 dark:text-white bg-gray-300 md:hidden shadow-lg z-60 transform transition-transform duration-500 ease-in-out p-4 ${
     isMenuOpen ? "translate-x-0" : "translate-x-full"
   }`}
 >
-  <h2 class="text-lg font-bold mb-4">Adam</h2>
-  <ul class="flex flex-col text-sm font-semibold p-4 gap-4">
-    <li><a href="#home" class="hover:text-[#ff48c4]">HOME</a></li>
-    <li><a href="#about" class="hover:text-[#ff48c4]">ABOUT</a></li>
-    <li><a href="#experience" class="hover:text-[#ff48c4]">EXPERIENCE</a></li>
-    <li><a href="#skills" class="hover:text-[#ff48c4]">SKILLS</a></li>
-    <li><a href="#education" class="hover:text-[#ff48c4]">EDUCATION</a></li>
-    <li><a href="#projects" class="hover:text-[#ff48c4]">PROJECTS</a></li>
+  <h2 class="text-lg font-bold">Adam</h2>
+  <ul class="flex flex-col w-full text-sm font-semibold pt-8 pb-4">
+    <li>
+      <a
+        href="#home"
+        class="hover:text-[#ff48c4] rounded-t-xl flex bg-gray-100 px-4 py-2 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-900"
+        >HOME</a
+      >
+    </li>
+    <li>
+      <a
+        href="#about"
+        class="hover:text-[#ff48c4] flex bg-gray-100 px-4 py-2 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-900"
+        >ABOUT</a
+      >
+    </li>
+    <li>
+      <a
+        href="#skills"
+        class="hover:text-[#ff48c4] flex bg-gray-100 px-4 py-2 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-900"
+        >SKILLS</a
+      >
+    </li>
+    <li>
+      <a
+        href="#projects"
+        class="hover:text-[#ff48c4] flex bg-gray-100 px-4 py-2 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-900"
+        >PROJECTS</a
+      >
+    </li>
+    <li>
+      <a
+        href="#contact"
+        class="hover:text-[#ff48c4] rounded-b-xl flex bg-gray-100 px-4 py-2 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-900"
+        >CONTACT</a
+      >
+    </li>
   </ul>
   <button
     on:click={toggleTheme}
