@@ -71,7 +71,7 @@
 </button>
 
 <aside
-  class={`top-0 right-0 h-full fixed w-64 dark:bg-gray-700 dark:text-white bg-gray-300 md:hidden shadow-lg z-60 transform transition-transform duration-500 ease-in-out p-4 ${
+  class={`top-0 right-0 h-full fixed w-64 dark:bg-gray-700 rounded-l-2xl dark:text-white bg-gray-300 md:hidden shadow-lg z-60 transform transition-transform duration-500 ease-in-out p-4 ${
     isMenuOpen ? "translate-x-0" : "translate-x-full"
   }`}
 >
@@ -124,3 +124,4 @@
     {/if}
   </button>
 </aside>
+ 

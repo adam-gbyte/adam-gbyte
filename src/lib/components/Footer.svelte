@@ -28,5 +28,9 @@
         >LinkedIn</a
       >
     </div>
+
+    <div class="text-screen">
+      <h1 class="text-3xl text-center h-full font-bold">ADAM G</h1>
+    </div>
   </div>
 </footer>
