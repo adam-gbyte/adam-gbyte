@@ -50,15 +50,18 @@ export default MyComponent;`;
 		<CodeCard title="React" code={exampleCode} />
 	</section>
 
-	<section id="about" class="w-max-4xl h-full scroll-mt-22 items-center justify-center p-6">
-		<div class="flex flex-col md:flex-row">
+	<section
+		id="about"
+		class="flex h-full max-w-4xl scroll-mt-22 items-center justify-center p-6 sm:h-screen"
+	>
+		<div class="flex flex-col gap-4 sm:flex-row">
 			<img
-				class="w-full md:w-1/4"
+				class="w-full rounded-tl-4xl rounded-br-4xl sm:w-1/4"
 				src="https://ik.imagekit.io/ginvitations/assets/BrideAndGroom.png"
 				alt="Profile"
 			/>
-			<div class="flex flex-col">
-				<h1 class="h-full text-center text-3xl font-bold">ABOUT</h1>
+			<div class="flex flex-col justify-center">
+				<h1 class="mb-4 text-center text-3xl font-bold">ABOUT</h1>
 				<p>
 					Hello, I'm Adam Gumilang, a front-end & back-end developer with 2 years of experience. I
 					have a strong passion for crafting captivating and functional user interfaces. With
