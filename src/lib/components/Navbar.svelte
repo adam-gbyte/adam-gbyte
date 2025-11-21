@@ -38,7 +38,7 @@
 			<li><a href="#about" class="hover:text-[#ff48c4]">ABOUT</a></li>
 			<li><a href="#skills" class="hover:text-[#ff48c4]">SKILLS</a></li>
 			<li><a href="#projects" class="hover:text-[#ff48c4]">PROJECTS</a></li>
-			<li><a href="#contact" class="hover:text-[#ff48c4]">CONTACT</a></li>
+			<li><a href="#contacts" class="hover:text-[#ff48c4]">CONTACTS</a></li>
 		</ul>
 		<button
 			on:click={toggleTheme}

@@ -54,7 +54,7 @@ export default MyComponent;`;
 		id="about"
 		class="flex h-full max-w-4xl scroll-mt-22 items-center justify-center p-6 sm:h-screen"
 	>
-		<div class="flex flex-col gap-4 sm:flex-row">
+		<div class="flex flex-col gap-10 sm:flex-row">
 			<img
 				class="w-full rounded-tl-4xl rounded-br-4xl sm:w-1/4"
 				src="https://ik.imagekit.io/ginvitations/assets/BrideAndGroom.png"
@@ -73,20 +73,20 @@ export default MyComponent;`;
 		</div>
 	</section>
 
-	<section id="experience" class="h-full w-full scroll-mt-22 items-center justify-center p-6">
-		<h1 class="text-center text-3xl font-bold">EXPPERIENCE</h1>
-	</section>
-
 	<section id="skills" class="h-full w-full scroll-mt-22 items-center justify-center p-6">
 		<h1 class="text-center text-3xl font-bold">SKILLS</h1>
 	</section>
 
-	<section id="education" class="h-full w-full scroll-mt-22 items-center justify-center p-6">
-		<h1 class="text-center text-3xl font-bold">EDUCATION</h1>
-	</section>
-
 	<section id="projects" class="h-full w-full scroll-mt-22 items-center justify-center p-6">
 		<h1 class="text-center text-3xl font-bold">PROJECTS</h1>
+	</section>
+
+	<section id="contacts" class="h-full w-full scroll-mt-22 items-center justify-center p-6">
+		<h1 class="text-center text-3xl font-bold">CONTACTS</h1>
+		<p class="text-center">
+			If you're interested in collaborating or have any questions, feel free to reach out to me:
+		</p>
+		<h2 class="text-center text-xl">adamgumilang2103@gmail.com</h2>
 	</section>
 </main>
 
