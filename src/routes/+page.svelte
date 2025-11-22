@@ -82,12 +82,15 @@ export default MyComponent;`;
 
 	<section
 		id="projects"
-		class="h-full w-full scroll-mt-22 items-center justify-center p-6 sm:h-screen"
+		class="flex h-full w-full scroll-mt-22 flex-col items-center justify-center p-6 sm:h-screen"
 	>
 		<h1 class="text-center text-3xl font-bold">PROJECTS</h1>
+		<div class="flex h-full w-full max-w-4xl flex-col bg-gray-100 sm:flex-row">
+			<div class="h-64 w-64 bg-gray-200"></div>
+		</div>
 	</section>
 
-	<section
+	<!-- <section
 		id="contacts"
 		class="h-full w-full scroll-mt-22 items-center justify-center p-6 sm:h-screen"
 	>
@@ -96,6 +99,45 @@ export default MyComponent;`;
 			If you're interested in collaborating or have any questions, feel free to reach out to me:
 		</p>
 		<h2 class="text-center text-xl">adamgumilang2103@gmail.com</h2>
+	</section> -->
+
+	<section
+		id="contacts"
+		class="flex min-h-screen w-full scroll-mt-22 items-center justify-center p-6"
+	>
+		<div
+			class="flex w-full max-w-md flex-col items-center gap-4 rounded-2xl border border-white/20 bg-white/10 p-8 shadow-xl backdrop-blur-md"
+		>
+			<h1 class="text-3xl font-bold tracking-wide">Get in Touch</h1>
+
+			<p class="text-center text-gray-300">
+				Have a project in mind or want to connect? Drop me a message anytime.
+			</p>
+
+			<a
+				href="mailto:adamgumilang2103@gmail.com"
+				class="text-lg font-semibold text-blue-400 transition hover:text-blue-300 hover:underline"
+			>
+				adamgumilang2103@gmail.com
+			</a>
+
+			<div class="mt-2 h-px w-full bg-white/20"></div>
+
+			<div class="flex gap-4">
+				<a href="#ig" class="text-xl text-gray-300 transition hover:text-white">
+					<!-- Instagram icon -->
+					<i class="ri-instagram-line"></i>
+				</a>
+				<a href="#git" class="text-xl text-gray-300 transition hover:text-white">
+					<!-- Github icon -->
+					<i class="ri-github-line"></i>
+				</a>
+				<a href="#link" class="text-xl text-gray-300 transition hover:text-white">
+					<!-- Linkedin icon -->
+					<i class="ri-linkedin-box-line"></i>
+				</a>
+			</div>
+		</div>
 	</section>
 </main>
 
