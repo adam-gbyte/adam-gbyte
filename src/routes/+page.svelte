@@ -19,6 +19,40 @@ const MyComponent = ({ name }) => {
 };
 
 export default MyComponent;`;
+
+	const tabs = [
+		{
+			id: 'overview',
+			title: 'Overview',
+			content: `
+        <h3>Overview</h3>
+        <p>Ini halaman overview.</p>
+      `
+		},
+		{
+			id: 'features',
+			title: 'Features',
+			content: `
+        <h3>Features</h3>
+        <ul>
+          <li>Sederhana</li>
+          <li>Ringan</li>
+        </ul>
+      `
+		},
+		{
+			id: 'settings',
+			title: 'Settings',
+			content: `
+        <h3>Settings</h3>
+        <p>Pengaturan di sini.</p>
+      `
+		}
+	];
+	let active = 0;
+	function select(i) {
+		active = i;
+	}
 </script>
 
 <svelte:head>
@@ -83,12 +117,27 @@ export default MyComponent;`;
 		class="flex h-full w-full scroll-mt-22 flex-col justify-center p-6 sm:h-screen"
 	>
 		<h1 class="text-center text-3xl font-bold">PROJECTS</h1>
-		<div class="flex w-full justify-center">
-			<div class="grid w-full max-w-3xl grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-6">
-				<div class="flex h-32 items-center justify-center bg-amber-400">Halo</div>
-				<div class="flex h-32 items-center justify-center bg-amber-400">Halo</div>
-				<div class="flex h-32 items-center justify-center bg-amber-400">Halo</div>
-				<div class="flex h-32 items-center justify-center bg-amber-400">Halo</div>
+		<div class="h-full w-full bg-amber-100">
+			<div class="flex flex-col bg-amber-200 sm:flex-row">
+				<div class="m-4 flex gap-4 sm:flex-col sm:gap-0" role="tablist">
+					{#each tabs as tab, i}
+						<button
+							class="tab-button my-2 cursor-pointer rounded-xl bg-amber-400 p-2 {i === active
+								? 'active'
+								: ''}"
+							role="tab"
+							aria-selected={i === active}
+							onclick={() => select(i)}
+						>
+							{tab.title}
+						</button>
+					{/each}
+				</div>
+				{#each tabs as tab, i}
+					<div class="tab-panel" role="tabpanel" hidden={i !== active}>
+						{@html tab.content}
+					</div>
+				{/each}
 			</div>
 		</div>
 	</section>
