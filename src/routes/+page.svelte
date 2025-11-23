@@ -28,9 +28,7 @@ export default MyComponent;`;
 
 <Navbar />
 
-<main
-	class="flex flex-col items-center justify-center text-gray-900 dark:bg-blue-950 dark:text-white"
->
+<main class="flex flex-col justify-center text-gray-900 dark:bg-blue-950 dark:text-white">
 	<section
 		id="home"
 		class="w-max-3xl mt-16 flex h-screen scroll-mt-25 flex-col items-center gap-4 p-6 md:scroll-mt-16 md:flex-row md:p-16"
@@ -82,11 +80,16 @@ export default MyComponent;`;
 
 	<section
 		id="projects"
-		class="flex h-full w-full scroll-mt-22 flex-col items-center justify-center p-6 sm:h-screen"
+		class="flex h-full w-full scroll-mt-22 flex-col justify-center p-6 sm:h-screen"
 	>
 		<h1 class="text-center text-3xl font-bold">PROJECTS</h1>
-		<div class="flex h-full w-full max-w-4xl flex-col bg-gray-100 sm:flex-row">
-			<div class="h-64 w-64 bg-gray-200"></div>
+		<div class="flex w-full justify-center">
+			<div class="grid w-full max-w-3xl grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-6">
+				<div class="flex h-32 items-center justify-center bg-amber-400">Halo</div>
+				<div class="flex h-32 items-center justify-center bg-amber-400">Halo</div>
+				<div class="flex h-32 items-center justify-center bg-amber-400">Halo</div>
+				<div class="flex h-32 items-center justify-center bg-amber-400">Halo</div>
+			</div>
 		</div>
 	</section>
 
@@ -110,7 +113,7 @@ export default MyComponent;`;
 		>
 			<h1 class="text-3xl font-bold tracking-wide">Get in Touch</h1>
 
-			<p class="text-center text-gray-300">
+			<p class="text-center text-gray-700 dark:text-gray-300">
 				Have a project in mind or want to connect? Drop me a message anytime.
 			</p>
 
@@ -121,7 +124,7 @@ export default MyComponent;`;
 				adamgumilang2103@gmail.com
 			</a>
 
-			<div class="mt-2 h-px w-full bg-white/20"></div>
+			<div class="mt-2 h-px w-full bg-black/20 dark:bg-white/20"></div>
 
 			<div class="flex gap-4">
 				<a href="#ig" class="text-xl text-gray-300 transition hover:text-white">
