@@ -22,34 +22,27 @@ export default MyComponent;`;
 
 	const tabs = [
 		{
-			id: 'overview',
-			title: 'Overview',
+			id: 'ginvitations',
+			title: 'Ginvitations',
+			img: 'https://ik.imagekit.io/ginvitations/assets/logo/Logo_GInvitations_v1_1.png',
 			content: `
-        <h3>Overview</h3>
-        <p>Ini halaman overview.</p>
+        <h3>Ginvitations</h3>
+        <p>Website KKN Ginvitations</p>
       `
 		},
 		{
-			id: 'features',
-			title: 'Features',
+			id: 'kknkabandungan',
+			title: 'KKN Kabandungan',
+			img: 'https://ik.imagekit.io/goldiron/Logo.png?updatedAt=1761141724098',
 			content: `
-        <h3>Features</h3>
-        <ul>
-          <li>Sederhana</li>
-          <li>Ringan</li>
-        </ul>
-      `
-		},
-		{
-			id: 'settings',
-			title: 'Settings',
-			content: `
-        <h3>Settings</h3>
-        <p>Pengaturan di sini.</p>
+        <h3>KKN Kabandungan</h3>
+        <p>Website KKN di Kabandungan</p>
       `
 		}
 	];
+
 	let active = 0;
+
 	function select(i) {
 		active = i;
 	}
@@ -62,10 +55,12 @@ export default MyComponent;`;
 
 <Navbar />
 
-<main class="flex flex-col justify-center text-gray-900 dark:bg-blue-950 dark:text-white">
+<main
+	class="flex flex-col items-center justify-center text-gray-900 dark:bg-blue-950 dark:text-white"
+>
 	<section
 		id="home"
-		class="w-max-3xl mt-16 flex h-screen scroll-mt-25 flex-col items-center gap-4 p-6 md:scroll-mt-16 md:flex-row md:p-16"
+		class="mt-16 flex h-screen scroll-mt-25 flex-col items-center gap-4 p-6 md:scroll-mt-16 md:flex-row md:p-16"
 	>
 		<div class="flex flex-col">
 			<h1 class="mb-3 text-2xl font-bold md:mb-6 md:text-4xl dark:text-yellow-400">
@@ -118,6 +113,7 @@ export default MyComponent;`;
 	>
 		<h1 class="text-center text-3xl font-bold">PROJECTS</h1>
 		<div class="h-full w-full bg-amber-100">
+			<!-- TABS -->
 			<div class="flex flex-col bg-amber-200 sm:flex-row">
 				<div class="m-4 flex gap-4 sm:flex-col sm:gap-0" role="tablist">
 					{#each tabs as tab, i}
@@ -129,7 +125,8 @@ export default MyComponent;`;
 							aria-selected={i === active}
 							onclick={() => select(i)}
 						>
-							{tab.title}
+							<img class="h-24 w-24" src={tab.img} alt={tab.title} />
+							<!-- {tab.title} -->
 						</button>
 					{/each}
 				</div>
