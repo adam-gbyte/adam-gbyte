@@ -20,32 +20,15 @@ const MyComponent = ({ name }) => {
 
 export default MyComponent;`;
 
-	const tabs = [
-		{
-			id: 'ginvitations',
-			title: 'Ginvitations',
-			img: 'https://ik.imagekit.io/ginvitations/assets/logo/Logo_GInvitations_v1_1.png',
-			content: `
-        <h3>Ginvitations</h3>
-        <p>Website KKN Ginvitations</p>
-      `
-		},
-		{
-			id: 'kknkabandungan',
-			title: 'KKN Kabandungan',
-			img: 'https://ik.imagekit.io/goldiron/Logo.png?updatedAt=1761141724098',
-			content: `
-        <h3>KKN Kabandungan</h3>
-        <p>Website KKN di Kabandungan</p>
-      `
-		}
-	];
+	import { tabs } from '$lib/data/dataProjects';
 
 	let active = 0;
 
 	function select(i) {
 		active = i;
 	}
+
+	const items = Array.from({ length: 15 }, (_, i) => `Item ${i + 1}`);
 </script>
 
 <svelte:head>
@@ -114,25 +97,30 @@ export default MyComponent;`;
 		<h1 class="text-center text-3xl font-bold">PROJECTS</h1>
 		<div class="h-full w-full bg-amber-100">
 			<!-- TABS -->
-			<div class="flex flex-col bg-amber-200 sm:flex-row">
-				<div class="m-4 flex gap-4 sm:flex-col sm:gap-0" role="tablist">
+			<div class="flex flex-col gap-4 md:flex-row">
+				<div
+					class="overflow-x-auto overflow-y-hidden rounded-xl border bg-white px-4 py-2 whitespace-nowrap shadow md:flex md:h-64 md:flex-col md:overflow-x-hidden md:overflow-y-auto md:whitespace-normal"
+					role="tablist"
+				>
 					{#each tabs as tab, i}
 						<button
-							class="tab-button my-2 cursor-pointer rounded-xl bg-amber-400 p-2 {i === active
+							class="mx-2 my-2 cursor-pointer rounded-xl bg-amber-400 p-2 {i === active
 								? 'active'
 								: ''}"
 							role="tab"
 							aria-selected={i === active}
 							onclick={() => select(i)}
 						>
-							<img class="h-24 w-24" src={tab.img} alt={tab.title} />
-							<!-- {tab.title} -->
+							<img class="h-24 w-24 object-contain" src={tab.img} alt={tab.title} />
 						</button>
 					{/each}
 				</div>
+
 				{#each tabs as tab, i}
-					<div class="tab-panel" role="tabpanel" hidden={i !== active}>
-						{@html tab.content}
+					<div class="bg-amber-500" role="tabpanel" hidden={i !== active}>
+						<h3>{tab.title}</h3>
+						<p>{tab.description}</p>
+						<a href={tab.link}>{tab.link}</a>
 					</div>
 				{/each}
 			</div>
