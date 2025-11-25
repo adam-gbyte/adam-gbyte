@@ -90,16 +90,13 @@ export default MyComponent;`;
 		<h1 class="text-center text-3xl font-bold">SKILLS</h1>
 	</section>
 
-	<section
-		id="projects"
-		class="flex h-full w-full scroll-mt-22 flex-col justify-center p-6 sm:h-screen"
-	>
+	<section id="projects" class="flex h-full w-full scroll-mt-22 flex-col justify-center p-6">
 		<h1 class="text-center text-3xl font-bold">PROJECTS</h1>
-		<div class="h-full w-full bg-amber-100">
+		<div class="bg-amber-100">
 			<!-- TABS -->
 			<div class="flex flex-col gap-4 md:flex-row">
 				<div
-					class="overflow-x-auto overflow-y-hidden rounded-xl border bg-white px-4 py-2 whitespace-nowrap shadow md:flex md:h-64 md:flex-col md:overflow-x-hidden md:overflow-y-auto md:whitespace-normal"
+					class="overflow-x-auto overflow-y-hidden rounded-xl border bg-white px-4 py-2 whitespace-nowrap shadow md:flex md:h-screen md:flex-col md:overflow-x-hidden md:overflow-y-auto md:whitespace-normal"
 					role="tablist"
 				>
 					{#each tabs as tab, i}
