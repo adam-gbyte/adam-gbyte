@@ -88,6 +88,7 @@ export default MyComponent;`;
 		class="h-full w-full scroll-mt-22 items-center justify-center p-6 sm:h-screen"
 	>
 		<h1 class="text-center text-3xl font-bold">SKILLS</h1>
+		<div class="h-24 bg-amber-200"></div>
 	</section>
 
 	<section id="projects" class="flex h-full w-full scroll-mt-22 flex-col justify-center p-6">
