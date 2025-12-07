@@ -26,9 +26,6 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 - Project Secret (Coming soon)
   Aplikasi **\* \*** yang membantu \*\*\* secara real-time.
 
-- **AI Waifu Engine (Eksperimen)**  
-  Proyek hobi membuat waifu 3D menggunakan Python dan OpenGL custom engine.
-
 ## 📫 Hubungi Saya
 
 - 💌 Email: **adamgumilang2103@gmail.com**
