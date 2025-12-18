@@ -17,7 +17,7 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 ## 💼 Proyek yang Saya Bangun
 
 - **Ginvitations**  
-  Platform undangan pernikahan digital dengan berbagai tema menarik: drakor, anime, adat, modern, dan lainnya.  
+  Platform undangan pernikahan digital dengan berbagai tema menarik: adat, modern, dan lainnya.  
   Teknologi: React, Node.js, MongoDB, TailwindCSS
 
 - **YouTube Comment Classifier**  
