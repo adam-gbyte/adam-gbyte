@@ -2,9 +2,9 @@
 	let current = 0;
 
 	const slides = [
-		{ id: 1, img: 'https://picsum.photos/id/1015/800/400', title: 'Slide 1' },
-		{ id: 2, img: 'https://picsum.photos/id/1016/800/400', title: 'Slide 2' },
-		{ id: 3, img: 'https://picsum.photos/id/1018/800/400', title: 'Slide 3' }
+		{ id: 1, img: 'https://picsum.photos/id/1015/1200/600', title: 'Landscape Project' },
+		{ id: 2, img: 'https://picsum.photos/id/1016/1200/600', title: 'UI Exploration' },
+		{ id: 3, img: 'https://picsum.photos/id/1018/1200/600', title: 'Creative Design' }
 	];
 
 	const next = () => {
@@ -16,42 +16,59 @@
 	};
 </script>
 
-<div class="relative mx-auto w-full max-w-3xl overflow-hidden bg-green-300 shadow-lg">
+<div class="relative mx-auto mt-24 w-full max-w-5xl overflow-hidden rounded-2xl bg-black shadow-xl">
 	<!-- Slides -->
 	<div
-		class="flex transition-transform duration-500 ease-in-out"
+		class="flex transition-transform duration-700 ease-out"
 		style="transform: translateX(-{current * 100}%);"
 	>
 		{#each slides as slide}
-			<div class="h-dvh w-full flex-shrink-0">
-				<img src={slide.img} alt={slide.title} class="w-full object-cover" />
+			<div class="relative h-[420px] w-full flex-shrink-0">
+				<img
+					src={slide.img}
+					alt={slide.title}
+					class="h-full w-full object-cover"
+				/>
+
+				<!-- Overlay -->
+				<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+
+				<!-- Title -->
+				<div class="absolute bottom-6 left-6 text-white">
+					<h2 class="text-2xl font-semibold tracking-wide">{slide.title}</h2>
+				</div>
 			</div>
 		{/each}
 	</div>
 
-	<!-- Prev Button -->
+	<!-- Prev -->
 	<button
 		on:click={prev}
-		class="absolute top-1/2 left-3 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-white hover:bg-black"
+		class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white backdrop-blur transition hover:bg-white/40"
 	>
-		{'<'}
+		‹
 	</button>
 
-	<!-- Next Button -->
+	<!-- Next -->
 	<button
 		on:click={next}
-		class="absolute top-1/2 right-3 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-white hover:bg-black"
+		class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white backdrop-blur transition hover:bg-white/40"
 	>
-		{'>'}
+		›
 	</button>
 
 	<!-- Indicators -->
-	<div class="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
+	<div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
 		{#each slides as _, i}
-			<button on:click={() => (current = i)} class="h-2 w-2 rounded-full transition-all">Cek</button
-			>
+			<button
+				aria-label={i}
+				on:click={() => (current = i)}
+				class="h-2 w-8 rounded-full transition-all duration-300
+				{current === i ? 'bg-white' : 'bg-white/40 hover:bg-white/70'}"
+			></button>
 		{/each}
 	</div>
 </div>
 
-<div class="h-screen bg-green-300"></div>
+<!-- Spacer demo -->
+<div class="h-screen bg-neutral-100"></div>
