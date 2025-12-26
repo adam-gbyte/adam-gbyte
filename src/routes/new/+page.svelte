@@ -16,6 +16,15 @@
 	};
 </script>
 
+<section class="min-h-screen bg-gray-100 flex items-center justify-center">
+  <h1 class="text-6xl font-bold">Section 1</h1>
+</section>
+
+<section class="min-h-screen bg-gray-200 flex items-center justify-center">
+  <h1 class="text-6xl font-bold">Section 2</h1>
+</section>
+
+
 <div class="relative mx-auto mt-24 w-full max-w-5xl overflow-hidden rounded-2xl bg-black shadow-xl">
 	<!-- Slides -->
 	<div
