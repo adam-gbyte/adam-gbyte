@@ -2,26 +2,31 @@
 	const year = new Date().getFullYear();
 </script>
 
-<footer class="w-full bg-gray-100 dark:bg-gray-900">
-	<div class="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-10">
-		<p class="text-sm text-gray-700 md:text-base dark:text-gray-300">
-			&copy; {year}
-			<span class="font-semibold text-gray-900 dark:text-white">Adam Gumilang</span>. All rights
-			reserved.
+<footer class="w-full border-t border-slate-200 bg-white dark:border-white/10 dark:bg-slate-950">
+	<div class="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 py-12">
+
+		<!-- Name / Brand -->
+		<p class="text-sm text-slate-500 dark:text-slate-400">
+			© {year} <span class="font-medium text-slate-900 dark:text-white">Adam Gumilang</span>
 		</p>
 
-		<div class="flex gap-6 text-gray-500 dark:text-gray-400">
-			<a href="#nstagram" class="transition hover:text-gray-800 dark:hover:text-gray-200"
-				>Instagram</a
-			>
-			<a href="#GitHub" class="transition hover:text-gray-800 dark:hover:text-gray-200">GitHub</a>
-			<a href="#LinkedIn" class="transition hover:text-gray-800 dark:hover:text-gray-200"
-				>LinkedIn</a
-			>
-		</div>
+		<!-- Links -->
+		<nav class="flex gap-8 text-sm">
+			<a href="https://instagram.com" class="text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+				Instagram
+			</a>
+			<a href="https://github.com" class="text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+				GitHub
+			</a>
+			<a href="https://linkedin.com" class="text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+				LinkedIn
+			</a>
+		</nav>
 
-		<div class="text-screen">
-			<h1 class="h-full text-center text-3xl font-bold">ADAM G</h1>
-		</div>
+		<!-- Subtle Mark -->
+		<span class="select-none text-xs tracking-widest text-slate-300 dark:text-slate-700">
+			ADAM G
+		</span>
+
 	</div>
 </footer>

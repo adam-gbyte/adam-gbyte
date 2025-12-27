@@ -1,41 +1,41 @@
 <script>
-	export let title = 'Kode';
+	export let title = 'Code';
 	export let code = '';
 </script>
 
 <div
-	class="mx-auto w-full overflow-hidden rounded-xl border shadow-lg hover:shadow-xl dark:border-gray-800 dark:bg-gray-900"
+	class="mx-auto w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-white/10 dark:bg-slate-950"
 >
-	<!-- Header bar -->
-	<div class="flex items-center justify-between bg-gray-200 px-3 py-2 sm:px-4 dark:bg-gray-800">
-		<span class="truncate text-xs font-semibold sm:text-sm dark:text-white">{title}</span>
-		<div class="flex flex-shrink-0 gap-1">
-			<span class="h-2.5 w-2.5 rounded-full bg-red-500 sm:h-3 sm:w-3"></span>
-			<span class="h-2.5 w-2.5 rounded-full bg-yellow-500 sm:h-3 sm:w-3"></span>
-			<span class="h-2.5 w-2.5 rounded-full bg-green-500 sm:h-3 sm:w-3"></span>
+	<!-- Header -->
+	<div class="flex items-center justify-between border-b border-slate-200 px-4 py-2 dark:border-white/10">
+		<span class="truncate text-sm font-medium text-slate-700 dark:text-slate-300">
+			{title}
+		</span>
+		<div class="flex gap-1">
+			<span class="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+			<span class="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+			<span class="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600"></span>
 		</div>
 	</div>
 
-	<!-- Code content -->
-	<div class="overflow-x-auto dark:bg-gray-900">
-		<pre
-			class="min-w-full p-3 text-xs leading-relaxed whitespace-pre text-black sm:p-4 sm:text-sm dark:text-gray-100">
+	<!-- Code -->
+	<div class="overflow-x-auto bg-slate-50 dark:bg-slate-900">
+		<pre class="min-w-full p-4 text-xs leading-relaxed text-slate-800 dark:text-slate-100">
 <code>{code}</code>
-    </pre>
+		</pre>
 	</div>
 </div>
 
 <style>
 	pre {
-		font-family: 'Fira Code', monospace;
+		font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 	}
 
-	/* Scrollbar halus untuk mobile */
 	pre::-webkit-scrollbar {
 		height: 6px;
 	}
 	pre::-webkit-scrollbar-thumb {
-		background: #4b5563;
+		background: rgba(100, 116, 139, 0.5);
 		border-radius: 4px;
 	}
 </style>
