@@ -1,179 +1,119 @@
 <script>
-	import { onMount } from 'svelte';
-	import { Moon, Sun } from 'lucide-svelte';
-	import CodeCard from '$lib/components/CodeCard.svelte';
-	import Navbar from '$lib/components/Navbar.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+  import Navbar from '$lib/components/Navbar.svelte';
+  import Footer from '$lib/components/Footer.svelte';
+  import CodeCard from '$lib/components/CodeCard.svelte';
+  import { tabs } from '$lib/data/dataProjects';
 
-	const exampleCode = `
-// MyComponent.jsx
+  let active = 0;
+  const exampleCode = `// MyComponent.jsx
 import React from 'react';
 
 const MyComponent = ({ name }) => {
   return (
     <div>
       <h1>Hello, i am {name}!</h1>
-      <p>And i'am a Fullstack</p>
+      <p>And i'm a Fullstack</p>
     </div>
   );
 };
 
 export default MyComponent;`;
 
-	import { tabs } from '$lib/data/dataProjects';
-
-	let active = 0;
-
-	function select(i) {
-		active = i;
-	}
-
-	const items = Array.from({ length: 15 }, (_, i) => `Item ${i + 1}`);
+  function select(i) {
+    active = i;
+  }
 </script>
 
 <svelte:head>
-	<title>Adam Gumilang</title>
-	<meta name="description" content="Profil Adam Gumilang, Pengembang Web" />
+  <title>Adam Gumilang</title>
+  <meta name="description" content="Profil Adam Gumilang, Web Developer" />
 </svelte:head>
 
 <Navbar />
 
-<main
-	class="flex flex-col items-center justify-center text-gray-900 dark:bg-blue-950 dark:text-white"
->
-	<section
-		id="home"
-		class="mt-16 flex h-screen scroll-mt-25 flex-col items-center gap-4 p-6 md:scroll-mt-16 md:flex-row md:p-16"
-	>
-		<div class="flex flex-col">
-			<h1 class="mb-3 text-2xl font-bold md:mb-6 md:text-4xl dark:text-yellow-400">
-				Hi, I'am Adam Gumilang
-			</h1>
-			<h1 class="mb-3 text-xl font-bold md:mb-6 md:text-4xl dark:text-yellow-400">
-				Back end & <br />Front end Developer
-			</h1>
-			<p class="mb-4 dark:text-gray-300">
-				Hi, I'm Adam Gumilang, a passionate web developer with expertise in building modern and
-				responsive web applications. Welcome to my portfolio!
-			</p>
-		</div>
-		<CodeCard title="React" code={exampleCode} />
-	</section>
+<main class="flex flex-col items-center bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
 
-	<section
-		id="about"
-		class="flex h-full max-w-4xl scroll-mt-22 items-center justify-center p-6 sm:h-screen"
-	>
-		<div class="flex flex-col gap-10 sm:flex-row">
-			<img
-				class="w-full rounded-tl-4xl rounded-br-4xl sm:w-1/3"
-				src="https://ik.imagekit.io/ginvitations/assets/BrideAndGroom.png"
-				alt="Profile"
-			/>
-			<div class="flex flex-col justify-center">
-				<h1 class="mb-4 text-center text-3xl font-bold">ABOUT</h1>
-				<p>
-					Hello, I'm Adam Gumilang, a front-end & back-end developer with 2 years of experience. I
-					have a strong passion for crafting captivating and functional user interfaces. With
-					expertise in HTML, CSS, and JavaScript, I enjoy collaborating to deliver creative
-					solutions. Additionally, I'm eager to continue learning and staying up-to-date with the
-					latest web technologies.
-				</p>
-			</div>
-		</div>
-	</section>
+<!-- HERO -->
+<section id="home" class="mt-24 flex min-h-screen w-full max-w-5xl flex-col items-center justify-center gap-12 px-6 md:flex-row">
+  <div class="flex flex-col gap-4 text-center md:text-left">
+    <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">Adam Gumilang</h1>
+    <h2 class="text-lg text-slate-500 dark:text-slate-400 md:text-xl">Back-end & Front-end Developer</h2>
+    <p class="max-w-xl text-slate-600 dark:text-slate-400">
+      I build clean, performant, and maintainable web applications.
+    </p>
+  </div>
+  <CodeCard title="React" code={exampleCode} />
+</section>
 
-	<section
-		id="skills"
-		class="h-full w-full scroll-mt-22 items-center justify-center p-6 sm:h-screen"
-	>
-		<h1 class="text-center text-3xl font-bold">SKILLS</h1>
-		<div class="h-24 bg-amber-200"></div>
-	</section>
+<!-- ABOUT -->
+<section id="about" class="flex w-full justify-center px-6 py-32">
+  <div class="flex max-w-4xl flex-col gap-10 rounded-2xl border border-slate-200 bg-white p-10 dark:border-white/10 dark:bg-slate-900 sm:flex-row">
+    <img class="w-full rounded-xl sm:w-1/3" src="https://ik.imagekit.io/ginvitations/assets/BrideAndGroom.png" alt="Profile" />
+    <div class="flex flex-col justify-center gap-4">
+      <h2 class="text-2xl font-semibold">About</h2>
+      <p class="text-slate-600 dark:text-slate-400">
+        I'm a front-end & back-end developer with 2 years of experience building modern web applications.
+        I enjoy crafting clean UI, scalable systems, and continuously learning new technologies.
+      </p>
+    </div>
+  </div>
+</section>
 
-	<section id="projects" class="flex h-full w-full scroll-mt-22 flex-col justify-center p-6">
-		<h1 class="text-center text-3xl font-bold">PROJECTS</h1>
-		<div class="bg-amber-100">
-			<!-- TABS -->
-			<div class="flex flex-col gap-4 md:flex-row">
-				<div
-					class="overflow-x-auto overflow-y-hidden rounded-xl border bg-white px-4 py-2 whitespace-nowrap shadow md:flex md:h-screen md:flex-col md:overflow-x-hidden md:overflow-y-auto md:whitespace-normal"
-					role="tablist"
-				>
-					{#each tabs as tab, i}
-						<button
-							class="mx-2 my-2 cursor-pointer rounded-xl bg-amber-400 p-2 {i === active
-								? 'active'
-								: ''}"
-							role="tab"
-							aria-selected={i === active}
-							onclick={() => select(i)}
-						>
-							<img class="h-24 w-24 object-contain" src={tab.img} alt={tab.title} />
-						</button>
-					{/each}
-				</div>
+<!-- SKILLS -->
+<section id="skills" class="flex w-full flex-col items-center px-6 py-24">
+  <h2 class="text-2xl font-semibold">Skills</h2>
+  <div class="mt-10 flex flex-wrap justify-center gap-3">
+    {#each ['HTML','CSS','JavaScript','Svelte','React','Node','Tailwind','PostgreSQL'] as skill}
+      <span class="rounded-full border border-slate-300 px-4 py-2 text-sm text-slate-600 dark:border-white/20 dark:text-slate-300">
+        {skill}
+      </span>
+    {/each}
+  </div>
+</section>
 
-				{#each tabs as tab, i}
-					<div class="bg-amber-500" role="tabpanel" hidden={i !== active}>
-						<h3>{tab.title}</h3>
-						<p>{tab.description}</p>
-						<a href={tab.link}>{tab.link}</a>
-					</div>
-				{/each}
-			</div>
-		</div>
-	</section>
+<!-- PROJECTS -->
+<section id="projects" class="flex w-full max-w-6xl flex-col gap-10 px-6 py-24">
+  <h2 class="text-center text-2xl font-semibold">Projects</h2>
 
-	<!-- <section
-		id="contacts"
-		class="h-full w-full scroll-mt-22 items-center justify-center p-6 sm:h-screen"
-	>
-		<h1 class="text-center text-3xl font-bold">CONTACTS</h1>
-		<p class="text-center">
-			If you're interested in collaborating or have any questions, feel free to reach out to me:
-		</p>
-		<h2 class="text-center text-xl">adamgumilang2103@gmail.com</h2>
-	</section> -->
+  <div class="flex flex-col gap-8 md:flex-row">
+    <div class="flex w-full gap-3 overflow-auto md:w-1/4 md:flex-col">
+      {#each tabs as tab, i}
+        <button
+          class="rounded-xl border px-3 py-2 text-sm transition
+          {i === active 
+            ? 'border-slate-900 text-slate-900 dark:border-white dark:text-white' 
+            : 'border-transparent text-slate-500 hover:border-slate-300 dark:text-slate-400'}"
+          on:click={() => select(i)}>
+          {tab.title}
+        </button>
+      {/each}
+    </div>
 
-	<section
-		id="contacts"
-		class="flex min-h-screen w-full scroll-mt-22 items-center justify-center p-6"
-	>
-		<div
-			class="flex w-full max-w-md flex-col items-center gap-4 rounded-2xl border border-white/20 bg-white/10 p-8 shadow-xl backdrop-blur-md"
-		>
-			<h1 class="text-3xl font-bold tracking-wide">Get in Touch</h1>
+    {#each tabs as tab, i}
+      <div hidden={i !== active} class="flex-1 rounded-2xl border p-8 dark:border-white/10">
+        <h3 class="text-xl font-semibold">{tab.title}</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-400">{tab.description}</p>
+        <a href={tab.link} class="mt-4 inline-block text-sm text-blue-600 hover:underline dark:text-blue-400">
+          View project →
+        </a>
+      </div>
+    {/each}
+  </div>
+</section>
 
-			<p class="text-center text-gray-700 dark:text-gray-300">
-				Have a project in mind or want to connect? Drop me a message anytime.
-			</p>
+<!-- CONTACT -->
+<section id="contacts" class="flex w-full justify-center px-6 py-32">
+  <div class="flex max-w-md flex-col items-center gap-6 rounded-2xl border border-slate-200 p-10 dark:border-white/10">
+    <h2 class="text-2xl font-semibold">Get in touch</h2>
+    <p class="text-center text-slate-600 dark:text-slate-400">
+      Have a project or want to collaborate? Let’s talk.
+    </p>
+    <a href="mailto:adamgumilang2103@gmail.com" class="text-blue-600 hover:underline dark:text-blue-400">
+      adamgumilang2103@gmail.com
+    </a>
+  </div>
+</section>
 
-			<a
-				href="mailto:adamgumilang2103@gmail.com"
-				class="text-lg font-semibold text-blue-400 transition hover:text-blue-300 hover:underline"
-			>
-				adamgumilang2103@gmail.com
-			</a>
-
-			<div class="mt-2 h-px w-full bg-black/20 dark:bg-white/20"></div>
-
-			<div class="flex gap-4">
-				<a href="#ig" class="text-xl text-gray-300 transition hover:text-white">
-					<!-- Instagram icon -->
-					<i class="ri-instagram-line"></i>
-				</a>
-				<a href="#git" class="text-xl text-gray-300 transition hover:text-white">
-					<!-- Github icon -->
-					<i class="ri-github-line"></i>
-				</a>
-				<a href="#link" class="text-xl text-gray-300 transition hover:text-white">
-					<!-- Linkedin icon -->
-					<i class="ri-linkedin-box-line"></i>
-				</a>
-			</div>
-		</div>
-	</section>
 </main>
 
 <Footer />

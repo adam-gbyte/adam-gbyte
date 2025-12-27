@@ -2,15 +2,14 @@
 	import { onMount } from 'svelte';
 	import { Moon, Sun, Menu, X } from 'lucide-svelte';
 
-	// THEME TOGGLER
 	let theme = 'light';
+	let isMenuOpen = false;
+
 	onMount(() => {
 		const saved = localStorage.getItem('theme');
-		if (saved) {
-			theme = saved;
-		} else {
-			theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-		}
+		theme =
+			saved ??
+			(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 		document.documentElement.classList.toggle('dark', theme === 'dark');
 	});
 
@@ -20,103 +19,109 @@
 		document.documentElement.classList.toggle('dark', theme === 'dark');
 	}
 
-	// MOBILE MENU TOGGLER
-	let isMenuOpen = false;
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
 	}
+
+	const links = [
+		{ href: '#home', label: 'Home' },
+		{ href: '#about', label: 'About' },
+		{ href: '#skills', label: 'Skills' },
+		{ href: '#projects', label: 'Projects' },
+		{ href: '#contacts', label: 'Contact' }
+	];
 </script>
 
 <nav
-	class={`fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-gray-100 px-10 py-6 md:flex-row dark:bg-gray-900 dark:text-white`}
+	class="fixed top-0 z-50 w-full border-b border-slate-200 bg-white/70 backdrop-blur 
+	       dark:border-white/10 dark:bg-slate-950/70"
 >
-	<h1 class="text-xl font-bold text-gray-900 md:text-2xl dark:text-gray-200">Adam Gumilang</h1>
+	<div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+		<!-- Brand -->
+		<a href="#home" class="text-lg font-semibold tracking-tight">
+			Adam Gumilang
+		</a>
 
-	<div class={`hidden items-center space-x-6 md:flex`}>
-		<ul class="flex items-center space-x-8 text-sm font-semibold">
-			<li><a href="#home" class="hover:text-[#ff48c4]">HOME</a></li>
-			<li><a href="#about" class="hover:text-[#ff48c4]">ABOUT</a></li>
-			<li><a href="#skills" class="hover:text-[#ff48c4]">SKILLS</a></li>
-			<li><a href="#projects" class="hover:text-[#ff48c4]">PROJECTS</a></li>
-			<li><a href="#contacts" class="hover:text-[#ff48c4]">CONTACTS</a></li>
-		</ul>
+		<!-- Desktop Menu -->
+		<div class="hidden items-center gap-8 md:flex">
+			{#each links as link}
+				<a
+					href={link.href}
+					class="text-sm text-slate-600 transition hover:text-slate-900 
+					       dark:text-slate-400 dark:hover:text-white"
+				>
+					{link.label}
+				</a>
+			{/each}
+
+			<button
+				on:click={toggleTheme}
+				aria-label="Toggle theme"
+				class="rounded-lg p-2 text-slate-600 hover:bg-slate-100 
+				       dark:text-slate-400 dark:hover:bg-white/10"
+			>
+				{#if theme === 'dark'}
+					<Sun size={18} />
+				{:else}
+					<Moon size={18} />
+				{/if}
+			</button>
+		</div>
+
+		<!-- Mobile Button -->
 		<button
-			on:click={toggleTheme}
-			class="cursor-pointer rounded-md border border-gray-300 bg-gray-100 p-2 text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+			on:click={toggleMenu}
+			class="rounded-lg p-2 text-slate-600 hover:bg-slate-100 
+			       md:hidden dark:text-slate-400 dark:hover:bg-white/10"
+			aria-label="Toggle menu"
 		>
-			{#if theme === 'dark'}
-				<Sun />
+			{#if isMenuOpen}
+				<X size={20} />
 			{:else}
-				<Moon />
+				<Menu size={20} />
 			{/if}
 		</button>
 	</div>
 </nav>
 
-<!-- Mobile Menu Button -->
-<button
-	class="fixed top-4 right-4 z-70 cursor-pointer rounded-md border border-gray-300 bg-gray-100 p-2 text-gray-800 md:hidden dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
-	on:click={toggleMenu}
-	aria-label="Toggle Menu"
->
-	{#if isMenuOpen}
-		<X />
-	{:else}
-		<Menu />
-	{/if}
-</button>
-
-<aside
-	class={`fixed top-0 right-0 z-60 h-full w-64 transform rounded-l-2xl bg-gray-300 p-4 shadow-lg transition-transform duration-500 ease-in-out md:hidden dark:bg-gray-700 dark:text-white ${
-		isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-	}`}
->
-	<h2 class="text-lg font-bold">Adam</h2>
-	<ul class="flex w-full flex-col pt-8 pb-4 text-sm font-semibold">
-		<li>
-			<a
-				href="#home"
-				class="flex rounded-t-xl bg-gray-100 px-4 py-2 hover:bg-gray-200 hover:text-[#ff48c4] dark:bg-gray-800 dark:hover:bg-gray-900"
-				>HOME</a
-			>
-		</li>
-		<li>
-			<a
-				href="#about"
-				class="flex bg-gray-100 px-4 py-2 hover:bg-gray-200 hover:text-[#ff48c4] dark:bg-gray-800 dark:hover:bg-gray-900"
-				>ABOUT</a
-			>
-		</li>
-		<li>
-			<a
-				href="#skills"
-				class="flex bg-gray-100 px-4 py-2 hover:bg-gray-200 hover:text-[#ff48c4] dark:bg-gray-800 dark:hover:bg-gray-900"
-				>SKILLS</a
-			>
-		</li>
-		<li>
-			<a
-				href="#projects"
-				class="flex bg-gray-100 px-4 py-2 hover:bg-gray-200 hover:text-[#ff48c4] dark:bg-gray-800 dark:hover:bg-gray-900"
-				>PROJECTS</a
-			>
-		</li>
-		<li>
-			<a
-				href="#contact"
-				class="flex rounded-b-xl bg-gray-100 px-4 py-2 hover:bg-gray-200 hover:text-[#ff48c4] dark:bg-gray-800 dark:hover:bg-gray-900"
-				>CONTACT</a
-			>
-		</li>
-	</ul>
+<!-- Mobile Backdrop -->
+{#if isMenuOpen}
 	<button
-		on:click={toggleTheme}
-		class="cursor-pointer rounded-md border border-gray-300 bg-gray-100 p-2 text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
-	>
-		{#if theme === 'dark'}
-			<Sun />
-		{:else}
-			<Moon />
-		{/if}
-	</button>
+		aria-label="button"
+		class="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm md:hidden"
+		on:click={toggleMenu}
+		type="button"
+	></button>
+{/if}
+
+<!-- Mobile Menu -->
+<aside
+	class="fixed right-0 top-0 z-50 h-full w-64 transform bg-white p-6 transition-transform duration-300
+	       dark:bg-slate-950 md:hidden
+	       {isMenuOpen ? 'translate-x-0' : 'translate-x-full'}"
+>
+	<nav class="mt-10 flex flex-col gap-6">
+		{#each links as link}
+			<a
+				href={link.href}
+				on:click={toggleMenu}
+				class="text-slate-700 transition hover:text-slate-900 
+				       dark:text-slate-300 dark:hover:text-white"
+			>
+				{link.label}
+			</a>
+		{/each}
+
+		<button
+			on:click={toggleTheme}
+			class="mt-4 flex items-center gap-2 text-slate-600 
+			       dark:text-slate-400"
+		>
+			{#if theme === 'dark'}
+				<Sun size={18} /> Light mode
+			{:else}
+				<Moon size={18} /> Dark mode
+			{/if}
+		</button>
+	</nav>
 </aside>
