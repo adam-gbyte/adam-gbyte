@@ -5,7 +5,6 @@
 <footer class="w-full border-t border-slate-200/70 bg-white dark:border-white/10 dark:bg-slate-950">
 	<div class="mx-auto grid max-w-6xl gap-8 px-6 py-12 sm:grid-cols-3 sm:items-center">
 
-		<!-- Brand -->
 		<div class="flex flex-col gap-1 text-center sm:text-left">
 			<span class="text-sm font-semibold tracking-wide text-slate-900 dark:text-white">
 				Adam Gumilang
@@ -15,7 +14,6 @@
 			</span>
 		</div>
 
-		<!-- Links -->
 		<nav class="flex justify-center gap-6 text-sm">
 			<a href="https://instagram.com"
 				class="group relative text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
@@ -36,7 +34,6 @@
 			</a>
 		</nav>
 
-		<!-- Signature -->
 		<div class="flex justify-center sm:justify-end">
 			<span class="select-none text-xs tracking-[0.3em] text-slate-300 dark:text-slate-700">
 				ADAM G
