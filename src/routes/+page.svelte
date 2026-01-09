@@ -33,7 +33,6 @@ export default MyComponent;`;
 
 <main class="flex flex-col items-center bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
 
-<!-- HERO -->
 <section id="home" class="mt-24 flex min-h-screen w-full max-w-5xl flex-col items-center justify-center gap-12 px-6 md:flex-row">
   <div class="flex flex-col gap-4 text-center md:text-left">
     <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">Adam Gumilang</h1>
@@ -45,7 +44,6 @@ export default MyComponent;`;
   <CodeCard title="React" code={exampleCode} />
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="flex w-full justify-center px-6 py-32">
   <div class="flex max-w-4xl flex-col gap-10 rounded-2xl border border-slate-200 bg-white p-10 dark:border-white/10 dark:bg-slate-900 sm:flex-row">
     <img class="w-full rounded-xl sm:w-1/3" src="https://ik.imagekit.io/ginvitations/assets/BrideAndGroom.png" alt="Profile" />
@@ -59,7 +57,6 @@ export default MyComponent;`;
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills" class="flex w-full flex-col items-center px-6 py-24">
   <h2 class="text-2xl font-semibold">Skills</h2>
   <div class="mt-10 flex flex-wrap justify-center gap-3">
