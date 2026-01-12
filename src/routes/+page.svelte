@@ -1,7 +1,6 @@
 <script>
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
-  import CodeCard from '$lib/components/CodeCard.svelte';
   import { tabs } from '$lib/data/dataProjects';
 
   let active = 0;
