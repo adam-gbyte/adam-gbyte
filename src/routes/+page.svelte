@@ -73,26 +73,63 @@ export default MyComponent;`;
 
 </section>
 
-<section id="about" class="flex w-full justify-center px-6 py-32">
-  <div class="flex max-w-4xl flex-col gap-10 rounded-2xl border border-slate-200 bg-white p-10 dark:border-white/10 dark:bg-slate-900 sm:flex-row">
-    <img class="w-full rounded-xl sm:w-1/3" src="https://ik.imagekit.io/ginvitations/assets/BrideAndGroom.png" alt="Profile" />
-    <div class="flex flex-col justify-center gap-4">
-      <h2 class="text-2xl font-semibold">About</h2>
-      <p class="text-slate-600 dark:text-slate-400">
-        I'm a front-end & back-end developer with 2 years of experience building modern web applications.
-        I enjoy crafting clean UI, scalable systems, and continuously learning new technologies.
-      </p>
+<section id="about" class="relative mx-auto flex w-full max-w-6xl justify-center px-6 py-32">
+  <div
+    class="grid w-full grid-cols-1 items-center gap-12 rounded-3xl border border-slate-200 bg-white p-12 shadow-sm dark:border-white/10 dark:bg-slate-900 md:grid-cols-2">
+
+    <!-- Image -->
+    <div class="relative">
+      <div
+        class="absolute -inset-3 rounded-3xl bg-gradient-to-br from-emerald-400 via-teal-400 to-cyan-400 opacity-30 blur-xl">
+      </div>
+      <img
+        class="relative w-full rounded-3xl object-cover shadow-lg"
+        src="https://ik.imagekit.io/ginvitations/assets/BrideAndGroom.png"
+        alt="Profile" />
     </div>
+
+    <!-- Text -->
+    <div class="flex flex-col gap-5">
+      <h2 class="text-3xl font-bold tracking-tight">
+        About <span class="text-emerald-500">Me</span>
+      </h2>
+
+      <p class="leading-relaxed text-slate-600 dark:text-slate-400">
+        I am a full-stack developer with over two years of experience building modern, maintainable, and scalable web
+        applications. I focus on clean user interfaces, robust back-end systems, and continuous improvement through new
+        technologies.
+      </p>
+
+      <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+        <div class="rounded-xl border border-slate-200 p-4 dark:border-white/10">
+          <p class="font-medium">Experience</p>
+          <p class="text-slate-500 dark:text-slate-400">2+ Years</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 p-4 dark:border-white/10">
+          <p class="font-medium">Focus</p>
+          <p class="text-slate-500 dark:text-slate-400">Full-Stack Web</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<section id="skills" class="flex w-full flex-col items-center px-6 py-24">
-  <h2 class="text-2xl font-semibold">Skills</h2>
-  <div class="mt-10 flex flex-wrap justify-center gap-3">
-    {#each ['HTML','CSS','JavaScript','Svelte','React','Node','Tailwind','PostgreSQL'] as skill}
-      <span class="rounded-full border border-slate-300 px-4 py-2 text-sm text-slate-600 dark:border-white/20 dark:text-slate-300">
+<section id="skills" class="relative mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-32">
+  <h2 class="text-3xl font-bold tracking-tight">
+    Skills <span class="text-emerald-500">& Tools</span>
+  </h2>
+
+  <p class="mt-3 max-w-xl text-center text-slate-600 dark:text-slate-400">
+    Technologies and tools I use to build modern, scalable, and maintainable web applications.
+  </p>
+
+  <div class="mt-12 grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+    {#each ['HTML','CSS','JavaScript','Svelte','React','Node.js','Tailwind CSS','PostgreSQL'] as skill}
+      <div
+        class="group flex items-center justify-center rounded-2xl border border-slate-200 bg-white p-5 text-sm font-medium text-slate-700 shadow-sm transition hover:-translate-y-1 hover:border-emerald-400 hover:shadow-md dark:border-white/10 dark:bg-slate-900 dark:text-slate-300">
         {skill}
-      </span>
+      </div>
     {/each}
   </div>
 </section>
@@ -159,16 +196,28 @@ export default MyComponent;`;
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contacts" class="flex w-full justify-center px-6 py-32">
-  <div class="flex max-w-md flex-col items-center gap-6 rounded-2xl border border-slate-200 p-10 dark:border-white/10">
-    <h2 class="text-2xl font-semibold">Get in touch</h2>
-    <p class="text-center text-slate-600 dark:text-slate-400">
-      Have a project or want to collaborate? Let’s talk.
+<section id="contacts" class="relative mx-auto flex w-full max-w-6xl justify-center px-6 py-32">
+  <div
+    class="flex w-full max-w-xl flex-col items-center gap-6 rounded-3xl border border-slate-200 bg-white p-12 text-center shadow-sm dark:border-white/10 dark:bg-slate-900">
+
+    <h2 class="text-3xl font-bold tracking-tight">
+      Get in <span class="text-emerald-500">Touch</span>
+    </h2>
+
+    <p class="max-w-md text-slate-600 dark:text-slate-400">
+      Have a project, a question, or want to collaborate? Feel free to reach out — I’m always open to new ideas.
     </p>
-    <a href="mailto:adamgumilang2103@gmail.com" class="text-blue-600 hover:underline dark:text-blue-400">
+
+    <a
+      href="mailto:adamgumilang2103@gmail.com"
+      class="mt-4 rounded-xl bg-emerald-500 px-6 py-3 font-medium text-white shadow transition hover:bg-emerald-600">
       adamgumilang2103@gmail.com
     </a>
+
+    <p class="text-sm text-slate-500 dark:text-slate-500">
+      I usually respond within 24 hours.
+    </p>
+
   </div>
 </section>
 
