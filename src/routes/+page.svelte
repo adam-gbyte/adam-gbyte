@@ -4,20 +4,6 @@
   import { tabs } from '$lib/data/dataProjects';
 
   let active = 0;
-  const exampleCode = `// MyComponent.jsx
-import React from 'react';
-
-const MyComponent = ({ name }) => {
-  return (
-    <div>
-      <h1>Hello, i am {name}!</h1>
-      <p>And i'm a Fullstack</p>
-    </div>
-  );
-};
-
-export default MyComponent;`;
-
   function select(i) {
     active = i;
   }
@@ -55,7 +41,7 @@ export default MyComponent;`;
         View Projects
       </a>
 
-      <a href="#contact"
+      <a href="#contacts"
         class="rounded-xl border border-slate-300 px-6 py-3 font-medium text-slate-700 transition hover:border-slate-500 hover:text-slate-900 dark:border-white/20 dark:text-slate-300 dark:hover:border-white/40 dark:hover:text-white">
         Contact Me
       </a>
