@@ -119,13 +119,11 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="mx-auto flex w-full max-w-6xl flex-col gap-14 px-6 py-28">
   <h2 class="text-center text-3xl font-semibold tracking-tight">Projects</h2>
 
   <div class="flex flex-col gap-10 md:flex-row">
 
-    <!-- Tabs -->
     <div class="flex w-full gap-3 overflow-x-auto md:w-1/4 md:flex-col md:overflow-visible">
       {#each tabs as tab, i}
         <button
@@ -139,11 +137,9 @@
       {/each}
     </div>
 
-    <!-- Content -->
     {#each tabs as tab, i}
       <div hidden={i !== active} class="flex-1 rounded-3xl border bg-white/70 p-10 backdrop-blur dark:border-white/10 dark:bg-slate-950/50">
 
-        <!-- Text -->
         <div class="flex flex-col gap-6">
           <div>
             <h3 class="text-2xl font-semibold tracking-tight">{tab.title}</h3>
@@ -160,7 +156,6 @@
             <span class="transition group-hover:translate-x-1">→</span>
           </a>
 
-          <!-- Images (below text) -->
           <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
             {#each tab.images as image}
               <div class="group relative overflow-hidden rounded-2xl border dark:border-white/10">
