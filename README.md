@@ -18,10 +18,14 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 
 - **Ginvitations**  
   Platform undangan pernikahan digital dengan berbagai tema menarik: adat, modern, dan lainnya.  
-  Teknologi: React, Node.js, MongoDB, TailwindCSS
+  Teknologi: Sveltekit, Node.js, MongoDB, TailwindCSS
 
-- Project Secret (Coming soon)
-  Aplikasi **\* \*** yang membantu \*\*\* secara real-time.
+- **Web KKN Kabandungan**
+  Web KKN Kabandungan bukan hanya mengenali tim kami, namun ada halaman pemantapan Karir dibuat untuk membantu siswa mengenal minat dan kemampuan dirinya. Melalui web ini, siswa dapat mengetahui pilihan karier yang sesuai dengan kepribadian dan keterampilan yang dimiliki. Selain itu, web ini membantu siswa merencanakan masa depan karier dengan lebih jelas dan terarah melalui cara yang mudah digunakan dan menyenangkan.
+  Teknologi: Reactjs, Tailwind CSS
+
+- **Clasification Cavendish**
+  Web untuk klasifikasi Pisang Cavendish
 
 ## 📫 Hubungi Saya
 
