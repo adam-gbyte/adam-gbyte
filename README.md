@@ -20,9 +20,6 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
   Platform undangan pernikahan digital dengan berbagai tema menarik: adat, modern, dan lainnya.  
   Teknologi: React, Node.js, MongoDB, TailwindCSS
 
-- **YouTube Comment Classifier**  
-  Chatbot dan sistem pendeteksi komentar spam/penipuan pada YouTube menggunakan Machine Learning.
-
 - Project Secret (Coming soon)
   Aplikasi **\* \*** yang membantu \*\*\* secara real-time.
 
