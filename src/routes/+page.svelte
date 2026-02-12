@@ -17,7 +17,7 @@
 <main class="flex flex-col items-center bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
   <Navbar />
 
-  <HomeSection />
+  <HomeSection class="overflow-hidden" />
   <AboutSection />
   <SkillsSection />
   <ProjectsSection />
