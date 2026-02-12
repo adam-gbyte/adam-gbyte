@@ -14,9 +14,11 @@
   <meta name="description" content="Profil Adam Gumilang, Web Developer" />
 </svelte:head>
 
-<Navbar />
+
 
 <main class="flex flex-col items-center bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+
+<Navbar />
 
 <section id="home"
   class="relative mx-auto mt-32 flex min-h-[80vh] w-full max-w-6xl flex-col items-center justify-center gap-12 px-6 md:flex-row">
@@ -110,7 +112,7 @@
   </p>
 
   <div class="mt-12 grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-    {#each ['HTML','CSS','JavaScript','Svelte','React','Node.js','Tailwind CSS','PostgreSQL'] as skill}
+    {#each ['Python', 'Java', 'HTML','CSS','JavaScript','Svelte','React','Node.js','Tailwind CSS','PostgreSQL'] as skill}
       <div
         class="group flex items-center justify-center rounded-2xl border border-slate-200 bg-white p-5 text-sm font-medium text-slate-700 shadow-sm transition hover:-translate-y-1 hover:border-emerald-400 hover:shadow-md dark:border-white/10 dark:bg-slate-900 dark:text-slate-300">
         {skill}

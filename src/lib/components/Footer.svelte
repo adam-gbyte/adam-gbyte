@@ -7,7 +7,7 @@
 
 		<div class="flex flex-col gap-1 text-center sm:text-left">
 			<span class="text-sm font-semibold tracking-wide text-slate-900 dark:text-white">
-				Adam Gumilang
+				<span class="text-emerald-500">Adam</span> Gumilang
 			</span>
 			<span class="text-xs text-slate-500 dark:text-slate-400">
 				&copy; {year} All rights reserved.
