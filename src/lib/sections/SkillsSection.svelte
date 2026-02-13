@@ -9,6 +9,7 @@
     Cpu,
     Globe,
     Zap,
+    BrainCircuit
   } from "lucide-svelte";
 
   const skillCategories = [
@@ -23,7 +24,15 @@
     {
       title: "Backend",
       icon: Server,
-      skills: ["Node.js", "Python", "Java", "PostgreSQL", "REST APIs"],
+      skills: ["Node.js", "Python", "Java", "MongoDB", "REST APIs"],
+      color: "text-emerald-500",
+      bg: "bg-emerald-500/10",
+      border: "hover:border-emerald-500/30",
+    },
+    {
+      title: "AI & Machine Learning",
+      icon: BrainCircuit,
+      skills: ["Pyhton", "TensorFlow", "PyTorch", "Scikit-learn", "Keras"],
       color: "text-emerald-500",
       bg: "bg-emerald-500/10",
       border: "hover:border-emerald-500/30",
@@ -31,7 +40,7 @@
     {
       title: "Tools & DevOps",
       icon: Wrench,
-      skills: ["Git", "Docker", "VS Code", "Figma", "Vercel"],
+      skills: ["Git", "VS Code", "Antigravity", "Vercel"],
       color: "text-purple-500",
       bg: "bg-purple-500/10",
       border: "hover:border-purple-500/30",
