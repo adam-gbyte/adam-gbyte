@@ -15,20 +15,36 @@ export const tabs = [
 		title: 'KKN Kabandungan',
 		img: 'https://ik.imagekit.io/goldiron/Logo.png',
 		link: 'https://kknkabandungan.vercel.app',
-		description: 'Developed a web platform to introduce KKN activities and showcase the team profile, providing clear information and accessibility for users. The platform also included a career guidance feature designed to help students identify suitable career paths based on their interests and potential.'
+		description: 'Developed a web platform to introduce KKN activities and showcase the team profile, providing clear information and accessibility for users. The platform also included a career guidance feature designed to help students identify suitable career paths based on their interests and potential.',
+		images: [
+			"https://ik.imagekit.io/goldiron/adam-gbyte/Kabandungan/kabandungan_home.png",
+			"https://ik.imagekit.io/goldiron/adam-gbyte/Kabandungan/kabandungan_profile.png",
+			"https://ik.imagekit.io/goldiron/adam-gbyte/Kabandungan/kabandungan_career.png",
+			"https://ik.imagekit.io/goldiron/adam-gbyte/Kabandungan/kabandungan_ppt.png"
+		]
 	},
 	{
 		id: 'cavendish',
 		title: 'Banana Classification',
 		img: 'https://cavendish-beta.vercel.app/logo.jpeg',
 		link: 'https://cavendish-beta.vercel.app/',
-		description: 'Implemented a basic deep learning model to classify Cavendish bananas, focusing on accurate image-based prediction. The project also integrated the classification logic into a simple web-based interface, allowing users to interact with the model easily through an accessible online platform.'
+		description: 'Implemented a basic deep learning model to classify Cavendish bananas, focusing on accurate image-based prediction. The project also integrated the classification logic into a simple web-based interface, allowing users to interact with the model easily through an accessible online platform.',
+		images: [
+			"https://ik.imagekit.io/goldiron/adam-gbyte/Cavendish/cavendish_home.png",
+			"https://ik.imagekit.io/goldiron/adam-gbyte/Cavendish/cavendish_about.png",
+			"https://ik.imagekit.io/goldiron/adam-gbyte/Cavendish/cavendish_classification.png",
+			"https://ik.imagekit.io/goldiron/adam-gbyte/Cavendish/cavendish_history.png",
+			"https://ik.imagekit.io/goldiron/adam-gbyte/Cavendish/cavendish_paper.png"
+		]
 	},
 	{
 		id: 'waste',
 		title: 'Waste Detection',
 		img: '',
 		link: '',
-		description: 'Waste Detection'
+		description: 'Waste Detection',
+		images: [
+			"https://ik.imagekit.io/goldiron/adam-gbyte/Waste/waste_detection.png"
+		]
 	}
 ];

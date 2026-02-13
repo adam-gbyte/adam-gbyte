@@ -1,19 +1,16 @@
 <script>
+  import {ChevronLeft, ChevronRight} from 'lucide-svelte';
   import { tabs } from '$lib/data/dataProjects';
 
-  // active tab index
   let active = 0;
 
-  // references to tab buttons for focus management
   let tabButtons = [];
 
   const select = (i) => {
     active = i;
-    // focus the newly selected tab button for better keyboard UX
     tabButtons[i]?.focus();
   };
 
-  // keyboard navigation for the tablist (Left/Right or Up/Down)
   function onTabKeydown(e, i) {
     const len = tabs.length;
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
@@ -34,6 +31,20 @@
       e.preventDefault();
       select(i);
     }
+  }
+
+  let current = 0;
+
+  function next(images) {
+    current = (current + 1) % images.length;
+  }
+
+  function prev(images) {
+    current = (current - 1 + images.length) % images.length;
+  }
+
+  function goTo(i) {
+    current = i;
   }
 </script>
 
@@ -65,7 +76,6 @@
         >
           <div class="flex items-center justify-between gap-3">
             <div class="flex items-center gap-3">
-              <!-- optional small icon placeholder -->
               <div class="h-8 w-8 flex-shrink-0 rounded-md bg-white/30 text-sm font-semibold text-emerald-500 flex items-center justify-center">
                 {tab.title.charAt(0)}
               </div>
@@ -77,11 +87,6 @@
               </div>
             </div>
 
-            <div class="ml-2 hidden md:block">
-              {#if i === active}
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd" /></svg>
-              {/if}
-            </div>
           </div>
         </button>
       {/each}
@@ -141,25 +146,62 @@
               {/if}
             </div>
 
-            <!-- Right: image gallery -->
-            <div class="md:w-1/2">
-              <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {#each tab.images as image, idx}
-                  <div class="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10">
-                    <img
-                      src={image}
-                      alt={`${tab.title} preview ${idx + 1}`}
-                      class="h-36 w-full object-cover transition-transform duration-400 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition group-hover:opacity-100"></div>
-                  </div>
+            <!-- Right: image slider -->
+            <div class="md:w-1/2 relative">
+              <!-- Slider viewport -->
+              <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10">
+                <div
+                  class="flex transition-transform duration-500 ease-out"
+                  style="transform: translateX(-{current * 100}%);"
+                >
+                  {#each tab.images as image, idx}
+                    <div class="w-full flex-shrink-0 group relative">
+                      <img
+                        src={image}
+                        alt={`${tab.title} preview ${idx + 1}`}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition group-hover:opacity-100"></div>
+                    </div>
+                  {/each}
+                </div>
+              </div>
+
+              <!-- Navigation buttons -->
+              <button
+                on:click={() => prev(tab.images)}
+                class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white backdrop-blur hover:bg-black/70"
+              >
+                <ChevronLeft />
+              </button>
+
+              <button
+                on:click={() => next(tab.images)}
+                class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white backdrop-blur hover:bg-black/70"
+              >
+                <ChevronRight />
+              </button>
+
+              <!-- Dots indicator -->
+              <div class="mt-4 flex justify-center gap-2">
+                {#each tab.images as _, i}
+                  <button
+                    on:click={() => goTo(i)}
+                    aria-label={`Go to slide ${i + 1}`}
+                    class="h-2 w-2 rounded-full transition
+                      {i === current
+                        ? 'bg-slate-900 dark:bg-white'
+                        : 'bg-slate-300 dark:bg-white/30'}"
+                  ></button>
                 {/each}
               </div>
             </div>
+
           </div>
         </div>
       {/each}
     </div>
+
   </div>
 </section>
