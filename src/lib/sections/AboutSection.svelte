@@ -1,72 +1,99 @@
+<script>
+  import { User, Code, Briefcase, Sparkles } from "lucide-svelte";
+</script>
+
 <section
   id="about"
-  class="relative mx-auto flex w-full max-w-6xl justify-center px-4 py-20 sm:px-6 sm:py-24 overflow-hidden"
+  class="relative mx-auto flex w-full max-w-6xl justify-center overflow-hidden px-4 py-24 sm:px-6 sm:py-32"
 >
   <div
-    class="relative grid w-full grid-cols-1 items-center gap-10 rounded-3xl border border-slate-200/80 bg-white/70 p-6 shadow-lg backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/60 sm:p-10 md:grid-cols-2"
+    class="relative grid w-full grid-cols-1 items-center gap-12 rounded-3xl border border-white/40 bg-white/60 p-8 shadow-2xl backdrop-blur-2xl transition-all duration-500 hover:shadow-emerald-500/10 dark:border-white/10 dark:bg-slate-900/60 sm:p-12 md:grid-cols-2"
   >
-    <!-- IMAGE -->
+    <!-- IMAGE COLUMN -->
     <div class="relative order-1 mx-auto w-full max-w-sm md:order-none">
-      <!-- glow -->
+      <!-- Animated Glow Background -->
       <div
-        class="absolute -inset-4 rounded-3xl bg-gradient-to-br from-emerald-400 via-teal-400 to-cyan-400 opacity-20 blur-2xl"
+        class="absolute -inset-4 rotate-6 rounded-[2rem] bg-gradient-to-br from-emerald-400 via-teal-400 to-cyan-400 opacity-30 blur-2xl transition-all duration-700 hover:rotate-12 hover:opacity-50"
       ></div>
 
+      <!-- Image Container -->
       <div
-        class="relative overflow-hidden rounded-3xl border border-white/20 shadow-xl"
+        class="relative overflow-hidden rounded-[2rem] border border-white/30 shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
       >
+        <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-100"></div>
         <img
           class="h-full w-full object-cover"
           src="https://ik.imagekit.io/ginvitations/assets/BrideAndGroom.png"
           alt="Profile"
+          loading="lazy"
         />
       </div>
     </div>
 
-    <!-- TEXT -->
-    <div class="order-2 flex flex-col gap-5 text-center md:text-left">
-      <span
-        class="mx-auto w-fit rounded-full bg-emerald-500/10 px-4 py-1 text-xs font-medium text-emerald-500 md:mx-0"
+    <!-- TEXT COLUMN -->
+    <div class="order-2 flex flex-col gap-6 text-center md:text-left">
+      <!-- Badge -->
+      <div
+        class="group mx-auto flex w-fit items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-4 py-1.5 text-xs font-medium text-emerald-600 transition-colors hover:bg-emerald-500/10 dark:text-emerald-400 md:mx-0"
       >
-        Introduction
-      </span>
+        <Sparkles class="size-3.5" />
+        <span>Introduction</span>
+      </div>
 
-      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">
-        About <span class="text-emerald-500">Me</span>
+      <!-- Heading -->
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl md:text-5xl">
+        About <span class="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">Me</span>
       </h2>
 
+      <!-- Description -->
       <p
-        class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:text-base"
+        class="text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg"
       >
-        I am a full-stack developer focused on building modern, scalable, and
-        maintainable web applications. My work combines clean UI design,
-        efficient back-end architecture, and continuous learning of emerging
-        technologies.
+        I am a <span class="font-semibold text-emerald-600 dark:text-emerald-400">full-stack developer</span> 
+        passionate about crafting digital experiences that live on the web. My focus is on 
+        building accessible, pixel-perfect, and performant applications that solve real-world problems.
       </p>
 
-      <!-- STATS -->
-      <div class="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <!-- Stats Grid -->
+      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <!-- Experience Card -->
         <div
-          class="rounded-2xl border border-slate-200 p-4 dark:border-white/10"
+          class="group relative overflow-hidden rounded-2xl border border-slate-200/60 bg-white/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-lg hover:shadow-emerald-500/5 dark:border-white/10 dark:bg-white/5"
         >
-          <p class="text-sm font-semibold">Experience</p>
-          <p class="text-slate-500 dark:text-slate-400">2+ Years</p>
+          <div class="flex items-start gap-4">
+            <div class="rounded-lg bg-emerald-100/50 p-2.5 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
+              <Briefcase class="size-5" />
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-900 dark:text-white">Experience</p>
+              <p class="mt-1 text-2xl font-bold text-emerald-600 dark:text-emerald-400">2+ <span class="text-base font-normal text-slate-500 dark:text-slate-400">Years</span></p>
+            </div>
+          </div>
         </div>
 
+        <!-- Focus Card -->
         <div
-          class="rounded-2xl border border-slate-200 p-4 dark:border-white/10"
+          class="group relative overflow-hidden rounded-2xl border border-slate-200/60 bg-white/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-lg hover:shadow-emerald-500/5 dark:border-white/10 dark:bg-white/5"
         >
-          <p class="text-sm font-semibold">Focus</p>
-          <p class="text-slate-500 dark:text-slate-400">
-            Full-Stack Web
-          </p>
+          <div class="flex items-start gap-4">
+            <div class="rounded-lg bg-blue-100/50 p-2.5 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400">
+              <Code class="size-5" />
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-900 dark:text-white">Focus</p>
+              <p class="mt-1 text-lg font-bold text-slate-700 dark:text-slate-200">Full-Stack Web</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- background glow -->
+  <!-- Background Decorative Elements -->
   <div
-    class="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/5 blur-3xl sm:h-[500px] sm:w-[500px]"
+    class="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/10 blur-[100px]"
+  ></div>
+  <div
+    class="pointer-events-none absolute right-0 top-0 -z-10 h-[300px] w-[300px] translate-x-1/3 -translate-y-1/3 rounded-full bg-teal-500/10 blur-[80px]"
   ></div>
 </section>
