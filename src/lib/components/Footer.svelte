@@ -1,6 +1,6 @@
 <script>
 	import { Github, Instagram, Linkedin, Mail, ArrowUp } from 'lucide-svelte';
-	
+
 	const year = new Date().getFullYear();
 
 	function scrollToTop() {
@@ -8,16 +8,22 @@
 	}
 </script>
 
-<footer class="relative w-full border-t border-slate-200/60 bg-white/50 pt-16 pb-8 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/50 overflow-hidden">
+<footer
+	class="relative w-full overflow-hidden border-t border-slate-200/60 bg-white/50 pt-16 pb-8 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/50"
+>
 	<!-- Background Glow -->
-	<div class="pointer-events-none absolute bottom-0 left-1/2 -z-10 h-[300px] w-[600px] -translate-x-1/2 translate-y-1/2 rounded-full bg-emerald-500/5 blur-[80px]"></div>
+	<div
+		class="pointer-events-none absolute bottom-0 left-1/2 -z-10 h-[300px] w-[600px] -translate-x-1/2 translate-y-1/2 rounded-full bg-emerald-500/5 blur-[80px]"
+	></div>
 
 	<div class="mx-auto flex max-w-6xl flex-col gap-12 px-6">
 		<div class="flex flex-col items-center justify-between gap-8 md:flex-row">
-			
 			<!-- Brand & Tagline -->
 			<div class="flex flex-col items-center gap-2 text-center md:items-start md:text-left">
-				<a href="#home" class="text-2xl font-bold tracking-tight text-slate-900 transition hover:opacity-80 dark:text-white">
+				<a
+					href="#home"
+					class="text-2xl font-bold tracking-tight text-slate-900 transition hover:opacity-80 dark:text-white"
+				>
 					<span class="text-emerald-500">Adam</span> Gumilang
 				</a>
 				<p class="max-w-xs text-sm text-slate-500 dark:text-slate-400">
@@ -77,7 +83,9 @@
 				class="group flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-emerald-500 dark:text-slate-400 dark:hover:text-emerald-400"
 			>
 				Back to Top
-				<span class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 transition group-hover:-translate-y-1 group-hover:bg-emerald-500 group-hover:text-white dark:bg-slate-800">
+				<span
+					class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 transition group-hover:-translate-y-1 group-hover:bg-emerald-500 group-hover:text-white dark:bg-slate-800"
+				>
 					<ArrowUp class="size-4" />
 				</span>
 			</button>

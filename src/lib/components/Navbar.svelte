@@ -10,11 +10,9 @@
 
 	onMount(() => {
 		const saved = localStorage.getItem('theme');
-		theme =
-			saved ??
-			(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		theme = saved ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 		document.documentElement.classList.toggle('dark', theme === 'dark');
-		
+
 		// Set initial active section
 		observeSections();
 	});
@@ -57,7 +55,7 @@
 			observer.observe(section);
 		});
 	}
-	
+
 	function scrollToSection(href) {
 		closeMenu();
 		activeSection = href;
@@ -91,7 +89,10 @@
 				<a
 					href={link.href}
 					on:click|preventDefault={() => scrollToSection(link.href)}
-					class="relative rounded-full px-4 py-1.5 text-sm font-medium transition-colors hover:text-emerald-600 dark:hover:text-emerald-400 {activeSection === link.href ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-600 dark:text-slate-400'}"
+					class="relative rounded-full px-4 py-1.5 text-sm font-medium transition-colors hover:text-emerald-600 dark:hover:text-emerald-400 {activeSection ===
+					link.href
+						? 'text-emerald-600 dark:text-emerald-400'
+						: 'text-slate-600 dark:text-slate-400'}"
 				>
 					{#if activeSection === link.href}
 						<!-- Active Indicator -->
@@ -111,10 +112,18 @@
 				aria-label="Toggle theme"
 				class="group relative rounded-full p-2 text-slate-600 transition hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800"
 			>
-				<div class="transition-transform duration-300 {theme === 'dark' ? 'rotate-90 scale-0' : 'rotate-0 scale-100'}">
+				<div
+					class="transition-transform duration-300 {theme === 'dark'
+						? 'scale-0 rotate-90'
+						: 'scale-100 rotate-0'}"
+				>
 					<Sun class="size-5" />
 				</div>
-				<div class="absolute left-2 top-2 transition-transform duration-300 {theme === 'dark' ? 'rotate-0 scale-100' : '-rotate-90 scale-0'}">
+				<div
+					class="absolute top-2 left-2 transition-transform duration-300 {theme === 'dark'
+						? 'scale-100 rotate-0'
+						: 'scale-0 -rotate-90'}"
+				>
 					<Moon class="size-5" />
 				</div>
 			</button>
@@ -138,12 +147,14 @@
 <!-- Mobile Overlay & Menu -->
 {#if isMenuOpen}
 	<!-- Backdrop -->
-	<div
-		class="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm md:hidden"
+	<button
+		type="button"
+		class="fixed inset-0 z-40 h-full w-full cursor-default border-none bg-black/20 backdrop-blur-sm md:hidden"
+		aria-label="Close menu"
 		in:fade={{ duration: 200 }}
 		out:fade={{ duration: 200 }}
 		on:click={closeMenu}
-	></div>
+	></button>
 
 	<!-- Menu -->
 	<div
@@ -155,9 +166,12 @@
 			<a
 				href={link.href}
 				on:click|preventDefault={() => scrollToSection(link.href)}
-				class="flex items-center gap-4 rounded-2xl p-4 text-base font-medium transition-all {activeSection === link.href ? 'bg-emerald-500/10 text-emerald-600 dark:bg-emerald-500/20 dark:text-emerald-400' : 'text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800'}"
+				class="flex items-center gap-4 rounded-2xl p-4 text-base font-medium transition-all {activeSection ===
+				link.href
+					? 'bg-emerald-500/10 text-emerald-600 dark:bg-emerald-500/20 dark:text-emerald-400'
+					: 'text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800'}"
 			>
-				<div class="{activeSection === link.href ? 'text-emerald-500' : 'text-slate-400'}">
+				<div class={activeSection === link.href ? 'text-emerald-500' : 'text-slate-400'}>
 					<svelte:component this={link.icon} class="size-5" />
 				</div>
 				{link.label}
