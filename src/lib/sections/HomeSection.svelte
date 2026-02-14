@@ -40,7 +40,7 @@
 				class="text-xl font-medium text-slate-600 sm:text-2xl dark:text-slate-300"
 				in:fly={{ y: 20, duration: 800, delay: 600 }}
 			>
-				Full-Stack Developer & UI/UX Enthusiast
+				Full-Stack Developer & AI Engineer
 			</h2>
 		</div>
 
@@ -112,7 +112,7 @@
 					class="relative h-80 w-80 rotate-3 overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 shadow-2xl backdrop-blur-sm transition duration-500 hover:scale-105 hover:rotate-0"
 				>
 					<img
-						src="https://ik.imagekit.io/ginvitations/assets/BrideAndGroom.png"
+						src="https://ik.imagekit.io/goldiron/adam-gbyte/AdamG.jpeg"
 						alt="Adam Gumilang"
 						class="h-full w-full object-cover"
 					/>

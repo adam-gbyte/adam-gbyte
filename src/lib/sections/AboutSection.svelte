@@ -25,7 +25,7 @@
 				></div>
 				<img
 					class="h-full w-full object-cover"
-					src="https://ik.imagekit.io/ginvitations/assets/BrideAndGroom.png"
+					src="https://ik.imagekit.io/goldiron/adam-gbyte/AdamG.jpeg"
 					alt="Profile"
 					loading="lazy"
 				/>
