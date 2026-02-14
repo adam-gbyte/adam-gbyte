@@ -43,7 +43,7 @@
 					<Github class="size-5 transition-transform group-hover:scale-110" />
 				</a>
 				<a
-					href="https://linkedin.com/in/adam-gumilang"
+					href="https://www.linkedin.com/in/adam-gumilang-663b7a361/"
 					target="_blank"
 					rel="noreferrer"
 					class="group flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all hover:-translate-y-1 hover:border-blue-500 hover:text-blue-500 dark:border-white/10 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-blue-400 dark:hover:text-blue-400"
@@ -52,7 +52,7 @@
 					<Linkedin class="size-5 transition-transform group-hover:scale-110" />
 				</a>
 				<a
-					href="https://instagram.com"
+					href="https://www.instagram.com/adam_gumilang_/"
 					target="_blank"
 					rel="noreferrer"
 					class="group flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all hover:-translate-y-1 hover:border-pink-500 hover:text-pink-500 dark:border-white/10 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-pink-400 dark:hover:text-pink-400"

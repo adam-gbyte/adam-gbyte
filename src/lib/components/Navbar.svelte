@@ -72,7 +72,7 @@
 	class="fixed top-0 z-50 w-full px-4 transition-all duration-300 {scrollY > 50 ? 'py-4' : 'py-6'}"
 >
 	<div
-		class="mx-auto flex w-full max-w-5xl items-center justify-between rounded-full border border-white/40 bg-white/60 px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-xl transition-all duration-300 dark:border-white/10 dark:bg-slate-900/60 dark:shadow-black/20"
+		class="mx-auto flex w-full max-w-5xl items-center justify-between rounded-full border border-white/30 bg-white/50 px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-sm transition-all duration-300 dark:border-white/10 dark:bg-slate-900/60 dark:shadow-black/20"
 	>
 		<!-- Brand -->
 		<a

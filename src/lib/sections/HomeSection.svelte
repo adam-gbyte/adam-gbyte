@@ -87,7 +87,7 @@
 				<span class="sr-only">GitHub</span>
 			</a>
 			<a
-				href="https://linkedin.com/in/adam-gumilang"
+				href="https://www.linkedin.com/in/adam-gumilang-663b7a361/"
 				target="_blank"
 				rel="noreferrer"
 				class="text-slate-400 transition hover:text-blue-600 dark:hover:text-blue-400"
