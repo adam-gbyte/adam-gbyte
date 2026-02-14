@@ -123,18 +123,20 @@
 						{/if}
 
 						<div class="mt-4 flex flex-wrap gap-4">
-							<a
-								href={project.link}
-								target="_blank"
-								rel="noopener noreferrer"
-								class="group/btn inline-flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-slate-900/20 transition-all hover:-translate-y-1 hover:bg-emerald-600 hover:shadow-emerald-500/30 dark:bg-white dark:text-slate-900 dark:hover:bg-emerald-400"
-							>
-								<span>View Project</span>
-								<!-- Replaced ArrowUpRight with ExternalLink for compatibility -->
-								<ExternalLink
-									class="size-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
-								/>
-							</a>
+							{#if project.link}
+								<a
+									href={project.link}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="group/btn inline-flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-slate-900/20 transition-all hover:-translate-y-1 hover:bg-emerald-600 hover:shadow-emerald-500/30 dark:bg-white dark:text-slate-900 dark:hover:bg-emerald-400"
+								>
+									<span>View Project</span>
+									<!-- Replaced ArrowUpRight with ExternalLink for compatibility -->
+									<ExternalLink
+										class="size-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
+									/>
+								</a>
+							{/if}
 
 							{#if project.github}
 								<a
