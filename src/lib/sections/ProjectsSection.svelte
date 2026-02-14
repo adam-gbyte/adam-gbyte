@@ -183,7 +183,7 @@
 								</div>
 							</div>
 
-							<div class="relative aspect-[16/10] w-full overflow-hidden bg-slate-900">
+							<div class="relative w-full overflow-hidden bg-slate-900">
 								<div
 									class="flex h-full transition-transform duration-700 ease-in-out"
 									style="transform: translateX(-{(currentImages[i] || 0) * 100}%);"
@@ -194,7 +194,7 @@
 												<img
 													src={image}
 													alt={`${project.title} ${idx + 1}`}
-													class="h-full w-full object-cover object-top transition-transform duration-700 group-hover/slider:scale-105"
+													class="h-full w-full object-cover object-top"
 													loading="lazy"
 												/>
 											{:else}
