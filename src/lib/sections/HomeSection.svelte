@@ -48,8 +48,8 @@
 			class="mx-auto max-w-lg text-lg leading-relaxed text-slate-600 md:mx-0 dark:text-slate-400"
 			in:fly={{ y: 20, duration: 800, delay: 800 }}
 		>
-			I craft digital experiences with a focus on simplicity, performance, and accessibility.
-			Building scalable web applications with modern technologies.
+			Informatics Engineering student experienced in backend, web development, and basic AI, with a
+			strong motivation to learn, collaborate remotely, and build real-world technology solutions.
 		</p>
 
 		<div
