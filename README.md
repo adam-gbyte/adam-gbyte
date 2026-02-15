@@ -1,17 +1,17 @@
-# Halo, saya Adam Gumilang 👋
+# Hello, I'm Adam Gumilang 👋
 
-![Emilia-chan](https://ik.imagekit.io/goldiron/Emilia.jpeg)
+![Adam Gumilang](https://ik.imagekit.io/goldiron/adam-gbyte/AdamG.jpeg)
 
-Selamat datang di profil GitHub saya! Saya adalah seorang **Informatics Engineering student** yang berfokus pada **Full Stack Web Development** dan eksplorasi **AI & Machine Learning**. Saya terbiasa membangun aplikasi modern mulai dari backend services, REST API, hingga antarmuka web yang responsif dan scalable.
+Welcome to my GitHub profile! I am an **Informatics Engineering student** focused on **Full Stack Web Development** and exploring **AI & Machine Learning**. I enjoy building modern applications — from backend services and REST APIs to responsive and scalable web interfaces.
 
 ---
 
-## 🚀 Tentang Saya
+## 🚀 About Me
 
-* 🎓 Mahasiswa **Informatics Engineering – Nusa Putra University** (2023 – Present)
-* 💻 Memiliki pengalaman membangun academic dan personal project menggunakan teknologi web modern.
-* 🤖 Tertarik pada pengembangan sistem berbasis AI, computer vision, dan automation.
-* 🌍 Terbiasa belajar secara mandiri dan berkolaborasi dalam remote environment.
+* 🎓 **Informatics Engineering – Nusa Putra University** (2023 – Present)
+* 💻 Experienced in developing academic and personal projects using modern web technologies.
+* 🤖 Interested in AI-based systems, computer vision, and automation.
+* 🌍 Self-driven learner who is comfortable collaborating in remote environments.
 
 ---
 
@@ -31,38 +31,38 @@ Git, VS Code, Vercel, Antigravity
 
 ---
 
-## 💼 Proyek yang Saya Bangun
+## 💼 Projects
 
 ### 🔹 Ginvitations
 
-Platform undangan digital yang dapat dikustomisasi dengan berbagai tema modern.
+A customizable digital invitation platform with various modern themes.
 
-* Backend services untuk manajemen data undangan
-* Responsive UI untuk desktop dan mobile
+* Built backend services for invitation data management
+* Implemented responsive UI for desktop and mobile
   **Tech:** SvelteKit, Node.js, MongoDB, TailwindCSS
 
 ### 🔹 Web KKN Kabandungan
 
-Website informasi kegiatan KKN dengan fitur pengenalan tim dan halaman pemantapan karir siswa.
+A community service website introducing the team and providing a student career preparation page.
 **Tech:** React.js, Tailwind CSS
 
 ### 🔹 Cavendish Banana Classification
 
-Implementasi model deep learning untuk klasifikasi pisang Cavendish serta integrasi ke web interface sederhana.
+A deep learning implementation for Cavendish banana classification integrated into a simple web interface.
 **Tech:** Python, TensorFlow
 
 ### 🔹 Waste Detection (YOLOv8)
 
-Sistem deteksi sampah berbasis computer vision menggunakan dataset TACO.
+A computer vision–based waste detection system using the TACO dataset.
 
-* Preprocessing dan annotation dataset
-* Training model object detection
-* Evaluasi menggunakan precision, recall, dan mAP
+* Dataset preprocessing and annotation
+* Object detection model training
+* Evaluation using precision, recall, and mAP
   **Tech:** Python, YOLOv8
 
 ---
 
-## 📫 Hubungi Saya
+## 📫 Contact Me
 
 * 📧 Email: **[adamgumilang2103@gmail.com](mailto:adamgumilang2103@gmail.com)**
 * 🌐 Website: http://www.adam-gbyte.my.id
