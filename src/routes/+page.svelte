@@ -11,7 +11,7 @@
 
 <svelte:head>
 	<title>Adam Gumilang</title>
-	<meta name="description" content="Profil Adam Gumilang, Web Developer" />
+	<meta name="description" content="Profil Adam Gumilang, Web Developer, AI Engineer" />
 </svelte:head>
 
 <main
@@ -19,7 +19,7 @@
 >
 	<Navbar />
 
-	<HomeSection class="overflow-hidden" />
+	<HomeSection />
 	<AboutSection />
 	<SkillsSection />
 	<ProjectsSection />

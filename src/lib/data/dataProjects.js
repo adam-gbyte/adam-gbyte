@@ -42,7 +42,7 @@ export const tabs = [
 		title: 'Waste Detection',
 		img: '',
 		link: '',
-		description: 'Waste Detection',
+		description: 'Developed a real-time waste detection system using YOLOv8 trained on the TACO dataset, including data preprocessing, annotation management, and end-to-end training pipeline development in Python. The project involved training and evaluating object detection models while monitoring key metrics such as precision, recall, and mAP, as well as building a real-time inference workflow to detect and classify waste objects directly through a live camera feed.',
 		images: [
 			"https://ik.imagekit.io/goldiron/adam-gbyte/Waste/waste_detection.png"
 		]
