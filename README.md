@@ -2,45 +2,84 @@
 
 ![Emilia-chan](https://ik.imagekit.io/goldiron/Emilia.jpeg)
 
-Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer** yang bersemangat membangun aplikasi dari nol, baik itu frontend maupun backend. Saat ini saya sedang mendalami berbagai teknologi modern seperti **React, TailwindCSS, Node.js, MongoDB**, dan juga menjelajahi dunia **AI dan Machine Learning**.
+Selamat datang di profil GitHub saya! Saya adalah seorang **Informatics Engineering student** yang berfokus pada **Full Stack Web Development** dan eksplorasi **AI & Machine Learning**. Saya terbiasa membangun aplikasi modern mulai dari backend services, REST API, hingga antarmuka web yang responsif dan scalable.
+
+---
 
 ## 🚀 Tentang Saya
 
-- 🎓 Lahir pada 21 Maret 2005 dan tinggal di Indonesia.
-- 💻 Saat ini fokus belajar dan mengembangkan berbagai aplikasi web, sistem autentikasi, dan proyek IoT.
-- ⚙️ Bahasa & Teknologi yang saya gunakan:
-  - **Frontend**: React, TailwindCSS, SvelteKit, Vite
-  - **Backend**: Node.js, Express.js, MongoDB, Mongoose
-  - **Machine Learning**: Python, scikit-learn, skfuzzy, OpenCV
-  - **Lainnya**: JWT Auth, OAuth2, REST API, Arduino, ESP32-CAM
+* 🎓 Mahasiswa **Informatics Engineering – Nusa Putra University** (2023 – Present)
+* 💻 Memiliki pengalaman membangun academic dan personal project menggunakan teknologi web modern.
+* 🤖 Tertarik pada pengembangan sistem berbasis AI, computer vision, dan automation.
+* 🌍 Terbiasa belajar secara mandiri dan berkolaborasi dalam remote environment.
+
+---
+
+## ⚙️ Tech Stack & Skills
+
+**Frontend**
+Svelte, React, HTML, CSS, Tailwind CSS, JavaScript
+
+**Backend**
+Node.js, Python, Java, REST API, MongoDB
+
+**AI & Machine Learning**
+Python, TensorFlow, PyTorch, Scikit-learn, Keras, OpenCV
+
+**Tools & DevOps**
+Git, VS Code, Vercel, Antigravity
+
+---
 
 ## 💼 Proyek yang Saya Bangun
 
-- **Ginvitations**  
-  Platform undangan pernikahan digital dengan berbagai tema menarik: adat, modern, dan lainnya.  
-  Teknologi: Sveltekit, Node.js, MongoDB, TailwindCSS
+### 🔹 Ginvitations
 
-- **Web KKN Kabandungan**
-  Web KKN Kabandungan bukan hanya mengenali tim kami, namun ada halaman pemantapan Karir dibuat untuk membantu siswa mengenal minat dan kemampuan dirinya. Melalui web ini, siswa dapat mengetahui pilihan karier yang sesuai dengan kepribadian dan keterampilan yang dimiliki. Selain itu, web ini membantu siswa merencanakan masa depan karier dengan lebih jelas dan terarah melalui cara yang mudah digunakan dan menyenangkan.
-  Teknologi: Reactjs, Tailwind CSS
+Platform undangan digital yang dapat dikustomisasi dengan berbagai tema modern.
 
-- **Clasification Cavendish**
-  Web untuk klasifikasi Pisang Cavendish
+* Backend services untuk manajemen data undangan
+* Responsive UI untuk desktop dan mobile
+  **Tech:** SvelteKit, Node.js, MongoDB, TailwindCSS
+
+### 🔹 Web KKN Kabandungan
+
+Website informasi kegiatan KKN dengan fitur pengenalan tim dan halaman pemantapan karir siswa.
+**Tech:** React.js, Tailwind CSS
+
+### 🔹 Cavendish Banana Classification
+
+Implementasi model deep learning untuk klasifikasi pisang Cavendish serta integrasi ke web interface sederhana.
+**Tech:** Python, TensorFlow
+
+### 🔹 Waste Detection (YOLOv8)
+
+Sistem deteksi sampah berbasis computer vision menggunakan dataset TACO.
+
+* Preprocessing dan annotation dataset
+* Training model object detection
+* Evaluasi menggunakan precision, recall, dan mAP
+  **Tech:** Python, YOLOv8
+
+---
 
 ## 📫 Hubungi Saya
 
-- Email: **adamgumilang2103@gmail.com**
-- Website: [adam-gbyte.my.id](http://www.adam-gbyte.my.id)
-- Instagram: [@adam*gumilang*](https://instagram.com/adam_gumilang_)
-- LinkedIn: [Adam*Gumilang](https://linkedin/)
+* 📧 Email: **[adamgumilang2103@gmail.com](mailto:adamgumilang2103@gmail.com)**
+* 🌐 Website: http://www.adam-gbyte.my.id
+* 📷 Instagram: https://instagram.com/adam_gumilang_
+* 💼 LinkedIn: https://linkedin/
 
-## 🌐 Skills
+---
+
+## 🌐 Skills Icons
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=js,html,css,git,express,svelte,react,py,java" />
+    <img src="https://skillicons.dev/icons?i=js,html,css,git,express,svelte,react,py,java,nodejs,mongodb,tailwind" />
   </a>
 </p>
+
+---
 
 ## 🔥 Statistik GitHub
 
@@ -59,4 +98,4 @@ Selamat datang di profil GitHub saya! Saya adalah seorang **Full Stack Developer
 
 ---
 
-**"Jangan mengatakan tidak mungkin kepadaku, sebelum kamu mati dalam mencobanya!"**
+**"Keep building, keep learning, and never stop exploring new technologies."**
