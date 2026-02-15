@@ -34,6 +34,7 @@
 	const links = [
 		{ href: '#home', label: 'Home', icon: Home },
 		{ href: '#about', label: 'About', icon: User },
+		{ href: '#education', label: 'Education', icon: User },
 		{ href: '#skills', label: 'Skills', icon: Code },
 		{ href: '#projects', label: 'Projects', icon: Layers },
 		{ href: '#contacts', label: 'Contact', icon: Mail }
