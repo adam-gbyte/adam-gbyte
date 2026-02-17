@@ -44,12 +44,17 @@
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
+					// Use a small intersection ratio to detect the section as soon as it enters
+					// the "middle" zone of the viewport defined by rootMargin
 					if (entry.isIntersecting) {
 						activeSection = `#${entry.target.id}`;
 					}
 				});
 			},
-			{ threshold: 0.5 }
+			{
+				threshold: 0.1, // Trigger when 10% of the section is visible
+				rootMargin: '-30% 0px -30% 0px' // Target the middle 40% of the viewport
+			}
 		);
 
 		document.querySelectorAll('section[id]').forEach((section) => {

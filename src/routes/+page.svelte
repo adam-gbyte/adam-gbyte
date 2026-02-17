@@ -7,7 +7,6 @@
 	import SkillsSection from '$lib/sections/SkillsSection.svelte';
 	import ProjectsSection from '$lib/sections/ProjectsSection.svelte';
 	import EducationSection from '$lib/sections/EducationSection.svelte';
-	import DownloadCVSection from '$lib/sections/DownloadCVSection.svelte';
 	import ContactSection from '$lib/sections/ContactSection.svelte';
 </script>
 
@@ -26,7 +25,6 @@
 	<EducationSection />
 	<SkillsSection />
 	<ProjectsSection />
-	<DownloadCVSection />
 	<ContactSection />
 
 	<Footer />
