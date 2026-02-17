@@ -26,7 +26,7 @@
 		{
 			title: 'Backend',
 			icon: Server,
-			skills: ['Node.js', 'Python', 'Java', 'MongoDB', 'REST APIs'],
+			skills: ['Node.js', 'Python', 'Java', 'MongoDB', 'REST APIs', 'MySQL'],
 			color: 'text-emerald-500',
 			bg: 'bg-emerald-500/10',
 			border: 'group-hover:border-emerald-500/50',
