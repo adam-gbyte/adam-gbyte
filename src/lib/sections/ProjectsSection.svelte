@@ -12,8 +12,6 @@
 	import { tabs } from '$lib/data/dataProjects';
 	import { fade, fly } from 'svelte/transition';
 
-	// Track current image index for each project independently
-	// Use fallback empty array if tabs is undefined to prevent crash
 	let currentImages = (tabs || []).map(() => 0);
 
 	function next(projectIndex, images) {

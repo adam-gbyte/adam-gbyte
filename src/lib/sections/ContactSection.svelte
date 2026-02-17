@@ -33,19 +33,19 @@
 		{
 			name: 'LinkedIn',
 			icon: Linkedin,
-			href: '#',
+			href: 'https://www.linkedin.com/in/adam-gumilang-663b7a361/',
 			color: 'hover:text-blue-600 dark:hover:text-blue-400'
 		},
 		{
 			name: 'GitHub',
 			icon: Github,
-			href: '#',
+			href: 'https://github.com/adam-gbyte',
 			color: 'hover:text-slate-900 dark:hover:text-white'
 		},
 		{
-			name: 'Twitter',
-			icon: Twitter,
-			href: '#',
+			name: 'Gmail',
+			icon: Mail,
+			href: 'mailto:adamgumilang2103@gmail.com',
 			color: 'hover:text-sky-500 dark:hover:text-sky-400'
 		}
 	];
