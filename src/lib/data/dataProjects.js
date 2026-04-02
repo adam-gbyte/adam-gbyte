@@ -3,7 +3,7 @@ export const tabs = [
 		id: 'ginvitations',
 		title: 'Ginvitations',
 		img: 'https://ik.imagekit.io/ginvitations/assets/logo/Logo_GInvitations_v1_1.png',
-		link: 'https://ginvitations.site',
+		link: 'https://ginvitations.vercel.app',
 		description: 'Built a customizable digital wedding invitation platform designed to streamline the creation and management of online invitations. The project involved developing robust backend services to handle invitation data efficiently, ensuring reliability and scalability. In addition, a fully responsive user interface was implemented to provide an optimal experience for both mobile and desktop users.',
 		images: [
 			"https://ik.imagekit.io/goldiron/adam-gbyte/Ginvitations/Home_ginvitations.png",
