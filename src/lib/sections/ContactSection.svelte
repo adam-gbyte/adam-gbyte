@@ -33,7 +33,7 @@
 		{
 			name: 'LinkedIn',
 			icon: Linkedin,
-			href: 'https://www.linkedin.com/in/adam-gumilang-663b7a361/',
+			href: 'https://www.linkedin.com/in/adam-gumilang/',
 			color: 'hover:text-blue-600 dark:hover:text-blue-400'
 		},
 		{
