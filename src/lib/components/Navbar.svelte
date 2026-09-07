@@ -1,7 +1,8 @@
 <script>
-	import { onMount, tick } from 'svelte';
-	import { Moon, Sun, Menu, X, Home, User, Briefcase, Layers, Mail, Code } from 'lucide-svelte';
-	import { fade, slide, fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	import { Moon, Sun, Menu, X, Home, User, Layers, Mail, Code, Languages } from 'lucide-svelte';
+	import { fade, fly } from 'svelte/transition';
+	import { currentLang, selectedLang, isLangChanging, setLang, initLang, t } from '$lib/i18n';
 
 	let theme = 'light';
 	let isMenuOpen = false;
@@ -9,11 +10,11 @@
 	let scrollY = 0;
 
 	onMount(() => {
-		const saved = localStorage.getItem('theme');
-		theme = saved ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-		document.documentElement.classList.toggle('dark', theme === 'dark');
+		initLang();
 
-		// Set initial active section
+		const isDark = document.documentElement.classList.contains('dark');
+		theme = isDark ? 'dark' : 'light';
+
 		observeSections();
 	});
 
@@ -32,12 +33,11 @@
 	}
 
 	const links = [
-		{ href: '#home', label: 'Home', icon: Home },
-		{ href: '#about', label: 'About', icon: User },
-		{ href: '#education', label: 'Education', icon: User },
-		{ href: '#skills', label: 'Skills', icon: Code },
-		{ href: '#projects', label: 'Projects', icon: Layers },
-		{ href: '#contacts', label: 'Contact', icon: Mail }
+		{ href: '#home', key: 'home', icon: Home },
+		{ href: '#about', key: 'about', icon: User },
+		{ href: '#skills', key: 'skills', icon: Code },
+		{ href: '#projects', key: 'projects', icon: Layers },
+		{ href: '#contacts', key: 'contact', icon: Mail }
 	];
 
 	function observeSections() {
@@ -63,9 +63,15 @@
 	function scrollToSection(href) {
 		closeMenu();
 		activeSection = href;
-		const element = document.querySelector(href);
-		if (element) {
-			element.scrollIntoView({ behavior: 'smooth' });
+		if (typeof window !== 'undefined') {
+			if (window.location.pathname !== '/') {
+				window.location.href = `/${href}`;
+				return;
+			}
+			const element = document.querySelector(href);
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth' });
+			}
 		}
 	}
 </script>
@@ -76,15 +82,18 @@
 	class="fixed top-0 z-50 w-full px-4 transition-all duration-300 {scrollY > 50 ? 'py-4' : 'py-6'}"
 >
 	<div
-		class="mx-auto flex w-full max-w-5xl items-center justify-between rounded-full border border-white/30 bg-white/50 px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-sm transition-all duration-300 dark:border-white/10 dark:bg-slate-900/60 dark:shadow-black/20"
+		class="mx-auto flex w-full max-w-5xl items-center justify-between rounded-xl border border-white/40 bg-white/70 px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-md transition-all duration-300 dark:border-zinc-800/80 dark:bg-zinc-900/80 dark:shadow-black/40"
 	>
 		<!-- Brand -->
 		<a
 			href="#home"
-			on:click|preventDefault={() => scrollToSection('#home')}
+			onclick={(e) => {
+				e.preventDefault();
+				scrollToSection('#home');
+			}}
 			class="relative z-10 text-lg font-bold tracking-tight text-slate-900 transition hover:opacity-80 dark:text-white"
 		>
-			<span class="text-emerald-500">Adam</span>.
+			<span class="text-indigo-600 dark:text-indigo-400">Adam</span>.
 		</a>
 
 		<!-- Desktop Menu -->
@@ -92,29 +101,76 @@
 			{#each links as link}
 				<a
 					href={link.href}
-					on:click|preventDefault={() => scrollToSection(link.href)}
-					class="relative rounded-full px-4 py-1.5 text-sm font-medium transition-colors hover:text-emerald-600 dark:hover:text-emerald-400 {activeSection ===
+					onclick={(e) => {
+						e.preventDefault();
+						scrollToSection(link.href);
+					}}
+					class="relative rounded-lg px-3.5 py-1.5 text-sm font-medium transition-colors hover:text-indigo-600 dark:hover:text-indigo-400 {activeSection ===
 					link.href
-						? 'text-emerald-600 dark:text-emerald-400'
-						: 'text-slate-600 dark:text-slate-400'}"
+						? 'text-indigo-600 dark:text-indigo-400'
+						: 'text-slate-600 dark:text-zinc-400'}"
 				>
 					{#if activeSection === link.href}
 						<!-- Active Indicator -->
 						<div
-							class="absolute inset-0 -z-10 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20"
+							class="absolute inset-0 -z-10 rounded-lg bg-indigo-500/10 dark:bg-indigo-500/20"
 							in:fade={{ duration: 200 }}
 						></div>
 					{/if}
-					{link.label}
+					<span
+						class="inline-block transition-opacity duration-150 {$isLangChanging
+							? 'opacity-20'
+							: 'opacity-100'}"
+					>
+						{$t.nav[link.key]}
+					</span>
 				</a>
 			{/each}
 
-			<div class="mx-2 h-6 w-px bg-slate-200 dark:bg-slate-800"></div>
+			<div class="mx-2 h-6 w-px bg-slate-200 dark:bg-zinc-800"></div>
 
+			<!-- Language Switcher (Desktop) -->
+			<div
+				class="relative flex items-center rounded-lg border border-slate-200/80 bg-slate-100/80 p-0.5 dark:border-zinc-800 dark:bg-zinc-800/80"
+			>
+				<!-- Sliding Pill Indicator -->
+				<span
+					class="pointer-events-none absolute top-0.5 bottom-0.5 left-0.5 w-8 rounded-md bg-white shadow-xs transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] dark:bg-zinc-900 dark:shadow-black/40 {$selectedLang ===
+					'en'
+						? 'translate-x-8'
+						: 'translate-x-0'}"
+					aria-hidden="true"
+				></span>
+
+				<button
+					type="button"
+					onclick={() => setLang('id')}
+					class="relative z-10 w-8 py-1 text-center text-xs font-bold transition-colors duration-200 active:scale-95 {$selectedLang ===
+					'id'
+						? 'text-indigo-600 dark:text-indigo-400'
+						: 'text-slate-500 hover:text-slate-800 dark:text-zinc-400 dark:hover:text-white'}"
+					aria-label="Bahasa Indonesia"
+				>
+					ID
+				</button>
+				<button
+					type="button"
+					onclick={() => setLang('en')}
+					class="relative z-10 w-8 py-1 text-center text-xs font-bold transition-colors duration-200 active:scale-95 {$selectedLang ===
+					'en'
+						? 'text-indigo-600 dark:text-indigo-400'
+						: 'text-slate-500 hover:text-slate-800 dark:text-zinc-400 dark:hover:text-white'}"
+					aria-label="English"
+				>
+					EN
+				</button>
+			</div>
+
+			<!-- Theme Toggle Button -->
 			<button
-				on:click={toggleTheme}
+				onclick={toggleTheme}
 				aria-label="Toggle theme"
-				class="group relative rounded-full p-2 text-slate-600 transition hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800"
+				class="group relative ml-1 rounded-lg p-2 text-slate-600 transition hover:bg-slate-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
 			>
 				<div
 					class="transition-transform duration-300 {theme === 'dark'
@@ -135,8 +191,8 @@
 
 		<!-- Mobile Toggle -->
 		<button
-			on:click={toggleMenu}
-			class="relative z-50 rounded-full p-2 text-slate-600 transition hover:bg-slate-100 md:hidden dark:text-slate-400 dark:hover:bg-slate-800"
+			onclick={toggleMenu}
+			class="relative z-50 rounded-lg p-2 text-slate-600 transition hover:bg-slate-100 md:hidden dark:text-zinc-400 dark:hover:bg-zinc-800"
 			aria-label="Toggle menu"
 		>
 			{#if isMenuOpen}
@@ -157,36 +213,88 @@
 		aria-label="Close menu"
 		in:fade={{ duration: 200 }}
 		out:fade={{ duration: 200 }}
-		on:click={closeMenu}
+		onclick={closeMenu}
 	></button>
 
 	<!-- Menu -->
 	<div
-		class="fixed inset-x-4 top-24 z-50 flex flex-col gap-2 rounded-3xl border border-white/40 bg-white/90 p-4 shadow-2xl backdrop-blur-xl md:hidden dark:border-white/10 dark:bg-slate-900/90"
+		class="fixed inset-x-4 top-24 z-50 flex flex-col gap-2 rounded-xl border border-white/40 bg-white/95 p-4 shadow-2xl backdrop-blur-xl md:hidden dark:border-zinc-800 dark:bg-zinc-900/95"
 		in:fly={{ y: -20, duration: 300 }}
 		out:fly={{ y: -20, duration: 200 }}
 	>
 		{#each links as link}
+			{@const Icon = link.icon}
 			<a
 				href={link.href}
-				on:click|preventDefault={() => scrollToSection(link.href)}
-				class="flex items-center gap-4 rounded-2xl p-4 text-base font-medium transition-all {activeSection ===
+				onclick={(e) => {
+					e.preventDefault();
+					scrollToSection(link.href);
+				}}
+				class="flex items-center gap-4 rounded-xl p-3.5 text-base font-medium transition-all {activeSection ===
 				link.href
-					? 'bg-emerald-500/10 text-emerald-600 dark:bg-emerald-500/20 dark:text-emerald-400'
-					: 'text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800'}"
+					? 'bg-indigo-500/10 text-indigo-600 dark:bg-indigo-500/20 dark:text-indigo-400'
+					: 'text-slate-600 hover:bg-slate-100 dark:text-zinc-400 dark:hover:bg-zinc-800'}"
 			>
-				<div class={activeSection === link.href ? 'text-emerald-500' : 'text-slate-400'}>
-					<svelte:component this={link.icon} class="size-5" />
+				<div class={activeSection === link.href ? 'text-indigo-500' : 'text-slate-400'}>
+					<Icon class="size-5" />
 				</div>
-				{link.label}
+				<span
+					class="transition-opacity duration-150 {$isLangChanging ? 'opacity-20' : 'opacity-100'}"
+				>
+					{$t.nav[link.key]}
+				</span>
 			</a>
 		{/each}
 
-		<hr class="my-2 border-slate-200 dark:border-white/10" />
+		<hr class="my-2 border-slate-200 dark:border-zinc-800" />
 
+		<!-- Language Switcher in Mobile Menu -->
+		<div class="flex items-center justify-between px-3.5 py-2">
+			<div class="flex items-center gap-3 text-slate-600 dark:text-zinc-400">
+				<Languages class="size-5" />
+				<span class="text-sm font-medium">Bahasa / Language</span>
+			</div>
+			<div
+				class="relative flex items-center rounded-lg border border-slate-200/80 bg-slate-100/80 p-0.5 dark:border-zinc-800 dark:bg-zinc-800/80"
+			>
+				<!-- Sliding Pill Indicator -->
+				<span
+					class="pointer-events-none absolute top-0.5 bottom-0.5 left-0.5 w-10 rounded-md bg-white shadow-xs transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] dark:bg-zinc-900 dark:shadow-black/40 {$selectedLang ===
+					'en'
+						? 'translate-x-10'
+						: 'translate-x-0'}"
+					aria-hidden="true"
+				></span>
+
+				<button
+					type="button"
+					onclick={() => setLang('id')}
+					class="relative z-10 w-10 py-1.5 text-center text-xs font-bold transition-colors duration-200 active:scale-95 {$selectedLang ===
+					'id'
+						? 'text-indigo-600 dark:text-indigo-400'
+						: 'text-slate-500 hover:text-slate-800 dark:text-zinc-400 dark:hover:text-white'}"
+				>
+					ID
+				</button>
+				<button
+					type="button"
+					onclick={() => setLang('en')}
+					class="relative z-10 w-10 py-1.5 text-center text-xs font-bold transition-colors duration-200 active:scale-95 {$selectedLang ===
+					'en'
+						? 'text-indigo-600 dark:text-indigo-400'
+						: 'text-slate-500 hover:text-slate-800 dark:text-zinc-400 dark:hover:text-white'}"
+				>
+					EN
+				</button>
+			</div>
+		</div>
+
+		<hr class="my-1 border-slate-200 dark:border-zinc-800" />
+
+		<!-- Theme Toggle in Mobile Menu -->
 		<button
-			on:click={toggleTheme}
-			class="flex items-center gap-4 rounded-2xl p-4 text-base font-medium text-slate-600 transition-all hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800"
+			onclick={toggleTheme}
+			class="flex items-center gap-4 rounded-xl p-3.5 text-base font-medium text-slate-600 transition-all hover:bg-slate-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
 		>
 			<div class="text-slate-400">
 				{#if theme === 'dark'}

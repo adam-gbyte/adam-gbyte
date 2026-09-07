@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 	<head>
 		<meta charset="utf-8" />
 		<link
@@ -7,6 +7,35 @@
 			href="https://ik.imagekit.io/gbyte/logo/Logo%20v5.2023.2%20(beta-circle).png"
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script>
+			try {
+				const theme = localStorage.getItem('theme');
+				if (
+					theme === 'dark' ||
+					(!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+				) {
+					document.documentElement.classList.add('dark');
+				} else {
+					document.documentElement.classList.remove('dark');
+				}
+
+				const lang = localStorage.getItem('lang');
+				if (lang === 'en') {
+					document.documentElement.lang = 'en';
+				} else {
+					document.documentElement.lang = 'id';
+				}
+			} catch (_) {}
+		</script>
 
 		%sveltekit.head%
 	</head>

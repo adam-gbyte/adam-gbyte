@@ -8,10 +8,10 @@ Welcome to my GitHub profile! I am an **Informatics Engineering student** focuse
 
 ## 🚀 About Me
 
-* 🎓 **Informatics Engineering – Nusa Putra University** (2023 – Present)
-* 💻 Experienced in developing academic and personal projects using modern web technologies.
-* 🤖 Interested in AI-based systems, computer vision, and automation.
-* 🌍 Self-driven learner who is comfortable collaborating in remote environments.
+- 🎓 **Informatics Engineering – Nusa Putra University** (2023 – Present)
+- 💻 Experienced in developing academic and personal projects using modern web technologies.
+- 🤖 Interested in AI-based systems, computer vision, and automation.
+- 🌍 Self-driven learner who is comfortable collaborating in remote environments.
 
 ---
 
@@ -37,8 +37,8 @@ Git, VS Code, Vercel, Antigravity
 
 A customizable digital invitation platform with various modern themes.
 
-* Built backend services for invitation data management
-* Implemented responsive UI for desktop and mobile
+- Built backend services for invitation data management
+- Implemented responsive UI for desktop and mobile
   **Tech:** SvelteKit, Node.js, MongoDB, TailwindCSS
 
 ### 🔹 Web KKN Kabandungan
@@ -55,19 +55,19 @@ A deep learning implementation for Cavendish banana classification integrated in
 
 A computer vision–based waste detection system using the TACO dataset.
 
-* Dataset preprocessing and annotation
-* Object detection model training
-* Evaluation using precision, recall, and mAP
+- Dataset preprocessing and annotation
+- Object detection model training
+- Evaluation using precision, recall, and mAP
   **Tech:** Python, YOLOv8
 
 ---
 
 ## 📫 Contact Me
 
-* 📧 Email: **[adamgumilang2103@gmail.com](mailto:adamgumilang2103@gmail.com)**
-* 🌐 Website: http://www.adam-gbyte.my.id
-* 📷 Instagram: https://instagram.com/adam_gumilang_
-* 💼 LinkedIn: https://linkedin/
+- 📧 Email: **[adamgumilang2103@gmail.com](mailto:adamgumilang2103@gmail.com)**
+- 🌐 Website: http://www.adam-gbyte.my.id
+- 📷 Instagram: https://instagram.com/adam_gumilang_
+- 💼 LinkedIn: https://www.linkedin.com/in/adam-gumilang/
 
 ---
 

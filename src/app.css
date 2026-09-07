@@ -2,22 +2,36 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-.nav-base {
-	@apply fixed top-0 z-50 w-full transition-all duration-300;
+@theme {
+	--font-sans:
+		'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		sans-serif;
+	--font-mono: 'JetBrains Mono', monospace;
 }
 
-.nav-scrolled {
-	@apply translate-y-0 bg-white/90 shadow-md backdrop-blur;
+html {
+	scroll-behavior: smooth;
+	font-family: var(--font-sans);
 }
 
-.nav-transparent {
-	@apply -translate-y-1 bg-transparent;
+::selection {
+	background-color: rgba(99, 102, 241, 0.25);
+	color: inherit;
 }
-
-/* * {
-	outline: 1px dashed rgba(255, 0, 0, 0.7);
-} */
 
 ::-webkit-scrollbar {
-	display: none;
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(148, 163, 184, 0.35);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(99, 102, 241, 0.7);
 }

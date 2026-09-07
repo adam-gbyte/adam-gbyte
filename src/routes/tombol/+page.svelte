@@ -8,7 +8,6 @@
 		Settings,
 		Mail,
 		Github,
-		Linkedin,
 		ExternalLink
 	} from 'lucide-svelte';
 	import { fade, fly } from 'svelte/transition';
@@ -156,7 +155,7 @@
 	<div class="mx-auto max-w-5xl space-y-20">
 		<div class="space-y-4 text-center" in:fly={{ y: 20, duration: 800 }}>
 			<span
-				class="inline-block rounded-full border border-emerald-500/20 bg-emerald-500/5 px-4 py-1.5 text-sm font-medium text-emerald-600 dark:text-emerald-400"
+				class="inline-block rounded-md border border-emerald-500/20 bg-emerald-500/5 px-3.5 py-1 text-sm font-medium text-emerald-600 dark:text-emerald-400"
 			>
 				UI Components
 			</span>
@@ -174,8 +173,9 @@
 
 		<div class="grid gap-12">
 			{#each variants as variant, i}
+				{@const Icon = variant.icon}
 				<div
-					class="group relative space-y-6 rounded-3xl border border-slate-200 bg-white/50 p-8 backdrop-blur-xl transition-all hover:border-emerald-500/30 hover:shadow-2xl hover:shadow-emerald-500/5 dark:border-white/10 dark:bg-slate-900/50"
+					class="group relative space-y-6 rounded-xl border border-slate-200 bg-white/50 p-7 backdrop-blur-xl transition-all hover:border-emerald-500/30 hover:shadow-2xl hover:shadow-emerald-500/5 dark:border-white/10 dark:bg-slate-900/50"
 					in:fly={{ y: 20, duration: 800, delay: i * 100 }}
 				>
 					<div class="flex items-center justify-between">
@@ -190,17 +190,11 @@
 							>
 								{#if variant.isCustom}
 									<span class={variant.innerClass}>
-										<svelte:component
-											this={variant.icon}
-											class="mr-2 size-4 transition-transform group-hover/btn:scale-110"
-										/>
+										<Icon class="mr-2 size-4 transition-transform group-hover/btn:scale-110" />
 										{variant.name}
 									</span>
 								{:else}
-									<svelte:component
-										this={variant.icon}
-										class="size-4 transition-transform group-hover/btn:scale-110"
-									/>
+									<Icon class="size-4 transition-transform group-hover/btn:scale-110" />
 									{variant.name}
 								{/if}
 							</button>
@@ -211,7 +205,7 @@
 							disabled
 							class="inline-flex cursor-not-allowed items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold opacity-50 {variant.class}"
 						>
-							<svelte:component this={variant.icon} class="size-4" />
+							<Icon class="size-4" />
 							Disabled
 						</button>
 					</div>
