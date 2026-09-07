@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { Moon, Sun, Menu, X, Home, User, Layers, Mail, Code, Languages } from 'lucide-svelte';
 	import { fade, fly } from 'svelte/transition';
-	import { currentLang, selectedLang, isLangChanging, setLang, initLang, t } from '$lib/i18n';
+	import { selectedLang, isLangChanging, setLang, initLang, t } from '$lib/i18n';
 
 	let theme = 'light';
 	let isMenuOpen = false;
@@ -82,7 +82,7 @@
 	class="fixed top-0 z-50 w-full px-4 transition-all duration-300 {scrollY > 50 ? 'py-4' : 'py-6'}"
 >
 	<div
-		class="mx-auto flex w-full max-w-5xl items-center justify-between rounded-xl border border-white/40 bg-white/70 px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-md transition-all duration-300 dark:border-zinc-800/80 dark:bg-zinc-900/80 dark:shadow-black/40"
+		class="mx-auto flex w-full max-w-5xl items-center justify-between rounded-xl border border-slate-200/80 bg-white/80 px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-md transition-all duration-300 dark:border-zinc-800/80 dark:bg-zinc-900/80 dark:shadow-black/40"
 	>
 		<!-- Brand -->
 		<a
@@ -93,7 +93,9 @@
 			}}
 			class="relative z-10 text-lg font-bold tracking-tight text-slate-900 transition hover:opacity-80 dark:text-white"
 		>
-			<span class="text-indigo-600 dark:text-indigo-400">Adam</span>.
+			<span class="text-indigo-600 dark:text-indigo-400">Adam</span><span class="text-cyan-500"
+				>.</span
+			>
 		</a>
 
 		<!-- Desktop Menu -->
@@ -108,12 +110,12 @@
 					class="relative rounded-lg px-3.5 py-1.5 text-sm font-medium transition-colors hover:text-indigo-600 dark:hover:text-indigo-400 {activeSection ===
 					link.href
 						? 'text-indigo-600 dark:text-indigo-400'
-						: 'text-slate-600 dark:text-zinc-400'}"
+						: 'text-slate-600 hover:bg-slate-100/70 dark:text-zinc-400 dark:hover:bg-zinc-800/60 dark:hover:text-zinc-200'}"
 				>
 					{#if activeSection === link.href}
 						<!-- Active Indicator -->
 						<div
-							class="absolute inset-0 -z-10 rounded-lg bg-indigo-500/10 dark:bg-indigo-500/20"
+							class="absolute inset-0 -z-10 rounded-lg bg-indigo-500/10 ring-1 ring-indigo-500/20 dark:bg-indigo-500/15 dark:ring-indigo-400/30"
 							in:fade={{ duration: 200 }}
 						></div>
 					{/if}
@@ -131,11 +133,11 @@
 
 			<!-- Language Switcher (Desktop) -->
 			<div
-				class="relative flex items-center rounded-lg border border-slate-200/80 bg-slate-100/80 p-0.5 dark:border-zinc-800 dark:bg-zinc-800/80"
+				class="relative flex items-center rounded-lg border border-slate-200/80 bg-slate-100/80 p-0.5 dark:border-zinc-800 dark:bg-zinc-950/80"
 			>
 				<!-- Sliding Pill Indicator -->
 				<span
-					class="pointer-events-none absolute top-0.5 bottom-0.5 left-0.5 w-8 rounded-md bg-white shadow-xs transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] dark:bg-zinc-900 dark:shadow-black/40 {$selectedLang ===
+					class="pointer-events-none absolute top-0.5 bottom-0.5 left-0.5 w-8 rounded-md bg-white shadow-xs transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] dark:bg-zinc-800 dark:shadow-black/40 {$selectedLang ===
 					'en'
 						? 'translate-x-8'
 						: 'translate-x-0'}"
@@ -170,21 +172,22 @@
 			<button
 				onclick={toggleTheme}
 				aria-label="Toggle theme"
-				class="group relative ml-1 rounded-lg p-2 text-slate-600 transition hover:bg-slate-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
+				class="group relative ml-1 flex size-8 items-center justify-center rounded-lg text-slate-600 transition hover:bg-slate-100 active:scale-95 dark:text-zinc-400 dark:hover:bg-zinc-800"
 			>
 				<div
 					class="transition-transform duration-300 {theme === 'dark'
-						? 'scale-0 rotate-90'
-						: 'scale-100 rotate-0'}"
+						? 'scale-0 rotate-90 opacity-0'
+						: 'scale-100 rotate-0 opacity-100'}"
 				>
-					<Sun class="size-5" />
+					<Sun class="size-4.5" />
 				</div>
 				<div
-					class="absolute top-2 left-2 transition-transform duration-300 {theme === 'dark'
-						? 'scale-100 rotate-0'
-						: 'scale-0 -rotate-90'}"
+					class="absolute inset-0 flex items-center justify-center transition-transform duration-300 {theme ===
+					'dark'
+						? 'scale-100 rotate-0 opacity-100'
+						: 'scale-0 -rotate-90 opacity-0'}"
 				>
-					<Moon class="size-5" />
+					<Moon class="size-4.5" />
 				</div>
 			</button>
 		</div>
@@ -196,7 +199,7 @@
 			aria-label="Toggle menu"
 		>
 			{#if isMenuOpen}
-				<X class="size-6" />
+				<X class="size-6 text-indigo-600 dark:text-indigo-400" />
 			{:else}
 				<Menu class="size-6" />
 			{/if}
@@ -209,7 +212,7 @@
 	<!-- Backdrop -->
 	<button
 		type="button"
-		class="fixed inset-0 z-40 h-full w-full cursor-default border-none bg-black/20 backdrop-blur-sm md:hidden"
+		class="fixed inset-0 z-40 h-full w-full cursor-default border-none bg-black/40 backdrop-blur-sm md:hidden"
 		aria-label="Close menu"
 		in:fade={{ duration: 200 }}
 		out:fade={{ duration: 200 }}
@@ -218,7 +221,7 @@
 
 	<!-- Menu -->
 	<div
-		class="fixed inset-x-4 top-24 z-50 flex flex-col gap-2 rounded-xl border border-white/40 bg-white/95 p-4 shadow-2xl backdrop-blur-xl md:hidden dark:border-zinc-800 dark:bg-zinc-900/95"
+		class="fixed inset-x-4 top-24 z-50 flex flex-col gap-2 rounded-xl border border-slate-200/80 bg-white/95 p-4 shadow-2xl backdrop-blur-xl md:hidden dark:border-zinc-800 dark:bg-zinc-900/95"
 		in:fly={{ y: -20, duration: 300 }}
 		out:fly={{ y: -20, duration: 200 }}
 	>
@@ -230,9 +233,9 @@
 					e.preventDefault();
 					scrollToSection(link.href);
 				}}
-				class="flex items-center gap-4 rounded-xl p-3.5 text-base font-medium transition-all {activeSection ===
+				class="flex items-center gap-4 rounded-xl p-3.5 text-base font-medium transition-all active:scale-[0.98] {activeSection ===
 				link.href
-					? 'bg-indigo-500/10 text-indigo-600 dark:bg-indigo-500/20 dark:text-indigo-400'
+					? 'bg-indigo-500/10 text-indigo-600 ring-1 ring-indigo-500/20 dark:bg-indigo-500/20 dark:text-indigo-400'
 					: 'text-slate-600 hover:bg-slate-100 dark:text-zinc-400 dark:hover:bg-zinc-800'}"
 			>
 				<div class={activeSection === link.href ? 'text-indigo-500' : 'text-slate-400'}>
@@ -251,15 +254,15 @@
 		<!-- Language Switcher in Mobile Menu -->
 		<div class="flex items-center justify-between px-3.5 py-2">
 			<div class="flex items-center gap-3 text-slate-600 dark:text-zinc-400">
-				<Languages class="size-5" />
+				<Languages class="size-5 text-indigo-500" />
 				<span class="text-sm font-medium">Bahasa / Language</span>
 			</div>
 			<div
-				class="relative flex items-center rounded-lg border border-slate-200/80 bg-slate-100/80 p-0.5 dark:border-zinc-800 dark:bg-zinc-800/80"
+				class="relative flex items-center rounded-lg border border-slate-200/80 bg-slate-100/80 p-0.5 dark:border-zinc-800 dark:bg-zinc-950/80"
 			>
 				<!-- Sliding Pill Indicator -->
 				<span
-					class="pointer-events-none absolute top-0.5 bottom-0.5 left-0.5 w-10 rounded-md bg-white shadow-xs transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] dark:bg-zinc-900 dark:shadow-black/40 {$selectedLang ===
+					class="pointer-events-none absolute top-0.5 bottom-0.5 left-0.5 w-10 rounded-md bg-white shadow-xs transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] dark:bg-zinc-800 dark:shadow-black/40 {$selectedLang ===
 					'en'
 						? 'translate-x-10'
 						: 'translate-x-0'}"
@@ -294,13 +297,13 @@
 		<!-- Theme Toggle in Mobile Menu -->
 		<button
 			onclick={toggleTheme}
-			class="flex items-center gap-4 rounded-xl p-3.5 text-base font-medium text-slate-600 transition-all hover:bg-slate-100 dark:text-zinc-400 dark:hover:bg-zinc-800"
+			class="flex items-center gap-4 rounded-xl p-3.5 text-base font-medium text-slate-600 transition-all hover:bg-slate-100 active:scale-[0.98] dark:text-zinc-400 dark:hover:bg-zinc-800"
 		>
 			<div class="text-slate-400">
 				{#if theme === 'dark'}
-					<Moon class="size-5" />
+					<Moon class="size-5 text-indigo-400" />
 				{:else}
-					<Sun class="size-5" />
+					<Sun class="size-5 text-amber-500" />
 				{/if}
 			</div>
 			<span>{theme === 'dark' ? 'Dark Mode' : 'Light Mode'}</span>

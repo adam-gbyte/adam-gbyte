@@ -48,26 +48,19 @@
 	];
 </script>
 
-<section id="contacts" class="relative mx-auto w-full max-w-7xl px-6 py-24 sm:px-8 lg:py-32">
-	<!-- Ambient Background Glow -->
-	<div
-		class="pointer-events-none absolute bottom-10 left-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-indigo-500/10 blur-[150px] dark:bg-indigo-500/15"
-	></div>
-
+<section
+	id="contacts"
+	class="relative mx-auto w-full max-w-7xl px-6 py-12 sm:px-8 sm:py-16 md:py-20"
+>
 	<!-- Section Header -->
-	<div class="mb-14 flex flex-col items-center text-center">
-		<h2
-			class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl dark:text-white"
-		>
+	<div class="mb-8 flex flex-col items-center text-center sm:mb-10">
+		<h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
 			{$t.contact.headingPart1} <br class="hidden sm:inline" />
-			<span
-				class="bg-gradient-to-r from-indigo-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent dark:from-indigo-400 dark:via-sky-300 dark:to-cyan-400"
-				>{$t.contact.headingPart2}</span
-			>
+			<span class="text-indigo-600 dark:text-indigo-400">{$t.contact.headingPart2}</span>
 		</h2>
 
 		<p
-			class="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg dark:text-zinc-400"
+			class="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base dark:text-zinc-400"
 		>
 			{$t.contact.subtitle}
 		</p>
@@ -77,7 +70,7 @@
 	<div class="grid grid-cols-1 gap-6 md:grid-cols-12">
 		<!-- Card 1: Main CTA Card (Spans 7 cols) -->
 		<div
-			class="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200/80 bg-white/70 p-8 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-indigo-500/40 md:col-span-7 lg:p-10 dark:border-zinc-800 dark:bg-zinc-900/80"
+			class="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-300 hover:border-indigo-500/40 md:col-span-7 lg:p-10 dark:border-zinc-800 dark:bg-zinc-900"
 		>
 			<div class="relative z-10">
 				<div
@@ -86,7 +79,7 @@
 					<Send class="size-6" />
 				</div>
 
-				<h3 class="mt-6 text-2xl font-extrabold text-slate-900 sm:text-3xl dark:text-white">
+				<h3 class="mt-4 text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">
 					{$t.contact.ctaTitle}
 				</h3>
 
@@ -110,7 +103,7 @@
 		<div class="flex flex-col gap-6 md:col-span-5">
 			<!-- Copy Email Card -->
 			<div
-				class="rounded-xl border border-slate-200/80 bg-white/70 p-6 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-indigo-500/40 dark:border-zinc-800 dark:bg-zinc-900/80"
+				class="rounded-xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:border-indigo-500/40 dark:border-zinc-800 dark:bg-zinc-900"
 			>
 				<div class="flex items-center justify-between">
 					<span
@@ -154,7 +147,7 @@
 
 			<!-- CV Download Card -->
 			<div
-				class="flex items-center justify-between rounded-xl border border-slate-200/80 bg-white/70 p-6 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-indigo-500/40 dark:border-zinc-800 dark:bg-zinc-900/80"
+				class="flex items-center justify-between rounded-xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:border-indigo-500/40 dark:border-zinc-800 dark:bg-zinc-900"
 			>
 				<div class="flex items-center gap-4">
 					<div
@@ -181,7 +174,7 @@
 
 		<!-- Card 3: Social Connections (Spans all 12 cols) -->
 		<div
-			class="rounded-xl border border-slate-200/80 bg-white/70 p-6 shadow-xl backdrop-blur-xl md:col-span-12 dark:border-zinc-800 dark:bg-zinc-900/80"
+			class="rounded-xl border border-slate-200/80 bg-white p-6 shadow-sm md:col-span-12 dark:border-zinc-800 dark:bg-zinc-900"
 		>
 			<div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
 				{#each socials as social}

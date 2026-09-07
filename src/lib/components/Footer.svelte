@@ -10,20 +10,15 @@
 </script>
 
 <footer
-	class="relative w-full overflow-hidden border-t border-slate-200/60 bg-white/50 pt-16 pb-8 backdrop-blur-xl dark:border-zinc-800/80 dark:bg-zinc-950/70"
+	class="relative w-full overflow-hidden border-t border-slate-200/80 bg-white pt-10 pb-8 sm:pt-12 dark:border-zinc-800 dark:bg-zinc-950"
 >
-	<!-- Background Glow -->
-	<div
-		class="pointer-events-none absolute bottom-0 left-1/2 -z-10 h-[300px] w-[600px] -translate-x-1/2 translate-y-1/2 rounded-full bg-indigo-500/5 blur-[90px]"
-	></div>
-
 	<div class="mx-auto flex max-w-6xl flex-col gap-12 px-6">
 		<div class="flex flex-col items-center justify-between gap-8 md:flex-row">
 			<!-- Brand & Tagline -->
 			<div class="flex flex-col items-center gap-2 text-center md:items-start md:text-left">
 				<a
 					href="#home"
-					class="text-2xl font-bold tracking-tight text-slate-900 transition hover:opacity-80 dark:text-white"
+					class="text-xl font-bold tracking-tight text-slate-900 transition hover:opacity-80 dark:text-white"
 				>
 					<span class="text-indigo-600 dark:text-indigo-400">Adam</span> Gumilang
 				</a>

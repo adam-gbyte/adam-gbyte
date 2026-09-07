@@ -33,32 +33,22 @@
 
 <section
 	id="projects"
-	class="relative mx-auto flex w-full max-w-7xl flex-col gap-24 overflow-hidden px-6 py-24 sm:px-8 lg:py-32"
+	class="relative mx-auto flex w-full max-w-7xl flex-col gap-12 overflow-hidden px-6 py-12 sm:px-8 sm:py-16 md:gap-14 md:py-20"
 >
-	<!-- Ambient Glow -->
-	<div
-		class="pointer-events-none absolute top-10 left-1/2 -z-10 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-indigo-500/10 blur-[150px] dark:bg-indigo-500/15"
-	></div>
-
 	<!-- Section Header -->
 	<div class="mx-auto flex max-w-3xl flex-col items-center text-center">
-		<h2
-			class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl dark:text-white"
-		>
+		<h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
 			{$t.projects.headingPart1}
-			<span
-				class="bg-gradient-to-r from-indigo-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent dark:from-indigo-400 dark:via-sky-300 dark:to-cyan-400"
-				>{$t.projects.headingPart2}</span
-			>
+			<span class="text-indigo-600 dark:text-indigo-400">{$t.projects.headingPart2}</span>
 		</h2>
 
-		<p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-zinc-400">
+		<p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base dark:text-zinc-400">
 			{$t.projects.subtitle}
 		</p>
 	</div>
 
 	<!-- Projects List -->
-	<div class="flex flex-col gap-24">
+	<div class="flex flex-col gap-14 lg:gap-16">
 		{#if tabs && tabs.length > 0}
 			{#each tabs as project, i}
 				{@const badgeText = getLocalized(project.badge)}
@@ -81,11 +71,11 @@
 								>
 									{badgeText || 'Project'}
 								</span>
-								<div class="h-px flex-1 bg-gradient-to-r from-indigo-500/40 to-transparent"></div>
+								<div class="h-px flex-1 bg-slate-200 dark:bg-zinc-800"></div>
 							</div>
 
 							<h3
-								class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl dark:text-white"
+								class="mt-2 text-xl font-bold tracking-tight text-slate-900 sm:text-2xl dark:text-white"
 							>
 								{project.title}
 							</h3>
@@ -197,9 +187,6 @@
 													{$t.projects.noPreview}
 												</div>
 											{/if}
-											<div
-												class="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-zinc-950/80 to-transparent"
-											></div>
 										</div>
 									{/each}
 								</div>

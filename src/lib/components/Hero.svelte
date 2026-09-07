@@ -16,16 +16,8 @@
 
 <section
 	id="home"
-	class="relative mx-auto flex min-h-[92vh] w-full max-w-7xl flex-col items-center justify-center gap-12 overflow-hidden px-6 pt-28 pb-16 md:flex-row md:pt-32 md:pb-24"
+	class="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 overflow-hidden px-6 pt-24 pb-10 sm:pt-28 sm:pb-12 md:flex-row md:gap-12 md:pt-32 md:pb-16"
 >
-	<!-- Ambient Glows -->
-	<div
-		class="pointer-events-none absolute -top-24 left-1/4 -z-10 h-[480px] w-[480px] rounded-full bg-indigo-500/10 blur-[140px] dark:bg-indigo-500/15"
-	></div>
-	<div
-		class="pointer-events-none absolute right-10 bottom-10 -z-10 h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-[130px] dark:bg-cyan-500/12"
-	></div>
-
 	<!-- Left Text Content -->
 	<div class="relative z-10 flex max-w-2xl flex-col gap-6 text-center md:text-left">
 		<!-- Mobile Avatar -->
@@ -42,20 +34,17 @@
 		</div>
 
 		<!-- Headings -->
-		<div class="space-y-3">
+		<div class="space-y-2">
 			<h1
-				class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white"
+				class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl lg:text-4xl dark:text-white"
 				in:fly={{ y: 20, duration: 800, delay: 300 }}
 			>
 				{$t.hero.greeting}
-				<span
-					class="bg-gradient-to-r from-indigo-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent dark:from-indigo-400 dark:via-sky-300 dark:to-cyan-400"
-					>Adam Gumilang</span
-				>
+				<span class="text-indigo-600 dark:text-indigo-400">Adam Gumilang</span>
 			</h1>
 
 			<p
-				class="text-xl font-semibold tracking-tight text-slate-700 sm:text-2xl dark:text-zinc-200"
+				class="text-base font-semibold tracking-tight text-slate-700 sm:text-lg dark:text-zinc-300"
 				in:fly={{ y: 20, duration: 800, delay: 450 }}
 			>
 				{$t.hero.role}
@@ -154,14 +143,9 @@
 		in:fade={{ duration: 1000, delay: 400 }}
 	>
 		<div class="relative w-full max-w-md">
-			<!-- Ambient Backlight -->
-			<div
-				class="absolute -inset-1.5 rounded-2xl bg-gradient-to-tr from-indigo-500/30 via-violet-500/20 to-cyan-500/30 opacity-70 blur-xl transition-all duration-700 group-hover:opacity-100"
-			></div>
-
 			<!-- Main Card Container -->
 			<div
-				class="relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/70 p-5 shadow-2xl backdrop-blur-xl dark:border-zinc-800 dark:bg-zinc-900/80"
+				class="relative overflow-hidden rounded-xl border border-slate-200/80 bg-white p-5 shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
 			>
 				<!-- Terminal Top Bar -->
 				<div
@@ -187,18 +171,16 @@
 						alt="Adam Gumilang"
 						class="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
 					/>
-					<div
-						class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent"
-					></div>
-
 					<!-- Bottom Tag inside Image -->
-					<div class="absolute inset-x-3 bottom-3 flex items-center justify-between text-white">
+					<div
+						class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-zinc-950/85 px-3.5 py-2.5 text-white backdrop-blur-xs"
+					>
 						<div>
 							<p class="text-sm font-bold">Adam Gumilang</p>
 							<p class="text-xs text-zinc-300">{$t.hero.role}</p>
 						</div>
 						<div
-							class="flex items-center gap-1 rounded-md bg-indigo-500/20 px-2 py-0.5 text-[11px] font-semibold text-indigo-300 backdrop-blur-md"
+							class="flex items-center gap-1 rounded-md bg-indigo-500/20 px-2 py-0.5 text-[11px] font-semibold text-indigo-300"
 						>
 							<CheckCircle2 class="size-3" />
 							<span>{$t.hero.activeTag}</span>

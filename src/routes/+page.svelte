@@ -19,7 +19,7 @@
 </svelte:head>
 
 <div
-	class="relative flex min-h-screen flex-col bg-slate-50/60 text-slate-900 transition-colors duration-300 dark:bg-[#09090b] dark:text-zinc-100"
+	class="relative flex min-h-screen flex-col bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-[#09090b] dark:text-zinc-100"
 >
 	<Navbar />
 
