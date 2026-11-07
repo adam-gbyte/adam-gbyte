@@ -1,6 +1,6 @@
 # Hello, I'm Adam Gumilang 👋
 
-![Adam Gumilang](https://ik.imagekit.io/goldiron/adam-gbyte/AdamG.jpeg)
+![Adam Gumilang](https://ik.imagekit.io/gbyte/Emilia.jpg)
 
 Welcome to my GitHub profile! I am an **Informatics Engineering student** focused on **Full Stack Web Development** and exploring **AI & Machine Learning**. I enjoy building modern applications — from backend services and REST APIs to responsive and scalable web interfaces.
 
